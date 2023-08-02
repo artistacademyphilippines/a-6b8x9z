@@ -1,0 +1,249 @@
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.5)
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+
+  #alertMessage {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+    color: salmon;   
+}
+
+#frmLogin {
+    z-index: 1;
+    width: 360px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#frmReset {
+    z-index: 1;
+    width: 360px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.05);
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#frm1 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+#frm1 h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin: auto;
+    cursor: default;
+}
+
+#frm2 {
+    width: 100%;
+    height: 30%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#txtEmail {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    aspect-ratio: 8/1;
+}
+
+#txtPw {
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: auto;
+    width: 70%;
+    
+
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    color: white;
+    aspect-ratio: 8/1;
+    outline: none;
+}
+
+
+#frm3 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+}
+
+#btnLogin {
+    width: 70%;
+    left: 830px;
+    top: 627px;
+    margin: auto;
+    background: rgba(116, 196, 255, 0.5);
+    border: 2px solid #74C4FF;
+    border-radius: 99px;
+    display: flex;
+    height: 40px;
+    cursor: pointer;
+}
+
+#btnLogin h1 {
+    margin: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 130%;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+#btnLogin:hover {
+    background: rgba(116, 196, 255, 1);
+}
+
+
+#btnConfirm {
+    width: 70%;
+    left: 830px;
+    top: 627px;
+    margin: auto;
+    background: rgba(116, 196, 255, 0.5);
+    border: 2px solid #74C4FF;
+    border-radius: 99px;
+    display: flex;
+    aspect-ratio: 6/1;
+    cursor: pointer;
+}
+
+#btnConfirm h1 {
+    margin: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 130%;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+#btnConfirm:hover {
+    background: rgba(116, 196, 255, 1);
+}
+
+
+#line {
+    width: 96%;
+    height: 1px;
+    background-color: white;
+    margin: auto;
+    opacity: .3;
+}
+
+#frm4 {
+    width: 86%;
+    height: 10%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+#frm4 img {
+    scale: 80%;
+    object-fit: none;
+    margin: auto;
+}
+
+#frm4 h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80%;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: white;
+    margin: auto;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #FFFFFF;
+  caret-color: white;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0,0,0,.001) inset;
+  transition: background-color 999999999s ease-in-out 0s;
+}

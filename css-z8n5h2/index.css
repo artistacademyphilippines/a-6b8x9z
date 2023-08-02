@@ -1,0 +1,103 @@
+
+
+#newBody {
+    min-width: 320px;
+    width: 1280px;
+    height: auto;
+    margin-top: 14vh;
+    margin-bottom: 10vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    aspect-ratio: 2/1;
+}
+
+#leftCard {
+    width: 600px;
+    min-width: 320px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#homeTitle {
+    height: 45%;
+    width: 100%;
+    display: flex;
+    word-wrap: break-word;
+    height: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#homeTitle p {
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.2vmax;
+    line-height: 100%;
+    cursor: default;
+}
+
+#homeDesc {
+    width: 100%;
+    height: auto;
+    min-height: 25%;
+    word-wrap: break-word;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#homeDesc p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 3.6vmin;
+    line-height: 140%;
+    color: #FFFFFF;
+    cursor: default;
+}
+
+#btnEnroll {
+    border: 3px solid #FFFFFF;
+    border-radius: 99px;
+    width: 99%;
+    height: 60px;
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    cursor: pointer;
+}
+
+#btnEnroll:hover {
+    background: rgba(116, 196, 255, 0.5);
+}
+
+#btnEnroll h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#rightCard {
+    width: 600px;
+    min-width: 320px;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border: 1px solid white;
+    border-radius: 6px;
+    aspect-ratio: 1/1;
+}

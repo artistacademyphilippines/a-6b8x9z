@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+  }
+  
+  /* selected link */
+  a:active {
+    color: white;
+  }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+	  overflow-x: hidden;
+    overflow-y: auto;
+    background-image: linear-gradient(180deg, rgba(39, 76, 148 ,1), rgba(109,196,245, 1)); 
+}
+
+
+/* width */
+body::-webkit-scrollbar {
+	width: 1px;
+  }
+  
+  /* Track */
+body::-webkit-scrollbar-track {
+	background: #303030;
+  }
+  
+  /* Handle */
+body::-webkit-scrollbar-thumb {
+	background: #313131;
+	border-radius: 100px;
+  }
+  
+body::-webkit-scrollbar-thumb:hover {
+	background: #505050;
+	border-radius: 100px;
+  }
+
+
+  #header {
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: fixed;
+}
+
+#div1 {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    display: flex;
+    background-color: #303030;
+}
+
+#div1 img {
+    max-width: 64px;
+    max-height: 61px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#div2 {
+    min-width: 23px;
+    max-width: 23px;
+}
+
+#div3 {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    background-color: #303030;
+}
+
+#div3 img {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+#divBanner {
+  z-index: 7;
+  margin-top: 40px;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  background-color: #284D8C;
+  visibility: hidden;
+    position: fixed;
+}
+
+#bannerContainer {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+#pBanner {
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 400; 
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    
+}
+
+#bodyBlue {
+    z-index: 0;
+    width: 100%;
+    min-height: 97vh;
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    background-image: linear-gradient(180deg, rgba(39, 76, 148 ,1), rgba(109,196,245, 1)); 
+}
+
+#footer {
+    z-index: 9;
+    height: 3vh;
+    width: 100%;
+    display: flex;
+    top: 97vh;
+    position: fixed;
+    background-color: #303030;
+}
+
+#footer p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-weight: 500;
+    color: #888888;
+    letter-spacing: 2px;
+}
