@@ -1,6 +1,3 @@
-sessionStorage.setItem("sessEmail", "");
-sessionStorage.setItem("sessPw", "");
-
 //------------------------Firebase--------------------
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
@@ -73,20 +70,25 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-
-    window.location.replace('https://artcademy.ph/dashboard')
+      var sessEmail = sessionStorage.getItem("sessEmail");
+      
+      if((sessEmail != "") && (sessEmail != null)) {
+        window.location.replace('https://artcademy.ph/dashboard')
+      }
+      
+      else {
+        signOut(app);
+      }
 
     }
     
-    else {
+  else {
       
-      bodyBlue.style.visibility = "visible";
+    bodyBlue.style.visibility = "visible";
       
-    } 
+  } 
 
   });
-
-
 
   //---------------------validate login--------------------
 
@@ -137,7 +139,7 @@ onAuthStateChanged(auth, (user) => {
                   time: getTime
                 })
                 .then(()=> {
-                  alertMsg.innerText = "Unauthorized access";
+                  alertMsg.innerText = "Email or password is incorrect";
                   alertMsg.style.opacity = "1";
                   loginEmail.value = "";
                   loginPw.value = "";
