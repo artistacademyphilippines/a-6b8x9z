@@ -70,9 +70,17 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
+      sessionStorage.setItem("sessID", user.uid);
       var sessEmail = sessionStorage.getItem("sessEmail");
       
       if((sessEmail != "") && (sessEmail != null)) {
+        
+        update(ref(db, 'accounts/trainees/' + user.uid + '/'), {
+          status: "online"
+        });
+            
+          
+        
         window.location.replace('https://artcademy.ph/dashboard')
       }
       

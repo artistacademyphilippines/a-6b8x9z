@@ -113,14 +113,37 @@ function getHeader() {
     })
 }
 
+//------------------------Check IF Online (Multiple Tabs)--------------------------
 
-//------------------------Check Conn--------------------------
-function checkConn() {
+function checkIfOnline() {
+
+    var path = ref(db, ".info/connected");
+    onValue(path, (snap) => {
+        if (snap.val() === true) {
+            
+            var sessID = sessionStorage.getItem("sessID");
+                    
+            update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                status: "online"
+            })
+            .catch((error)=> {
+                alert(error.code);
+            })
+        } 
+        
+      });
+}
+checkIfOnline();
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
     var sessEmail = sessionStorage.getItem('sessEmail');
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
-
+            
             if(sessEmail == childSnapshot.val().email) {
                 var sessID = childSnapshot.key;
 
@@ -131,8 +154,5 @@ function checkConn() {
     })
 }
 
-checkConn();
+checkIfOffline();
 
-//set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
-//    status: "offline"
-//})
