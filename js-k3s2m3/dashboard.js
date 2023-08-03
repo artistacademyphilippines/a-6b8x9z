@@ -124,8 +124,8 @@ function checkOffline() {
             
             var sessEmail = sessionStorage.getItem('sessEmail');
             var path2 = ref(db, 'accounts/trainees/');
-
-            get(path).then((snapshot)=> {
+            console.log("online");
+            get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
                     
                     if(childSnapshot.val().email == sessEmail) {
@@ -144,8 +144,8 @@ function checkOffline() {
         else {
             var sessEmail = sessionStorage.getItem('sessEmail');
             var path2 = ref(db, 'accounts/trainees/');
-
-            get(path).then((snapshot)=> {
+            console.log("offline");
+            get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
                     
                     if(childSnapshot.val().email == sessEmail) {
