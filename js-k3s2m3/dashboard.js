@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user) => {
         }
         
         else {
-          signOut(app);
+          signOut(auth);
         }
         
     }
