@@ -121,14 +121,27 @@ function checkIfOnline() {
     onValue(path, (snap) => {
         if (snap.val() === true) {
             
-            var sessID = sessionStorage.getItem("sessID");
+            var path2 = ref(db, 'accounts/trainees/');
+            
+            get(path2).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
                     
-            update(ref(db, 'accounts/trainees/' + sessID + '/'), {
-                status: "online"
+                    var sessEmail = sessionStorage.getItem('sessEmail');
+
+                    if(childSnapshot.val().email == sessEmail) {
+
+                        var sessID = childSnapshot.key;
+                        
+                        update(ref(db, 'accounts/trainees/' + sessID), {
+                            status: "online"
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    }
+                })
             })
-            .catch((error)=> {
-                alert(error.code);
-            })
+
         } 
         
       });
@@ -156,3 +169,6 @@ function checkIfOffline() {
 
 checkIfOffline();
 
+//set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
+//    status: "offline"
+//})

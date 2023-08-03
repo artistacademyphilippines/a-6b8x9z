@@ -70,15 +70,22 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-      sessionStorage.setItem("sessID", user.uid);
       var sessEmail = sessionStorage.getItem("sessEmail");
       
       if((sessEmail != "") && (sessEmail != null)) {
         
-        update(ref(db, 'accounts/trainees/' + user.uid + '/'), {
-          status: "online"
-        });
-            
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+          snapshot.forEach((childSnapshot)=> {
+            if(sessEmail == childSnapshot.val().email) {
+              var sessID = childSnapshot.key;
+
+              update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                status: "online"
+              })
+            }
+          })
+        })
         window.location.replace('https://artcademy.ph/dashboard')
       }
       
