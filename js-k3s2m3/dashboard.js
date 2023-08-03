@@ -125,10 +125,7 @@ function checkConn() {
                 var sessID = childSnapshot.key;
 
                 var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
-                onDisconnect(checkCon).set("offline")
-                .then(()=> {
-                    signOut(auth);
-                })
+                onDisconnect(checkCon).set("offline");
             }
         })
     })
