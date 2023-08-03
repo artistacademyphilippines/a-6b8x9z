@@ -122,12 +122,14 @@ function checkOffline() {
     onValue(path, (snap) => {
         if (snap.val() === true) {
             
-            var sessEmail = sessionStorage.getItem('sessEmail');
             var path2 = ref(db, 'accounts/trainees/');
-            console.log("online");
+            
             get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
                     
+                    console.log(childSnapshot.val().email);
+                    var sessEmail = sessionStorage.getItem('sessEmail');
+
                     if(childSnapshot.val().email == sessEmail) {
 
                         var sessID = childSnapshot.key;
@@ -142,11 +144,14 @@ function checkOffline() {
         } 
         
         else {
-            var sessEmail = sessionStorage.getItem('sessEmail');
+
             var path2 = ref(db, 'accounts/trainees/');
-            console.log("offline");
+            
             get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
+                    
+                    console.log(childSnapshot.val().email);
+                    var sessEmail = sessionStorage.getItem('sessEmail');
                     
                     if(childSnapshot.val().email == sessEmail) {
 
