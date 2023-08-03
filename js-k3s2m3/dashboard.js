@@ -25,8 +25,16 @@ var bodyBlue = document.getElementById('bodyBlue');
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
-    
-        bodyBlue.style.visibility = "visible";
+
+        var sessEmail = sessionStorage.getItem("sessEmail");
+      
+        if((sessEmail != "") && (sessEmail != null)) {
+            bodyBlue.style.visibility = "visible";
+        }
+        
+        else {
+          signOut(app);
+        }
         
     }
 
@@ -37,7 +45,6 @@ onAuthStateChanged(auth, (user) => {
     } 
 
 });
-
 
 
 //--------------------------------Banner--------------------------------------
@@ -59,6 +66,7 @@ function checkBanner() {
             scrollingBannerText.innerText = snapshot.val().message;
             if(snapshot.val().status === true) {
                 scrollingBanner.style.visibility = "visible";
+                
             }
             else {
                 scrollingBanner.style.visibility = "hidden";
@@ -77,3 +85,80 @@ function bannerAnimation() {
     }
 }
 setInterval(bannerAnimation, t);
+
+
+//---------------------------Get Header---------------------------------------
+
+var fullname = document.getElementById("fullname");
+var traineeID = document.getElementById("traineeID");
+var frm1 = document.getElementById("frm1");
+
+function getHeader() {
+
+    var append = "";
+
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot=> {
+            var sessEmail = sessionStorage.getItem('sessEmail');
+
+            if(sessEmail == childSnapshot.val().email) {
+                append = 
+
+                `<div id="fullname">${childSnapshot.val().name}</div>
+                <input id="traineeID" value = "${childSnapshot.key}" readonly>`;
+            }
+        }))
+        frm1.innerHTML = append;
+    })
+}
+
+
+//-----------------------Before Unload-------------------------
+
+function checkOffline() {
+
+    var path = ref(db, ".info/connected");
+    onValue(path, (snap) => {
+        if (snap.val() === true) {
+            
+            var sessEmail = sessionStorage.getItem('sessEmail');
+            var path2 = ref(db, 'accounts/trainees/');
+
+            get(path).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
+                    
+                    if(childSnapshot.val().email == sessEmail) {
+
+                        var sessID = childSnapshot.key;
+
+                        update(ref(db, 'accounts/trainees/' + sessID), {
+                            status: "online"
+                        })
+                    }
+                })
+            })
+
+        } 
+        
+        else {
+            var sessEmail = sessionStorage.getItem('sessEmail');
+            var path2 = ref(db, 'accounts/trainees/');
+
+            get(path).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
+                    
+                    if(childSnapshot.val().email == sessEmail) {
+
+                        var sessID = childSnapshot.key;
+
+                        update(ref(db, 'accounts/trainees/' + sessID), {
+                            status: "offline"
+                        })
+                    }
+                })
+            })
+        }
+      });
+}
+checkOffline();
