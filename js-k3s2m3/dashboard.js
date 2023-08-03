@@ -175,9 +175,12 @@ checkOffline();
 
 //------------------------Check Conn--------------------------
 
-//var checkCon = ref(db, 'accounts/status/T230729180616/status/')
-//onDisconnect(checkCon).set("offline");
-
-set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
-    status: "offline"
+var checkCon = ref(db, 'accounts/status/T230729180616/status/')
+onDisconnect(checkCon).set("offline")
+.then(()=> {
+    signOut(auth);
 })
+
+//set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
+//    status: "offline"
+//})
