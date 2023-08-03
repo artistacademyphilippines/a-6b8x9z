@@ -30,6 +30,28 @@ onAuthStateChanged(auth, (user) => {
       
         if((sessEmail != "") && (sessEmail != null)) {
             bodyBlue.style.visibility = "visible";
+
+            var path2 = ref(db, 'accounts/trainees/');
+            
+            get(path2).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
+                    
+                    var sessEmail = sessionStorage.getItem('sessEmail');
+
+                    if(childSnapshot.val().email == sessEmail) {
+
+                        var sessID = childSnapshot.key;
+                        
+                        update(ref(db, 'accounts/trainees/' + sessID), {
+                            status: "online"
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    }
+                })
+            })
+            
         }
         
         else {
@@ -146,7 +168,7 @@ function checkIfOnline() {
         
       });
 }
-checkIfOnline();
+
 
 
 //------------------------Check IF Offline--------------------------
