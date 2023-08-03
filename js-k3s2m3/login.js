@@ -1,7 +1,7 @@
 //------------------------Firebase--------------------
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { getDatabase, ref, onValue, get, set} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+import { getDatabase, ref, onValue, get, set, update} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
@@ -79,8 +79,6 @@ onAuthStateChanged(auth, (user) => {
           status: "online"
         });
             
-          
-        
         window.location.replace('https://artcademy.ph/dashboard')
       }
       
