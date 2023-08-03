@@ -175,5 +175,9 @@ checkOffline();
 
 //------------------------Check Conn--------------------------
 
-var checkCon = ref(db, 'accounts/status/T230729180616/status/')
-onDisconnect(checkCon).set("offline");
+//var checkCon = ref(db, 'accounts/status/T230729180616/status/')
+//onDisconnect(checkCon).set("offline");
+
+set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
+    status: "offline"
+})
