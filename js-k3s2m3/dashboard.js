@@ -131,7 +131,7 @@ function checkOffline() {
                     if(childSnapshot.val().email == sessEmail) {
 
                         var sessID = childSnapshot.key;
-                        console.log(sessID);
+                        
 
                         update(ref(db, 'accounts/trainees/' + sessID), {
                             status: "online"
@@ -157,7 +157,7 @@ function checkOffline() {
                     if(childSnapshot.val().email == sessEmail) {
 
                         var sessID = childSnapshot.key;
-                        console.log(sessID);
+                       
 
                         update(ref(db, 'accounts/trainees/' + sessID), {
                             status: "offline"
@@ -175,5 +175,5 @@ checkOffline();
 
 //------------------------Check Conn--------------------------
 
-var checkCon = ref(db, 'accounts/status/T230729180616/status')
+var checkCon = ref(db, 'accounts/status/T230729180616/status/')
 onDisconnect(checkCon).set("offline");
