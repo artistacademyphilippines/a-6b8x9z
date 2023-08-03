@@ -113,73 +113,28 @@ function getHeader() {
     })
 }
 
-//-----------------------Before Unload-------------------------
-
-function checkOffline() {
-
-    var path = ref(db, ".info/connected");
-    onValue(path, (snap) => {
-        if (snap.val() === true) {
-            
-            var path2 = ref(db, 'accounts/trainees/');
-            
-            get(path2).then((snapshot)=> {
-                snapshot.forEach((childSnapshot)=> {
-                    
-                    var sessEmail = sessionStorage.getItem('sessEmail');
-
-                    if(childSnapshot.val().email == sessEmail) {
-
-                        var sessID = childSnapshot.key;
-                        
-
-                        update(ref(db, 'accounts/trainees/' + sessID), {
-                            status: "online"
-                        })
-                        .catch((error)=> {
-                            alert(error.code);
-                        })
-                    }
-                })
-            })
-
-        } 
-        
-        else {
-
-            var path2 = ref(db, 'accounts/trainees/');
-            
-            get(path2).then((snapshot)=> {
-                snapshot.forEach((childSnapshot)=> {
-                    
-                    var sessEmail = sessionStorage.getItem('sessEmail');
-
-                    if(childSnapshot.val().email == sessEmail) {
-
-                        var sessID = childSnapshot.key;
-                       
-
-                        update(ref(db, 'accounts/trainees/' + sessID), {
-                            status: "offline"
-                        })
-                        .catch((error)=> {
-                            alert(error.code);
-                        })
-                    }
-                })
-            })
-        }
-      });
-}
-checkOffline();
 
 //------------------------Check Conn--------------------------
+function checkConn() {
+    var sessEmail = sessionStorage.getItem('sessEmail');
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
 
-var checkCon = ref(db, 'accounts/status/T230729180616/status/')
-onDisconnect(checkCon).set("offline")
-.then(()=> {
-    signOut(auth);
-})
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
+                onDisconnect(checkCon).set("offline")
+                .then(()=> {
+                    signOut(auth);
+                })
+            }
+        })
+    })
+}
+
+checkConn();
 
 //set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
 //    status: "offline"
