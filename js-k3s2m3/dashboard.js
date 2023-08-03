@@ -113,7 +113,6 @@ function getHeader() {
     })
 }
 
-
 //-----------------------Before Unload-------------------------
 
 function checkOffline() {
@@ -173,3 +172,8 @@ function checkOffline() {
       });
 }
 checkOffline();
+
+//------------------------Check Conn--------------------------
+
+var checkCon = ref(db, 'accounts/status/T230729180616/')
+onDisconnect(presenceRef).set("offline");
