@@ -30,7 +30,6 @@ onAuthStateChanged(auth, (user) => {
       
         if((sessEmail != "") && (sessEmail != null)) {
             bodyBlue.style.visibility = "visible";
-
             
         }
         
@@ -100,20 +99,21 @@ function getHeader() {
     var append = "";
 
     const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
         snapshot.forEach((childSnapshot=> {
-            var sessEmail = sessionStorage.getItem('sessEmail');
-
+    
             if(sessEmail == childSnapshot.val().email) {
                 append = 
 
                 `<div id="fullname">${childSnapshot.val().name}</div>
-                <input id="traineeID" value = "${childSnapshot.key}" readonly>`;
+                <input id="traineeID" value = "ID: ${childSnapshot.key}" readonly>`;
             }
         }))
         frm1.innerHTML = append;
     })
 }
+getHeader();
 
 //------------------------Check IF Online (Multiple Tabs)--------------------------
 
