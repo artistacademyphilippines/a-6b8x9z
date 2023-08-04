@@ -178,8 +178,8 @@ onAuthStateChanged(auth, (user) => {
   }
 
   btnLogin.addEventListener("click", validateLogin);
-  document.querySelector('#txtEmail').addEventListener("keydown", pressEnter);
-  document.querySelector('#txtPw').addEventListener("keydown", pressEnter);
+  loginEmail.addEventListener("keydown", pressEnter);
+  loginPw.addEventListener("keydown", pressEnter);
 
 //-------------------------Reset Texts---------------------
 
