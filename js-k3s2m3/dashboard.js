@@ -90,18 +90,18 @@ setInterval(bannerAnimation, t);
 
 //---------------------------Get Header---------------------------------------
 
+var traineeID = document.getElementById("traineeID");
+var frm1 = document.getElementById("frm1");
+var frm4 = document.getElementById("frm4");
+
 function copyMe() {
     var copyText = this;
-
     copyText.focus();
     copyText.select();
     copyText.setSelectionRange(0, 99999); // For mobile devices
     document.execCommand('copy');
+    console.log('copy me');
 }
-
-var traineeID = document.getElementById("traineeID");
-var frm1 = document.getElementById("frm1");
-var frm4 = document.getElementById("frm4");
 
 function getHeader() {
 
@@ -127,7 +127,7 @@ getHeader();
 
 //--------------------------------Slide Cards--------------------------------------
 
-alert('width: ' + frm4.clientWidth + 'height: ' + frm4.clientHeight);
+
 
 
 //------------------------Check IF Online (Multiple Tabs)--------------------------
