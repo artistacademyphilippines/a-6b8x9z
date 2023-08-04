@@ -83,10 +83,13 @@ onAuthStateChanged(auth, (user) => {
               update(ref(db, 'accounts/trainees/' + sessID + '/'), {
                 status: "online"
               })
+              .then(()=> {
+                window.location.replace('https://artcademy.ph/dashboard')
+              })
             }
           })
         })
-        window.location.replace('https://artcademy.ph/dashboard')
+        
       }
       
       else {
@@ -115,7 +118,7 @@ onAuthStateChanged(auth, (user) => {
         sessionStorage.setItem("sessEmail", loginEmail.value);
         sessionStorage.setItem("sessPw", loginPw.value);
       })
-      .catch((error)=> {
+      /*.catch((error)=> {
 
         var getIP, getCountry, getISP, getEmail, getTime, getDate = "";
 
@@ -139,7 +142,7 @@ onAuthStateChanged(auth, (user) => {
                 getCountry = data.country;
                 getISP = data.org;
 
-                getEmail = loginEmail;
+                getEmail = loginEmail.value;
                 
 
                 set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
@@ -161,6 +164,7 @@ onAuthStateChanged(auth, (user) => {
                 })
               }
       })
+      */
 
     }
     else {
@@ -168,7 +172,6 @@ onAuthStateChanged(auth, (user) => {
       alertMsg.style.opacity = "1";
     }
   }
-
 
   //-------------on enter, use function login---------------
   function pressEnter(e) {
@@ -178,7 +181,7 @@ onAuthStateChanged(auth, (user) => {
   }
 
   btnLogin.addEventListener("click", validateLogin);
-  //loginEmail.addEventListener("keydown", pressEnter);
+  loginEmail.addEventListener("keydown", pressEnter);
   loginPw.addEventListener("keydown", pressEnter);
 
 //-------------------------Reset Texts---------------------
