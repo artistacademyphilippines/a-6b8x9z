@@ -28,6 +28,10 @@
 
 #traineeID {
     background-color: transparent;
+    outline: none;
+    border: none;
+    width: auto;
+
     cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;
