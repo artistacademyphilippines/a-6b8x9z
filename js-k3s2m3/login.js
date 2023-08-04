@@ -70,15 +70,9 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-    var sessEmail = sessionStorage.getItem("sessEmail");
+    
+    window.location.replace('https://artcademy.ph/dashboard')
 
-    if((sessEmail != "") && (sessEmail != null)) {
-      window.location.replace('https://artcademy.ph/dashboard')
-    }
-
-    else {
-      signOut(auth);
-    }
 
   }
     
@@ -103,7 +97,7 @@ onAuthStateChanged(auth, (user) => {
         sessionStorage.setItem("sessPw", loginPw.value);
 
       })
-      /*.catch((error)=> {
+      .catch((error)=> {
 
         var getIP, getCountry, getISP, getEmail, getTime, getDate = "";
 
@@ -144,12 +138,10 @@ onAuthStateChanged(auth, (user) => {
                   alertMsg.style.opacity = "1";
                   loginEmail.value = "";
                   loginPw.value = "";
-
-                  
                 })
               }
       })
-      */
+      
 
     }
     else {
