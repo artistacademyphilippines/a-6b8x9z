@@ -120,8 +120,7 @@ function getHeader() {
             }
         }))
         frm1.innerHTML = append;
-        //traineeID.addEventListener('click', copyMe);
-        console.log(document.getElementById('traineeID').value);
+        document.getElementById('traineeID').addEventListener('click', copyMe);
     })
 }
 getHeader();
