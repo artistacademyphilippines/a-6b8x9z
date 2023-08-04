@@ -168,7 +168,7 @@ function checkIfOffline() {
                     var newDate = new Date();
                     var currMonth = newDate.getMonth() + 1;
                     var currDate = newDate.getDate();
-                    var currYear = (newDate.getFullYear().toString).substr(2);
+                    var currYear = newDate.getFullYear();
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
                     update(path2, {
