@@ -21,7 +21,7 @@ const db = getDatabase();
 //--check first if user is currently logged in
 
 var bodyBlue = document.getElementById('bodyBlue');
-
+/*
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
@@ -46,7 +46,7 @@ onAuthStateChanged(auth, (user) => {
     } 
 
 });
-
+*/
 
 //--------------------------------Banner--------------------------------------
 
