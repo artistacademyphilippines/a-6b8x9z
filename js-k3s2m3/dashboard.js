@@ -99,9 +99,9 @@ function copyMe() {
     document.execCommand('copy');
 }
 
-var fullname = document.getElementById("fullname");
 var traineeID = document.getElementById("traineeID");
 var frm1 = document.getElementById("frm1");
+var frm4 = document.getElementById("frm4");
 
 function getHeader() {
 
@@ -124,6 +124,11 @@ function getHeader() {
     })
 }
 getHeader();
+
+//--------------------------------Slide Cards--------------------------------------
+
+console.log('width: ' + frm4.offsetWidth + 'height: ' + frm4.offsetHeight);
+
 
 //------------------------Check IF Online (Multiple Tabs)--------------------------
 
