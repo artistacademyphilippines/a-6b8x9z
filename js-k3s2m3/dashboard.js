@@ -48,6 +48,8 @@ onAuthStateChanged(auth, (user) => {
 });
 */
 
+bodyBlue.style.visibility = "visible";
+
 //--------------------------------Banner--------------------------------------
 
 var t = .002*window.innerWidth;
