@@ -178,7 +178,7 @@ onAuthStateChanged(auth, (user) => {
   }
 
   btnLogin.addEventListener("click", validateLogin);
-  loginEmail.addEventListener("keydown", pressEnter);
+  //loginEmail.addEventListener("keydown", pressEnter);
   loginPw.addEventListener("keydown", pressEnter);
 
 //-------------------------Reset Texts---------------------
