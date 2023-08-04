@@ -27,7 +27,8 @@
 }
 
 #traineeID {
-    cursor: default;
+    background-color: transparent;
+    cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
