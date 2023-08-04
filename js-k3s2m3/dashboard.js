@@ -90,7 +90,7 @@ setInterval(bannerAnimation, t);
 
 //---------------------------Get Header---------------------------------------
 
-var traineeID = document.getElementById("traineeID");
+//var traineeID = document.getElementById("traineeID");
 var frm1 = document.getElementById("frm1");
 var frm4 = document.getElementById("frm4");
 
@@ -121,7 +121,7 @@ function getHeader() {
         }))
         frm1.innerHTML = append;
         //traineeID.addEventListener('click', copyMe);
-        console.log(traineeID.value);
+        console.log(document.getElementById('traineeID').value);
     })
 }
 getHeader();
