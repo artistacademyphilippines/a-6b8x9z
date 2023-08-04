@@ -127,7 +127,7 @@ getHeader();
 
 //--------------------------------Slide Cards--------------------------------------
 
-alert('width: ' + frm4.offsetWidth + 'height: ' + frm4.offsetHeight);
+alert('width: ' + frm4.clientWidth + 'height: ' + frm4.clientHeight);
 
 
 //------------------------Check IF Online (Multiple Tabs)--------------------------
