@@ -30,7 +30,7 @@ onAuthStateChanged(auth, (user) => {
       
         if((sessEmail != "") && (sessEmail != null)) {
             bodyBlue.style.visibility = "visible";
-            
+
         }
         
         else {
@@ -90,6 +90,15 @@ setInterval(bannerAnimation, t);
 
 //---------------------------Get Header---------------------------------------
 
+function copyMe() {
+    var copyText = this;
+
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
 var fullname = document.getElementById("fullname");
 var traineeID = document.getElementById("traineeID");
 var frm1 = document.getElementById("frm1");
@@ -111,6 +120,7 @@ function getHeader() {
             }
         }))
         frm1.innerHTML = append;
+        traineeID.addEventListener('click', copyMe);
     })
 }
 getHeader();
