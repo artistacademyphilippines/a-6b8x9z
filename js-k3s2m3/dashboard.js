@@ -163,7 +163,18 @@ function checkIfOffline() {
                 var sessID = childSnapshot.key;
 
                 var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
-                onDisconnect(checkCon).set("offline");
+                onDisconnect(checkCon).set("offline")
+                .then(()=> {
+                    var newDate = new Date();
+                    var currMonth = newDate.getMonth() + 1;
+                    var currDate = newDate.getDate();
+                    var currYear = (newDate.getFullYear().toString).substr(2);
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
+                    update(path2, {
+                        lastOnline: currMonth + "." + currDate + "." + currYear
+                    })
+                })
             }
         })
     })
@@ -171,6 +182,3 @@ function checkIfOffline() {
 
 checkIfOffline();
 
-//set(onDisconnect(ref(db, 'accounts/status/T230729180616/')), {
-//    status: "offline"
-//})
