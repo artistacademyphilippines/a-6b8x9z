@@ -91,7 +91,7 @@ setInterval(bannerAnimation, t);
 //---------------------------Get Header---------------------------------------
 
 function copyMe() {
-    var copyText = this;
+    var copyText = this.value;
 
     copyText.focus();
     copyText.select();
