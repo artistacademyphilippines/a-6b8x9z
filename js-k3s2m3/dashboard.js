@@ -116,7 +116,7 @@ function getHeader() {
                 append = 
 
                 `<div id="fullname">${childSnapshot.val().name}</div>
-                <input type="text" id="traineeID" value = "ID: ${childSnapshot.key}" readonly>`;
+                <input type="text" id="traineeID" value = "ID: ${childSnapshot.key}">`;
             }
         }))
         frm1.innerHTML = append;
