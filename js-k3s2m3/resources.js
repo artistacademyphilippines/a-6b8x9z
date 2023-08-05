@@ -102,7 +102,7 @@ function loadCerti() {
                                 append+= 
                                 ` <div class="clickables">
                                     <h2>${dropCourse.value}_${sessBatch}</h2>
-                                    <img src="img-h6rv2c/btnDownload.png" onclick="window.open(${snapshot.val().certificates})>
+                                    <img src="img-h6rv2c/btnDownload.png" onclick="window.open(${snapshot.val().certificates})">
                                 </div>`;
                                 divCerti.innerHTML = append;
                             })
