@@ -14,7 +14,6 @@ function showMenu() {
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
-    console.log("black supposed to be here");
 }
 
 function hideMenu() {

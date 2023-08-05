@@ -21,7 +21,7 @@ const db = getDatabase();
 //--check first if user is currently logged in
 
 var bodyBlue = document.getElementById('bodyBlue');
-/*
+
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
@@ -46,9 +46,7 @@ onAuthStateChanged(auth, (user) => {
     } 
 
 });
-*/
 
-bodyBlue.style.visibility = "visible";
 
 //--------------------------------Banner--------------------------------------
 
@@ -92,9 +90,8 @@ setInterval(bannerAnimation, t);
 
 //---------------------------Get Header---------------------------------------
 
-//var traineeID = document.getElementById("traineeID");
 var frm1 = document.getElementById("frm1");
-var frm4 = document.getElementById("frm4");
+var frm2 = document.getElementById("frm2");
 
 function copyMe() {
     var copyText = this;
@@ -126,10 +123,102 @@ function getHeader() {
 }
 getHeader();
 
+
+//-----------------------------------CARDS----------------------------------------
+
+const dot1 = document.getElementById('dot1');
+dot1.style.backgroundColor = "white";
+const dot2 = document.getElementById('dot2');
+const dot3 = document.getElementById('dot3');
+var card1, card2, card3 = null;
+
+//--------------------------------Load Cards---------------------------------------
+
+function loadCards() {
+    var append = "";
+
+    const path = ref(db, 'settings/cards/');
+    onValue(path, (snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            
+            append+=`<div id="card${childSnapshot.key}" class="cards"><img src="${childSnapshot.val().link}" class="imgCards"></div>`;
+        })
+        frm2.innerHTML = append;
+        card1 = document.getElementById('card1');
+        card2 = document.getElementById('card2');
+        card3 = document.getElementById('card3');
+    })
+}
+loadCards();
+
 //--------------------------------Slide Cards--------------------------------------
 
+function slideCards() {
+    var a = frm2.scrollLeft;
+    var b = frm2.scrollWidth - frm2.clientWidth;
+    var c = (a / b) * 100;
+
+    if (c < 25) {
+        dot1.style.backgroundColor = "white";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if((c >= 25) && (c <= 75)) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "white";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if(c > 75) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "white";
+    }
+
+}
+frm2.addEventListener("scroll", slideCards);
 
 
+//----------------------------------Tap Cards-----------------------------------
+var newCard = 1;
+
+function tapCards() {
+    if(this.id == 'dot1') {
+        card1.scrollIntoView();
+        newCard = 1;
+    }
+    else if(this.id == 'dot2') {
+        card2.scrollIntoView();
+        newCard = 2;
+    }
+    else if(this.id == 'dot3') {
+        card3.scrollIntoView();
+        newCard = 3;
+    }
+}
+dot1.addEventListener('click', tapCards);
+dot2.addEventListener('click', tapCards);
+dot3.addEventListener('click', tapCards);
+
+
+//----------------------------------Autoplay Cards--------------------------------
+
+function playCards() {
+    if(newCard == 1) {
+        card1.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 2) {
+        card2.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 3) {
+        card3.scrollIntoView();
+        newCard = 1;
+    }
+}
+setInterval(playCards, 3000);
 
 //------------------------Check IF Online (Multiple Tabs)--------------------------
 
