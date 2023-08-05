@@ -66,12 +66,53 @@ function loadCourse() {
                     snapshot.forEach((childSnapshot)=> {
                         append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
                     })
-                    dropCourse.innerHTML = append;
+                    
                 })
 
             }
         })
+        dropCourse.innerHTML = append;
     })
 
 }
 loadCourse();
+
+function loadCerti() {
+
+    var divCerti = document.getElementById('divCerti');
+
+    if(dropCourse.value != "Select Course") {
+        const path = ref(db, 'accounts/trainees/');
+        onValue(path, (snapshot)=> {
+
+            var append = "";
+
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                    onValue(path2, (snapshot)=> {
+                        snapshot.forEach((childSnapshot)=> {
+                            
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + childSnapshot.key + '/');
+                            onValue(path3, (snapshot)=> {
+                                append+= 
+                                ` <div class="clickables">
+                                    <h2>${dropCourse.value}_${childSnapshot.key}</h2>
+                                    <a href = "${snapshot.val().link}"><img src="img-h6rv2c/btnDownload.png"></a>
+                                </div>`;
+                            })
+                            
+                        })
+                    })
+                }
+
+            })
+            divCerti.innerHTML = append;
+        })
+    }
+
+}
