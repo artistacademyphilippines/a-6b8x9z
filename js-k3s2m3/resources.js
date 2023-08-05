@@ -121,7 +121,7 @@ function loadCerti() {
 
     else {
 
-        divCerti.innerHTML = "";
+        document.getElementById('divCerti').innerHTML = "";
     }
 
 }
