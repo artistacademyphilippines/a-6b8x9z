@@ -189,7 +189,7 @@ function loadTrainingVideos() {
 
     if(dropCourse.value != "Select Course") {
         const path = ref(db, 'accounts/trainees/');
-        onValue(path, (snapshot)=> {
+        get(path).then((snapshot)=> {
             
             var append = "";
         
@@ -200,11 +200,11 @@ function loadTrainingVideos() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                    onValue(path2, (snapshot)=> {
+                    get(path2).then((snapshot)=> {
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
-                            onValue(path3, (snapshot)=> {
+                            get(path3).then((snapshot)=> {
                                 snapshot.forEach((childSnapshot)=> {
                                     append += 
                                     `<div class="clickables">
