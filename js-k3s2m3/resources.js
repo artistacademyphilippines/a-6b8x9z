@@ -116,3 +116,4 @@ function loadCerti() {
     }
 
 }
+dropCourse.addEventListener('change', loadCerti);
