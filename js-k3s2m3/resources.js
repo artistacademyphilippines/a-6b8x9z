@@ -19,20 +19,16 @@ const db = getDatabase();
 
 
 //--check first if user is currently logged in
-var userEmail = "";
+
+var sessEmail = sessionStorage.getItem("sessEmail");
 var bodyBlue = document.getElementById('bodyBlue');
 
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
 
-        userEmail = user.email;
-        console.log(userEmail);
-        var sessEmail = sessionStorage.getItem("sessEmail");
-        
-        if((sessEmail != "") && (sessEmail != null)) {
+        if(sessEmail == user.email) {
             bodyBlue.style.visibility = "visible";
-
         }
         
         else {
@@ -58,6 +54,21 @@ function loadCourse() {
     var append = `<option value="none" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().email == sessEmail) {
+                
+                var sessID = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
+                onValue(path2, (snapshot)=> {
+                    console.log(snapshot);
+                })
+
+            }
+        })
+    })
 
 }
-
+loadCourse();
