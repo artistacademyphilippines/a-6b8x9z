@@ -142,7 +142,7 @@ function playTrainingVids() {
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
     
-    /*
+    
     const path = ref(db, 'accounts/trainees/');
     onValue(path, (snapshot)=> {
     
@@ -179,7 +179,7 @@ function playTrainingVids() {
            
         })
      
-    }) */
+    }) 
     
 }
 
