@@ -99,6 +99,7 @@ function loadCerti() {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
                             onValue(path3, (snapshot)=> {
+                                console.log(snapshot.val().link);
                                 append+= 
                                 ` <div class="clickables">
                                     <h2>${dropCourse.value}_${sessBatch}</h2>
