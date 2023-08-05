@@ -214,7 +214,7 @@ function loadTrainingVideos() {
                                 divTrainingVids.innerHTML = append;
 
                                 for(var a = 0; a < btnPlayTrainingVids.length; a++) {
-                                    btnPlayTrainingVids.addEventListener('click', playTrainingVids);
+                                    btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
                                 }
                             })
                         
