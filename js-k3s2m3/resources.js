@@ -51,7 +51,7 @@ onAuthStateChanged(auth, (user) => {
 var dropCourse = document.getElementById('dropCourse');
 
 function loadCourse() {
-    var append = `<option value="none" class="dropOption">Select Course</option>`;
+    var append = `<option value="Select  Course" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
     onValue(path, (snapshot)=> {
@@ -63,7 +63,10 @@ function loadCourse() {
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
                 onValue(path2, (snapshot)=> {
-                    console.log(snapshot.key);
+                    snapshot.forEach((childSnapshot)=> {
+                        append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+                    })
+                    dropCourse.innerHTML = append;
                 })
 
             }
