@@ -121,7 +121,7 @@ function loadCerti() {
 
     else {
 
-        document.getElementById('divCerti').innerHTML = "";
+        console.log(dropCourse.value);
     }
 
 }
@@ -172,7 +172,8 @@ function loadTrainingVideos() {
         })
     }
     else {
-        divTrainingVids.innerHTML = "";
+        
+        console.log(dropCourse.value);
     }
 }
 loadTrainingVideos();
