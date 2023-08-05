@@ -78,7 +78,7 @@ function loadCourse() {
 loadCourse();
 
 function loadCerti() {
-    
+
     var divCerti = document.getElementById('divCerti');
 
     if(dropCourse.value != "Select Course") {
@@ -128,7 +128,7 @@ function loadCerti() {
 
 function loadTrainingVideos() {
 
-    var divTrainingVids = document.getElementById('divTrainingVids')
+    var divTrainingVids = document.getElementById('divTrainingVids');
 
     if(dropCourse.value != "Select Course") {
         const path = ref(db, 'accounts/trainees/');
