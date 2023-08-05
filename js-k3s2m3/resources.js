@@ -104,13 +104,13 @@ function loadCerti() {
                                     <a href = "${snapshot.val().link}"><img src="img-h6rv2c/btnDownload.png"></a>
                                 </div>`;
                             })
-                            
+                            console.log(append);
                         })
                     })
                 }
 
             })
-            divCerti.innerHTML = append;
+            
         })
     }
 
