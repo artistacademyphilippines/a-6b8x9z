@@ -77,6 +77,8 @@ function loadCourse() {
 }
 loadCourse();
 
+//--------------------------Load Certificate-----------------------
+
 function loadCerti() {
 
     var divCerti = document.getElementById('divCerti');
@@ -126,6 +128,58 @@ function loadCerti() {
 
 }
 
+//---------------------------Training Videos-----------------------
+const black = document.getElementById('black');
+var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids');
+
+function playTrainingVids() {
+    var vidTitle = this.parentElement.children[0].innerText;
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+    
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().email == sessEmail) {
+
+                var sessID = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                onValue(path2, (snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+
+                        var sessBatch = childSnapshot.key;
+                        const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/');
+                        onValue(path3, (snapshot)=> {
+                            
+                            black.innerHTML = `
+                            <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                            `;
+
+                            var oldViews = snapshot.val().views;
+
+                            update(ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/'), {
+                                views: oldViews + 1
+                            })
+                        })
+                    
+                    })
+                 
+                })
+                
+            }
+           
+        })
+     
+    })
+    
+}
+
 function loadTrainingVideos() {
 
     var divTrainingVids = document.getElementById('divTrainingVids');
@@ -158,6 +212,10 @@ function loadTrainingVideos() {
                                 })
 
                                 divTrainingVids.innerHTML = append;
+
+                                for(var a = 0; a < btnPlayTrainingVids.length; a++) {
+                                    btnPlayTrainingVids.addEventListener('click', playTrainingVids);
+                                }
                             })
                         
                         })
@@ -176,6 +234,7 @@ function loadTrainingVideos() {
     }
 }
 
+//-----------------------------------------------------------------
 
-dropCourse.addEventListener('click', loadCerti);
+dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
