@@ -78,7 +78,6 @@ function loadCourse() {
 loadCourse();
 
 function loadCerti() {
-    console.log('changed');
     var divCerti = document.getElementById('divCerti');
 
     if(dropCourse.value != "Select Course") {
@@ -96,12 +95,12 @@ function loadCerti() {
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
                     onValue(path2, (snapshot)=> {
                         snapshot.forEach((childSnapshot)=> {
-                            
-                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + childSnapshot.key + '/');
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
                             onValue(path3, (snapshot)=> {
                                 append+= 
                                 ` <div class="clickables">
-                                    <h2>${dropCourse.value}_${childSnapshot.key}</h2>
+                                    <h2>${dropCourse.value}_${sessBatch}</h2>
                                     <a href = "${snapshot.val().link}"><img src="img-h6rv2c/btnDownload.png"></a>
                                 </div>`;
                             })
