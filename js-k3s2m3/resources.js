@@ -161,7 +161,7 @@ function playTrainingVids() {
                         get(path3).then((snapshot)=> {
                             
                             black.innerHTML = `
-                            <iframe src="${snapshot.val().link}" FRAMEBORDER=0 MARGINWIDTH=0 MARGINHEIGHT=0 SCROLLING=NO allowfullscreen></iframe>
+                            <iframe src="${snapshot.val().link}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
                             `;
 
                             var oldViews = snapshot.val().views;
