@@ -85,7 +85,7 @@ function loadCerti() {
 
     if(dropCourse.value != "Select Course") {
         const path = ref(db, 'accounts/trainees/');
-        onValue(path, (snapshot)=> {
+        get(path).then((snapshot)=> {
             
             var append = "";
             
@@ -96,11 +96,11 @@ function loadCerti() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                    onValue(path2, (snapshot)=> {
+                    get(path2).then((snapshot)=> {
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
-                            onValue(path3, (snapshot)=> {
+                            get(path3).then((snapshot)=> {
                                 append+= 
                                 ` <div class="clickables">
                                     <h2>${dropCourse.value}_${sessBatch}</h2>
