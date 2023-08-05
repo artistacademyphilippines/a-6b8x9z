@@ -63,7 +63,7 @@ function loadCourse() {
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
                 onValue(path2, (snapshot)=> {
-                    console.log(snapshot);
+                    console.log(snapshot.key);
                 })
 
             }
