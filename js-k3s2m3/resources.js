@@ -172,10 +172,10 @@ function loadTrainingVideos() {
         })
     }
     else {
-        
+
         console.log(dropCourse.value);
     }
 }
 loadTrainingVideos();
 
-dropCourse.addEventListener('change', loadCerti);
+dropCourse.addEventListener('click', loadCerti);
