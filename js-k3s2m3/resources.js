@@ -144,7 +144,7 @@ function playTrainingVids() {
     
     
     const path = ref(db, 'accounts/trainees/');
-    onValue(path).then((snapshot)=> {
+    get(path).then((snapshot)=> {
     
         snapshot.forEach((childSnapshot)=> {
 
