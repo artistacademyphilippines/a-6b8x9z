@@ -19,15 +19,16 @@ const db = getDatabase();
 
 
 //--check first if user is currently logged in
-
+var userEmail = "";
 var bodyBlue = document.getElementById('bodyBlue');
 
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
 
+        userEmail = user.email;
         var sessEmail = sessionStorage.getItem("sessEmail");
-      
+        
         if((sessEmail != "") && (sessEmail != null)) {
             bodyBlue.style.visibility = "visible";
 
@@ -36,7 +37,7 @@ onAuthStateChanged(auth, (user) => {
         else {
           signOut(auth);
         }
-        
+
     }
 
     else {
@@ -48,4 +49,14 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
+//--------------------------Load Course---------------------------
 
+var dropCourse = document.getElementById('dropCourse');
+
+function loadCourse() {
+    var append = `<option value="none" class="dropOption">Select Course</option>`;
+
+    const path = ref(db, 'accounts/trainees/');
+
+}
+console.log(userEmail);
