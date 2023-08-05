@@ -155,18 +155,17 @@ function loadTrainingVideos() {
                                         <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
                                     </div>
                                     <div class="clickLines"></div>`;
-
-                                    console.log('1: ' + append);
                                 })
-                                console.log('2: ' + append);
+
+                                divTrainingVids.innerHTML = append;
                             })
-                            console.log('3: ' + append);
+                        
                         })
-                        console.log('4: ' + append);
+                     
                     })
-                    console.log('5: ' + append);
+                    
                 }
-                console.log('6: ' + append);
+               
             })
          
         })
