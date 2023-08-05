@@ -72,6 +72,23 @@
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+#frm2::-webkit-scrollbar {
+    height: 0px;
+}
+  
+#frm2::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.3);
+}
+
+.cards {
+    width: 100%;
+    aspect-ratio: 4/3;
 }
 
 
@@ -108,3 +125,4 @@
     transform: rotate(45deg);
     cursor: pointer;
 }
+
