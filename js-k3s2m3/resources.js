@@ -135,6 +135,7 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 function playTrainingVids() {
     var vidTitle = this.parentElement.children[0].innerText;
     
+    console.log(vidTitle);
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
