@@ -136,7 +136,7 @@ function playTrainingVids() {
     var vidTitle = this.parentElement.children[0].innerText;
 
     console.log(vidTitle);
-    
+
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
@@ -211,23 +211,22 @@ function loadTrainingVideos() {
                                         <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
                                     </div>
                                     <div class="clickLines"></div>`;
+
+                                    console.log('1:' + append);
                                 })
 
+                                console.log('2:' + append);
                                 divTrainingVids.innerHTML = append;
                             })
-                        
+                            console.log('3:' + append);
                         })
-                     
+                        console.log('4:' + append);
                     })
-                    
+                    console.log('5:' + append);
                 }
-               
+                console.log('6:' + append);
             })
-        
-            for(var a = 0; a < btnPlayTrainingVids.length; a++) {
-                btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
-            }
-
+            console.log('7:' + append);
         })
     }
     else {
