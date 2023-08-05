@@ -79,14 +79,14 @@ loadCourse();
 
 function loadCerti() {
     
+    var divCerti = document.getElementById('divCerti');
 
     if(dropCourse.value != "Select Course") {
         const path = ref(db, 'accounts/trainees/');
         onValue(path, (snapshot)=> {
             
             var append = "";
-            var divCerti = document.getElementById('divCerti');
-
+            
             snapshot.forEach((childSnapshot)=> {
 
                 if(childSnapshot.val().email == sessEmail) {
@@ -103,7 +103,8 @@ function loadCerti() {
                                 ` <div class="clickables">
                                     <h2>${dropCourse.value}_${sessBatch}</h2>
                                     <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
-                                </div>`;
+                                </div>
+                                <div class="clickLines"></div>`;
                                 divCerti.innerHTML = append;
                             })
                            
@@ -118,5 +119,62 @@ function loadCerti() {
         })
     }
 
+    else {
+
+        divCerti.innerHTML = "";
+    }
+
 }
+
+function loadTrainingVideos() {
+
+    var divTrainingVids = document.getElementById('divTrainingVids')
+
+    if(dropCourse.value != "Select Course") {
+        const path = ref(db, 'accounts/trainees/');
+        onValue(path, (snapshot)=> {
+            
+            var append = "";
+        
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                    onValue(path2, (snapshot)=> {
+                        snapshot.forEach((childSnapshot)=> {
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
+                            onValue(path3, (snapshot)=> {
+                                snapshot.forEach((childSnapshot)=> {
+                                    append += 
+                                    `<div class="clickables">
+                                        <h2>${childSnapshot.key}</h2>
+                                        <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
+                                    </div>
+                                    <div class="clickLines"></div>`;
+
+                                    console.log('1: ' + append);
+                                })
+                                console.log('2: ' + append);
+                            })
+                            console.log('3: ' + append);
+                        })
+                        console.log('4: ' + append);
+                    })
+                    console.log('5: ' + append);
+                }
+                console.log('6: ' + append);
+            })
+         
+        })
+    }
+    else {
+        divTrainingVids.innerHTML = "";
+    }
+}
+loadTrainingVideos();
+
 dropCourse.addEventListener('change', loadCerti);
