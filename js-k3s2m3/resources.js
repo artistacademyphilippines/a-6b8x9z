@@ -104,17 +104,17 @@ function loadCerti() {
                                     <h2>${dropCourse.value}_${sessBatch}</h2>
                                     <a href = "${snapshot.val().link}"><img src="img-h6rv2c/btnDownload.png"></a>
                                 </div>`;
-                                console.log("1: " + append);
+                                divCerti.innerHTML = append;
                             })
-                            console.log("2: " + append);
+                           
                         })
-                        console.log("3: " + append);
+                       
                     })
-                    console.log("4: " + append);
+               
                 }
-                console.log("5: " + append);
+                
             })
-            console.log("6: " + append);
+         
         })
     }
 
