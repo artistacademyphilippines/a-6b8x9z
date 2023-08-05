@@ -27,6 +27,7 @@ onAuthStateChanged(auth, (user) => {
     if (user) {
 
         userEmail = user.email;
+        console.log(userEmail);
         var sessEmail = sessionStorage.getItem("sessEmail");
         
         if((sessEmail != "") && (sessEmail != null)) {
@@ -59,4 +60,4 @@ function loadCourse() {
     const path = ref(db, 'accounts/trainees/');
 
 }
-console.log(userEmail);
+
