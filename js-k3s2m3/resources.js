@@ -119,7 +119,7 @@ function loadCerti() {
         })
     }
 
-    else {
+    else if(dropCourse.value == "Select Course") {
 
         console.log(dropCourse.value);
     }
@@ -171,7 +171,7 @@ function loadTrainingVideos() {
          
         })
     }
-    else {
+    else if(dropCourse.value == "Select Course") {
 
         console.log(dropCourse.value);
     }
