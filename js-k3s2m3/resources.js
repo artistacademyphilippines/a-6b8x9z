@@ -153,12 +153,12 @@ function playTrainingVids() {
                 var sessID = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                onValue(path2, (snapshot)=> {
+                get(path2).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
 
                         var sessBatch = childSnapshot.key;
                         const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/');
-                        onValue(path3, (snapshot)=> {
+                        get(path3).then((snapshot)=> {
                             
                             black.innerHTML = `
                             <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
