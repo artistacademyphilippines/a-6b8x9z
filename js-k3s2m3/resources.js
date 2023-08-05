@@ -212,10 +212,6 @@ function loadTrainingVideos() {
                                 })
 
                                 divTrainingVids.innerHTML = append;
-
-                                for(var a = 0; a < btnPlayTrainingVids.length; a++) {
-                                    btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
-                                }
                             })
                         
                         })
@@ -225,7 +221,11 @@ function loadTrainingVideos() {
                 }
                
             })
-         
+        
+            for(var a = 0; a < btnPlayTrainingVids.length; a++) {
+                btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
+            }
+            
         })
     }
     else {
