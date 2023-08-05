@@ -78,7 +78,7 @@ function loadCourse() {
 loadCourse();
 
 function loadCerti() {
-
+    console.log('changed');
     var divCerti = document.getElementById('divCerti');
 
     if(dropCourse.value != "Select Course") {
