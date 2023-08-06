@@ -121,11 +121,6 @@ function loadCerti() {
         })
     }
 
-    else {
-
-        console.log(dropCourse.value);
-    }
-
 }
 
 //---------------------------Training Videos-----------------------
@@ -229,13 +224,6 @@ function loadTrainingVideos() {
             })
             
         })
-
-       
-
-    }
-    else {
-
-        console.log(dropCourse.value);
     }
 }
 
@@ -347,3 +335,4 @@ function loadBasicFiles() {
 dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
 dropCourse.addEventListener('change', loadOtherVideos);
+dropCourse.addEventListener('change', loadBasicFiles);
