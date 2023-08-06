@@ -270,6 +270,7 @@ function playOtherVids() {
 
 function loadOtherVideos() {
 
+    console.log('load other videos');
     var divOtherVids = document.getElementById('divOtherVids');
 
     if(dropCourse.value != "Select Course") {
