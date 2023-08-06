@@ -121,6 +121,11 @@ function loadCerti() {
          
         })
     }
+    
+    else {
+        console.log('puqeng ina');
+    }
+
 }
 
 
@@ -226,6 +231,10 @@ function loadTrainingVideos() {
             })
             
         })
+    }
+
+    else {
+        console.log('puqeng ina');
     }
 }
 
