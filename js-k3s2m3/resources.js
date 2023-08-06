@@ -82,9 +82,10 @@ loadCourse();
 function loadCerti() {
 
     var divCerti = document.getElementById('divCerti');
-    var append = "";
-
+    
     if(dropCourse.value != "Select Course") {
+
+        var append = "";
 
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
@@ -103,7 +104,7 @@ function loadCerti() {
                             get(path3).then((snapshot)=> {
                                 append+= 
                                 ` <div class="clickables">
-                                    <h2>${dropCourse.value}_${sessBatch}</h2>
+                                    <h2>${dropCourse.value}_${sessBatch}_</h2>
                                     <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
                                 </div>
                                 <div class="clickLines"></div>`;
@@ -120,13 +121,6 @@ function loadCerti() {
          
         })
     }
-
-    else {
-
-        append = "";
-        document.getElementById('divCerti').innerHTML = "";
-    }
-
 }
 
 
@@ -186,12 +180,11 @@ function playTrainingVids() {
 function loadTrainingVideos() {
 
     var divTrainingVids = document.getElementById('divTrainingVids');
-    var append = "";
 
     if(dropCourse.value != "Select Course") {
 
-        
-        
+        var append = "";
+    
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
         
@@ -233,11 +226,6 @@ function loadTrainingVideos() {
             })
             
         })
-    }
-
-    else {
-        append = "";
-        document.getElementById('divTrainingVids').innerHTML = "";
     }
 }
 
