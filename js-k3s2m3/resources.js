@@ -275,12 +275,13 @@ function loadOtherVideos() {
     if(dropCourse.value != "Select Course") {
 
         var append = "";
-        const path = ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/');
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/');
 
         get(path).then((snapshot)=> {
             snapshot.forEach((childSnapshot)=> {
-                
+
                 console.log(childSnapshot.key);
+
                 append += 
                 `<div class="clickables">
                     <h2>${childSnapshot.key}</h2>
