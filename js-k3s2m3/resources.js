@@ -279,22 +279,23 @@ function loadOtherVideos() {
 
         get(path).then((snapshot)=> {
             snapshot.forEach((childSnapshot)=> {
+                
+                console.log(childSnapshot.key);
                 append += 
                 `<div class="clickables">
                     <h2>${childSnapshot.key}</h2>
                     <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
                 </div>
                 <div class="clickLines"></div>`;
-                console.log(append);
-
+                
             })
-            console.log(append);
+            
             divOtherVids.innerHTML = append;
             for(var a = 0; a < btnPlayOtherVids.length; a++) {
                 btnPlayOtherVids[a].addEventListener('click', playOtherVids);
             }
         })
-        console.log(append);
+        
     }
 
 }
