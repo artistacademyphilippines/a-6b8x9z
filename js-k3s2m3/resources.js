@@ -299,6 +299,51 @@ function loadOtherVideos() {
 
 }
 
+//-----------------------------Basic Files-------------------------
+
+var btnBasicFiles = document.getElementsByClassName('btnBasicFiles');
+
+function downloadBasicFiles() {
+    var fileName = this.parentElement.children[0].innerText;
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + fileName + '/');
+    get(path).then((snapshot)=> {
+        window.location.href = snapshot.val().link;
+
+        newDownload = snapshot.val().downloads + 1;
+
+        update(path, {
+            downloads: newDownload
+        })
+    })
+}
+
+function loadBasicFiles() {
+
+    var divBasicFiles = document.getElementById('divBasicFiles');
+
+    if(dropCourse.value != "Select Course") {
+        var append = "";
+
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/');
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                append += 
+                `<div class="clickables">
+                    <h2>${childSnapshot.key}</h2>
+                    <img src="img-h6rv2c/btnDownload.png" class="btnBasicFiles">
+                </div>
+                <div class="clickLines"></div>`;
+            })
+
+            divBasicFiles.innerHTML = append;
+            for(var a = 0; a < btnBasicFiles.length; a++) {
+                btnBasicFiles[a].addEventListener('click', downloadBasicFiles);
+            }
+        })
+    }
+}
+
 dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
 dropCourse.addEventListener('change', loadOtherVideos);
