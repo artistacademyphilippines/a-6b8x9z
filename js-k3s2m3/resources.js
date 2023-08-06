@@ -82,10 +82,9 @@ loadCourse();
 function loadCerti() {
 
     var divCerti = document.getElementById('divCerti');
+    var append = "";
 
     if(dropCourse.value != "Select Course") {
-
-        var append = "";
 
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
@@ -122,7 +121,14 @@ function loadCerti() {
         })
     }
 
+    else {
+
+        append = "";
+        divCerti.innerHTML = "";
+    }
+
 }
+
 
 //---------------------------Training Videos-----------------------
 const black = document.getElementById('black');
@@ -180,10 +186,11 @@ function playTrainingVids() {
 function loadTrainingVideos() {
 
     var divTrainingVids = document.getElementById('divTrainingVids');
+    var append = "";
 
     if(dropCourse.value != "Select Course") {
 
-        var append = "";
+        
         
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
@@ -226,6 +233,11 @@ function loadTrainingVideos() {
             })
             
         })
+    }
+
+    else {
+        append = "";
+        divTrainingVids.innerHTML = "";
     }
 }
 
