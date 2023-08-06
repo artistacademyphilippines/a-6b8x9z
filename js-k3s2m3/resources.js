@@ -241,7 +241,24 @@ function loadTrainingVideos() {
     }
 }
 
-//-----------------------------------------------------------------
+//----------------------------Other Videos--------------------------
+
+var btnPlayOtherVids = document.getElementsByClassName('btnPlayOtherVids');
+
+function loadOtherVideos() {
+    var divOtherVids = document.getElementById('divOtherVids');
+
+    if(dropCourse.value != "Select Course") {
+
+        var append = 
+        `<div class="clickables">
+            <h2>Batch 12</h2>
+            <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
+        </div>
+        <div class="clickLines"></div>`;
+    }
+
+}
 
 dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
