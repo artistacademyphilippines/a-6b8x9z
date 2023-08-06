@@ -269,6 +269,7 @@ function playOtherVids() {
 }
 
 function loadOtherVideos() {
+
     var divOtherVids = document.getElementById('divOtherVids');
 
     if(dropCourse.value != "Select Course") {
@@ -284,9 +285,9 @@ function loadOtherVideos() {
                     <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
                 </div>
                 <div class="clickLines"></div>`;
+                divOtherVids.innerHTML = append;
             })
-            divOtherVids.innerHTML = append;
-            
+
             for(var a = 0; a < btnPlayOtherVids.length; a++) {
                 btnPlayOtherVids[a].addEventListener('click', playOtherVids);
             }
