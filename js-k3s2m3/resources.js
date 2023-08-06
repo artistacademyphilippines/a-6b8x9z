@@ -252,7 +252,7 @@ function playOtherVids() {
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
 
-    const path = ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/' + vidTitle + '/');
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle + '/');
     get(path).then((snapshot)=> {
 
         black.innerHTML = `
@@ -261,7 +261,7 @@ function playOtherVids() {
 
         var oldViews = snapshot.val().views;
 
-        update(ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/' + vidTitle + '/') , {
+        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle + '/') , {
             views: oldViews + 1
         })
 
@@ -279,8 +279,6 @@ function loadOtherVideos() {
 
         get(path).then((snapshot)=> {
             snapshot.forEach((childSnapshot)=> {
-
-                console.log(childSnapshot.key);
 
                 append += 
                 `<div class="clickables">
