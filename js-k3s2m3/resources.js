@@ -84,10 +84,11 @@ function loadCerti() {
     var divCerti = document.getElementById('divCerti');
 
     if(dropCourse.value != "Select Course") {
+
+        var append = "";
+
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
-            
-            var append = "";
             
             snapshot.forEach((childSnapshot)=> {
 
@@ -181,10 +182,11 @@ function loadTrainingVideos() {
     var divTrainingVids = document.getElementById('divTrainingVids');
 
     if(dropCourse.value != "Select Course") {
+
+        var append = "";
+        
         const path = ref(db, 'accounts/trainees/');
         get(path).then((snapshot)=> {
-            
-            var append = "";
         
             snapshot.forEach((childSnapshot)=> {
 
