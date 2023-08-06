@@ -135,8 +135,6 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 function playTrainingVids() {
     var vidTitle = this.parentElement.children[0].innerText;
     
-    console.log(vidTitle);
-    
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
@@ -245,20 +243,58 @@ function loadTrainingVideos() {
 
 var btnPlayOtherVids = document.getElementsByClassName('btnPlayOtherVids');
 
+function playOtherVids() {
+
+    var vidTitle = this.parentElement.children[0].innerText;
+    
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/' + vidTitle + '/');
+    get(path).then((snapshot)=> {
+
+        black.innerHTML = `
+        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        `;
+
+        var oldViews = snapshot.val().views;
+
+        update(ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/' + vidTitle + '/') , {
+            views: oldViews + 1
+        })
+
+    })
+}
+
 function loadOtherVideos() {
     var divOtherVids = document.getElementById('divOtherVids');
 
     if(dropCourse.value != "Select Course") {
 
-        var append = 
-        `<div class="clickables">
-            <h2>Batch 12</h2>
-            <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
-        </div>
-        <div class="clickLines"></div>`;
+        var append = "";
+        const path = ref(db, 'courses/' + dropCourse.value + '/batch/resources/public/videos/');
+
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                append += 
+                `<div class="clickables">
+                    <h2>${childSnapshot.key}</h2>
+                    <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
+                </div>
+                <div class="clickLines"></div>`;
+            })
+            divOtherVids.innerHTML = append;
+            
+            for(var a = 0; a < btnPlayOtherVids.length; a++) {
+                btnPlayOtherVids[a].addEventListener('click', playOtherVids);
+            }
+        })
     }
 
 }
 
 dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
+dropCourse.addEventListener('change', loadOtherVideos);
