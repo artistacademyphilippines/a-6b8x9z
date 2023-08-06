@@ -124,7 +124,7 @@ function loadCerti() {
     else {
 
         append = "";
-        divCerti.innerHTML = "";
+        document.getElementById('divCerti').innerHTML = "";
     }
 
 }
@@ -237,7 +237,7 @@ function loadTrainingVideos() {
 
     else {
         append = "";
-        divTrainingVids.innerHTML = "";
+        document.getElementById('divTrainingVids').innerHTML = "";
     }
 }
 
