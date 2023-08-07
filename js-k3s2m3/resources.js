@@ -382,13 +382,26 @@ function checkIfOnline() {
                         if(childSnapshot.val().email == sessEmail) {
 
                             var sessID = childSnapshot.key;
-                            
-                            update(ref(db, 'accounts/trainees/' + sessID), {
-                                status: "online"
-                            })
-                            .catch((error)=> {
-                                alert(error.code);
-                            })
+
+                            if(childSnapshot.val().status == "suspended") {
+                                signOut(auth)
+                                .then(()=> {
+                                    sessionStorage.clear();
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                }) 
+                            }
+
+                            else {
+                                update(ref(db, 'accounts/trainees/' + sessID), {
+                                    status: "online"
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                })
+                            }
+
                         }
                     })
                 })
@@ -400,6 +413,7 @@ function checkIfOnline() {
     }
 }
 setInterval(checkIfOnline, 500);
+
 
 
 //------------------------Check IF Offline--------------------------
