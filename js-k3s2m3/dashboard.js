@@ -224,34 +224,49 @@ setInterval(playCards, 3000);
 
 function checkIfOnline() {
 
-    var path = ref(db, ".info/connected");
-    onValue(path, (snap) => {
-        if (snap.val() === true) {
-            
-            var path2 = ref(db, 'accounts/trainees/');
-            
-            get(path2).then((snapshot)=> {
-                snapshot.forEach((childSnapshot)=> {
-                    
-                    var sessEmail = sessionStorage.getItem('sessEmail');
+    var oAuth = sessionStorage.getItem("oAuth");
+    if(oAuth == "out") {
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    }
 
-                    if(childSnapshot.val().email == sessEmail) {
+    else {
 
-                        var sessID = childSnapshot.key;
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) {
+                
+                var path2 = ref(db, 'accounts/trainees/');
+                
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
                         
-                        update(ref(db, 'accounts/trainees/' + sessID), {
-                            status: "online"
-                        })
-                        .catch((error)=> {
-                            alert(error.code);
-                        })
-                    }
-                })
-            })
+                        var sessEmail = sessionStorage.getItem('sessEmail');
 
-        } 
-        
-      });
+                        if(childSnapshot.val().email == sessEmail) {
+
+                            var sessID = childSnapshot.key;
+                            
+                            update(ref(db, 'accounts/trainees/' + sessID), {
+                                status: "online"
+                            })
+                            .catch((error)=> {
+                                alert(error.code);
+                            })
+                        }
+                    })
+                })
+
+            } 
+            
+        });
+
+    }
 }
 setInterval(checkIfOnline, 500);
 
@@ -286,4 +301,3 @@ function checkIfOffline() {
 }
 
 checkIfOffline();
-
