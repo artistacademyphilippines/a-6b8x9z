@@ -45,5 +45,5 @@ const resetPw = async() => {
 btnConfirm.addEventListener("click", resetPw);
 
 function reLogin() {
-   window.location.replace('https://artcademy.ph/login/');
+   window.location.replace('https://artcademy.ph/login');
 }
