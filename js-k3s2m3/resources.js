@@ -54,7 +54,7 @@ function loadCourse() {
     var append = `<option value="Select  Course" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
 
             if(childSnapshot.val().email == sessEmail) {
@@ -62,7 +62,7 @@ function loadCourse() {
                 var sessID = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
-                onValue(path2, (snapshot)=> {
+                get(path2).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
                     })
@@ -127,7 +127,6 @@ function loadCerti() {
     }
 
 }
-
 
 //---------------------------Training Videos-----------------------
 const black = document.getElementById('black');
