@@ -69,10 +69,8 @@ var bodyBlue = document.getElementById('bodyBlue');
 onAuthStateChanged(auth, (user) => {
 
   if (user) {
-
     
     window.location.replace('https://artcademy.ph/dashboard')
-
 
   }
     
