@@ -203,7 +203,7 @@ function loadTrainingVideos() {
                                 snapshot.forEach((childSnapshot)=> {
                                     append += 
                                     `<div class="clickables">
-                                        <h2>${childSnapshot.key}</h2>
+                                        <h2>${dropCourse.value + '_' + sessBatch + '_' + childSnapshot.key}</h2>
                                         <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
                                     </div>
                                     <div class="clickLines"></div>`;
