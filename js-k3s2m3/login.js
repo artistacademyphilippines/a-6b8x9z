@@ -123,6 +123,9 @@ onAuthStateChanged(auth, (user) => {
                   .then(()=> {
                     alertMsg.innerText = "Account has been permanently removed";
                     alertMsg.style.opacity = "1";
+                    loginEmail.value = "";
+                    loginPw.value = "";
+                    sessionStorage.clear();
                   })
                 })
               }
@@ -134,6 +137,9 @@ onAuthStateChanged(auth, (user) => {
             .then(()=> {
               alertMsg.innerText = "Account has been temporarily suspended";
               alertMsg.style.opacity = "1";
+              loginEmail.value = "";
+              loginPw.value = "";
+              sessionStorage.clear();
             })
           }
 
@@ -152,6 +158,7 @@ onAuthStateChanged(auth, (user) => {
                   alertMsg.style.opacity = "1";
                   loginEmail.value = "";
                   loginPw.value = "";
+                  sessionStorage.clear();
                 })
               })
             }
