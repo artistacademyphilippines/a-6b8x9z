@@ -18,6 +18,11 @@ const auth = getAuth(app);
 const db = getDatabase();
 
 
+//--check first if user is currently logged in
+
+var sessEmail = sessionStorage.getItem("sessEmail");
+var bodyBlue = document.getElementById('bodyBlue');
+
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
