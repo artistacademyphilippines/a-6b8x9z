@@ -269,12 +269,8 @@ function checkIfOnline() {
                                 deleteUser(currUser)
                                 .then(()=> {
                                     
-                                    alertMsg.innerText = "Account has been permanently removed";
-                                    alertMsg.style.opacity = "1";
-                                    loginEmail.value = "";
-                                    loginPw.value = "";
                                     sessionStorage.clear();
-                                    
+                                    window.location.replace("https://artcademy.ph/login");
                                 })
 
                             }
