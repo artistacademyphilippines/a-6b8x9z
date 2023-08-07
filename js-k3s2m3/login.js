@@ -166,9 +166,7 @@ onAuthStateChanged(auth, (user) => {
         }
       })
     })
-    .catch((error)=> {
-      alert(error.code);
-    })
+
   }
     
   else {
