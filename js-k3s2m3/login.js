@@ -71,6 +71,7 @@ onAuthStateChanged(auth, (user) => {
   if (user) {
     
     var sessEmail = "";
+    const currUser = auth.currentUser;
 
     if((loginEmail.value != "") && (loginEmail.value != null)) {
       sessEmail = loginEmail.value;
@@ -117,7 +118,7 @@ onAuthStateChanged(auth, (user) => {
               
                 remove(ref(db, 'accounts/trainees/' + sessID))
                 .then(()=> {
-                  deleteUser(user)
+                  deleteUser(currUser)
                   .then(()=> {
                     alertMsg.innerText = "Account has been permanently removed";
                     alertMsg.style.opacity = "1";
