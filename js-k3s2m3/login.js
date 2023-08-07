@@ -120,14 +120,13 @@ onAuthStateChanged(auth, (user) => {
                 .then(()=> {
                   deleteUser(currUser)
                   .then(()=> {
-                    signOut(auth)
-                    .then(()=> {
+                    
                       alertMsg.innerText = "Account has been permanently removed";
                       alertMsg.style.opacity = "1";
                       loginEmail.value = "";
                       loginPw.value = "";
                       sessionStorage.clear();
-                    })
+                    
                   })
                 })
               
