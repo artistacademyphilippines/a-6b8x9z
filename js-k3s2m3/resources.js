@@ -51,10 +51,10 @@ onAuthStateChanged(auth, (user) => {
 var dropCourse = document.getElementById('dropCourse');
 
 function loadCourse() {
-    var append = `<option value="Select  Course" class="dropOption">Select Course</option>`;
+    var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
 
             if(childSnapshot.val().email == sessEmail) {
@@ -62,7 +62,7 @@ function loadCourse() {
                 var sessID = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
-                get(path2).then((snapshot)=> {
+                onValue(path2 ,(snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
                     })
@@ -120,10 +120,6 @@ function loadCerti() {
             })
          
         })
-    }
-    
-    else {
-        console.log('puqeng ina');
     }
 
 }
