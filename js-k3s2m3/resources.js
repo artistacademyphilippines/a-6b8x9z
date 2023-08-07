@@ -383,7 +383,7 @@ function checkIfOnline() {
 
                             var sessID = childSnapshot.key;
 
-                            if((childSnapshot.val().status == "suspended") || (childSnapshot.val().status == "deletion")) {
+                            if(childSnapshot.val().status == "suspended") {
                                 signOut(auth)
                                 .then(()=> {
                                     sessionStorage.clear();
@@ -391,6 +391,23 @@ function checkIfOnline() {
                                 .catch((error)=> {
                                     alert(error.code);
                                 }) 
+                            }
+
+                            else if (childSnapshot.val().status == "deletion") {
+
+                                const currUser = auth.currentUser;
+
+                                deleteUser(currUser)
+                                .then(()=> {
+                                    
+                                    alertMsg.innerText = "Account has been permanently removed";
+                                    alertMsg.style.opacity = "1";
+                                    loginEmail.value = "";
+                                    loginPw.value = "";
+                                    sessionStorage.clear();
+                                    
+                                })
+
                             }
 
                             else {
@@ -415,7 +432,6 @@ function checkIfOnline() {
 setInterval(checkIfOnline, 500);
 
 
-
 //------------------------Check IF Offline--------------------------
 
 function checkIfOffline() {
@@ -424,22 +440,25 @@ function checkIfOffline() {
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-            if(sessEmail == childSnapshot.val().email) {
-                var sessID = childSnapshot.key;
+            if((sessEmail != null) || (sessEmail != "")) {
 
-                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
-                onDisconnect(checkCon).set("offline")
-                .then(()=> {
-                    var newDate = new Date();
-                    var currMonth = newDate.getMonth() + 1;
-                    var currDate = newDate.getDate();
-                    var currYear = newDate.getFullYear();
+                if(sessEmail == childSnapshot.val().email) {
+                    var sessID = childSnapshot.key;
 
-                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
-                    update(path2, {
-                        lastOnline: currMonth + "." + currDate + "." + currYear
+                    var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
+                    onDisconnect(checkCon).set("offline")
+                    .then(()=> {
+                        var newDate = new Date();
+                        var currMonth = newDate.getMonth() + 1;
+                        var currDate = newDate.getDate();
+                        var currYear = newDate.getFullYear();
+
+                        const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
+                        update(path2, {
+                            lastOnline: currMonth + "." + currDate + "." + currYear
+                        })
                     })
-                })
+                }
             }
         })
     })
