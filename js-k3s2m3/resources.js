@@ -104,7 +104,7 @@ function loadCerti() {
                             get(path3).then((snapshot)=> {
                                 append+= 
                                 ` <div class="clickables">
-                                    <h2>${dropCourse.value}_${sessBatch}_</h2>
+                                    <h2>${dropCourse.value}_${sessBatch}</h2>
                                     <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
                                 </div>
                                 <div class="clickLines"></div>`;
@@ -232,10 +232,6 @@ function loadTrainingVideos() {
             
         })
     }
-
-    else {
-        console.log('puqeng ina');
-    }
 }
 
 //----------------------------Other Videos--------------------------
@@ -343,7 +339,17 @@ function loadBasicFiles() {
     }
 }
 
+function clearFields() {
+    if(dropCourse.value == "Select Course") {
+        document.getElementById('divBasicFiles').innerHTML = "";
+        document.getElementById('divOtherVids').innerHTML = "";
+        document.getElementById('divTrainingVids').innerHTML = "";
+        document.getElementById('divCerti').innerHTML = "";
+    }
+}
+
 dropCourse.addEventListener('change', loadCerti);
 dropCourse.addEventListener('change', loadTrainingVideos);
 dropCourse.addEventListener('change', loadOtherVideos);
 dropCourse.addEventListener('change', loadBasicFiles);
+dropCourse.addEventListener('change', clearFields);
