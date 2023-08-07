@@ -91,7 +91,7 @@ onAuthStateChanged(auth, (user) => {
           //check if status is for deletion
 
           if(childSnapshot.val().status == "deletion") { //if account status is for deletion
-
+            console.log("deletion");
             //delete courses and batches records first
             const path2 = ref(db, 'courses/');
             onValue(path2, (snapshot)=> {
