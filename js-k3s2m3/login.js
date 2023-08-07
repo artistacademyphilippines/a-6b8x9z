@@ -91,18 +91,18 @@ onAuthStateChanged(auth, (user) => {
           //check if status is for deletion
 
           if(childSnapshot.val().status == "deletion") { //if account status is for deletion
-            console.log("deletion");
+            
             //delete courses and batches records first
             const path2 = ref(db, 'courses/');
             onValue(path2, (snapshot)=> {
-              if(snapshot.exists()) {   //check if there's existing courses   
+            
                 snapshot.forEach((childSnapshot)=> {
                   //get course name
                   var sessCourses = childSnapshot.key;
 
                   const path3 = ref(db, 'courses/' + sessCourses + '/batch/');
                   get(path3).then((snapshot)=> {
-                    if(snapshot.exists()) { //check if there's existing batches   
+                     
                       snapshot.forEach((childSnapshot)=> {
                         //get batch no.
                         var sessBatch = childSnapshot.key;
@@ -111,12 +111,10 @@ onAuthStateChanged(auth, (user) => {
                         remove(path4);
 
                       })
-                    }
+                    
                   })
                 })
-              }
-
-              else { // delete trainee records then delete firebase account
+              
                 remove(ref(db, 'accounts/trainees/' + sessID))
                 .then(()=> {
                   deleteUser(user)
@@ -128,7 +126,7 @@ onAuthStateChanged(auth, (user) => {
                     sessionStorage.clear();
                   })
                 })
-              }
+              
             })
           }
 
