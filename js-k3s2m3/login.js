@@ -94,7 +94,7 @@ onAuthStateChanged(auth, (user) => {
             //check if there are multiple warnings
             if(sessWarning < 2) {
               
-              update(ref(db, 'courses/trainees/' + sessID), {
+              update(ref(db, 'accounts/trainees/' + sessID), {
                 warning: sessWarning + 1,
                 status: "suspended"
               })
