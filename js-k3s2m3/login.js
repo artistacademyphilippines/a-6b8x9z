@@ -70,7 +70,103 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
     
-    window.location.replace('https://artcademy.ph/dashboard');
+    var sessEmail = "";
+
+    if((loginEmail.value != "") && (loginEmail.value != null)) {
+      sessEmail = loginEmail.value;
+    }
+    else {
+      sessEmail = sessionStorage.getItem('sessEmail');
+    }
+    
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+      snapshot.forEach((childSnapshot)=> {
+
+        var sessID = childSnapshot.key;
+        var sessWarning = childSnapshot.val().warning;
+
+        if(childSnapshot.val().email == sessEmail) {
+
+          //check if status is for deletion
+
+          if(childSnapshot.val().status == "deletion") { //if account status is for deletion
+
+            //delete courses and batches records first
+            const path2 = ref(db, 'courses/');
+            onValue(path2, (snapshot)=> {
+              if(snapshot.exists()) {   //check if there's existing courses   
+                snapshot.forEach((childSnapshot)=> {
+                  //get course name
+                  var sessCourses = childSnapshot.key;
+
+                  const path3 = ref(db, 'courses/' + sessCourses + '/batch/');
+                  get(path3).then((snapshot)=> {
+                    if(snapshot.exists()) { //check if there's existing batches   
+                      snapshot.forEach((childSnapshot)=> {
+                        //get batch no.
+                        var sessBatch = childSnapshot.key;
+
+                        const path4 = ref(db, 'courses/' + sessCourses + '/batch/' + sessBatch + '/trainees/' + sessID);
+                        remove(path4);
+
+                      })
+                    }
+                  })
+                })
+              }
+
+              else { // delete trainee records then delete firebase account
+                remove(ref(db, 'accounts/trainees/' + sessID))
+                .then(()=> {
+                  deleteUser(user)
+                  .then(()=> {
+                    alertMsg.innerText = "Account has been permanently removed";
+                    alertMsg.style.opacity = "1";
+                  })
+                })
+              }
+            })
+          }
+
+          else if (childSnapshot.val().status == "suspended") { // check if account is suspended
+            signOut(auth)
+            .then(()=> {
+              alertMsg.innerText = "Account has been temporarily suspended";
+              alertMsg.style.opacity = "1";
+            })
+          }
+
+          else if (childSnapshot.val().status == "online") {
+            //check if there are multiple warnings
+            if(sessWarning < 2) {
+              
+              update(ref(db, 'courses/trainees/' + sessID), {
+                warning: sessWarning + 1,
+                status: "suspended"
+              })
+              .then(()=> {
+                signOut(auth)
+                .then(()=> {
+                  alertMsg.innerText = "Account has been temporarily suspended";
+                  alertMsg.style.opacity = "1";
+                })
+              })
+            }
+
+            else {
+              update(ref(db, 'courses/trainees/' + sessID), {
+                status: "deletion"
+              })
+            }
+          }
+
+          else if(childSnapshot.val().status == "offline") {
+            window.location.replace('https://artcademy.ph/dashboard');
+          }
+        }
+      })
+    })
 
   }
     
