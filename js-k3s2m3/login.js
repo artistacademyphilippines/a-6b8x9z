@@ -164,7 +164,7 @@ onAuthStateChanged(auth, (user) => {
             }
 
             else {
-              update(ref(db, 'courses/trainees/' + sessID), {
+              update(ref(db, 'accounts/trainees/' + sessID), {
                 status: "deletion"
               })
             }
