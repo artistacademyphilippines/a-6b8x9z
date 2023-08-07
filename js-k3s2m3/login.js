@@ -95,14 +95,14 @@ onAuthStateChanged(auth, (user) => {
             //delete courses and batches records first
             const path2 = ref(db, 'courses/');
             onValue(path2, (snapshot)=> {
-              if(snapshot.exists()) {   //check if there's existing courses   
+                //check if there's existing courses   
                 snapshot.forEach((childSnapshot)=> {
                   //get course name
                   var sessCourses = childSnapshot.key;
 
                   const path3 = ref(db, 'courses/' + sessCourses + '/batch/');
                   get(path3).then((snapshot)=> {
-                    if(snapshot.exists()) { //check if there's existing batches   
+                    //check if there's existing batches   
                       snapshot.forEach((childSnapshot)=> {
                         //get batch no.
                         var sessBatch = childSnapshot.key;
@@ -111,22 +111,21 @@ onAuthStateChanged(auth, (user) => {
                         remove(path4);
 
                       })
-                    }
+                    
                   })
-                })
-              }
-
-              else { // delete trainee records then delete firebase account
-                remove(ref(db, 'accounts/trainees/' + sessID))
-                .then(()=> {
-                  deleteUser(user)
-                  .then(()=> {
-                    alertMsg.innerText = "Account has been permanently removed";
-                    alertMsg.style.opacity = "1";
-                  })
-                })
-              }
+                }) 
             })
+
+            // delete trainee records then delete firebase account
+            remove(ref(db, 'accounts/trainees/' + sessID))
+            .then(()=> {
+              deleteUser(user)
+              .then(()=> {
+                alertMsg.innerText = "Account has been permanently removed";
+                alertMsg.style.opacity = "1";
+              })
+            })
+
           }
 
           else if (childSnapshot.val().status == "suspended") { // check if account is suspended
@@ -167,7 +166,9 @@ onAuthStateChanged(auth, (user) => {
         }
       })
     })
-
+    .catch((error)=> {
+      alert(error.code);
+    })
   }
     
   else {
