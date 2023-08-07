@@ -383,7 +383,7 @@ function checkIfOnline() {
 
                             var sessID = childSnapshot.key;
 
-                            if(childSnapshot.val().status == "suspended") {
+                            if((childSnapshot.val().status == "suspended") || (childSnapshot.val().status == "deletion")) {
                                 signOut(auth)
                                 .then(()=> {
                                     sessionStorage.clear();
