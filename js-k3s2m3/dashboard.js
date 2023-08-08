@@ -263,7 +263,7 @@ function checkIfOnline() {
                             }
 
                             else if (childSnapshot.val().status == "deletion") {
-
+    
                                 sessionStorage.clear();
                                 window.location.replace("https://artcademy.ph/login");
 
@@ -274,7 +274,7 @@ function checkIfOnline() {
                                 var currMonth = newDate.getMonth() + 1;
                                 var currDate = newDate.getDate();
                                 var currYear = newDate.getFullYear();
-
+            
                                 update(ref(db, 'accounts/trainees/' + sessID), {
                                     status: "online",
                                     lastOnline: currMonth + "." + currDate + "." + currYear
@@ -283,15 +283,34 @@ function checkIfOnline() {
                                     alert(error.code);
                                 })
                             }
-
                         }
                     })
                 })
-
             } 
-            
         });
-
     }
 }
 setInterval(checkIfOnline, 500);
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
+
+    var sessEmail = sessionStorage.getItem('sessEmail');
+    const path = ref(db, 'accounts/trainees/');
+
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
+                onDisconnect(checkCon).set("offline")
+            }
+        })
+    })
+}
+
+checkIfOffline();
