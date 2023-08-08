@@ -1,14 +1,1 @@
-var bodyBlue = document.getElementById('bodyBlue');
-bodyBlue.style.visibility = "visible";
-var i = 5;
-function redirect() {
-    document.getElementById('frmHeader').firstElementChild.innerText = "Oops! Page Not Found (" + i + "s)"
-    if(i == 0) {
-        window.location.replace('https://artcademy.ph/');
-    }
-    else {
-        i-=1;
-    }
-    
-}
-setInterval(redirect, 1000);
+var _0x456d0c=_0x3d70;(function(_0x4a9e51,_0x4a2cae){var _0x437275=_0x3d70,_0x375489=_0x4a9e51();while(!![]){try{var _0x5aa42f=-parseInt(_0x437275(0x170))/0x1+parseInt(_0x437275(0x163))/0x2+-parseInt(_0x437275(0x16f))/0x3*(-parseInt(_0x437275(0x15c))/0x4)+-parseInt(_0x437275(0x169))/0x5*(-parseInt(_0x437275(0x161))/0x6)+parseInt(_0x437275(0x16c))/0x7*(-parseInt(_0x437275(0x167))/0x8)+-parseInt(_0x437275(0x171))/0x9*(-parseInt(_0x437275(0x15e))/0xa)+parseInt(_0x437275(0x166))/0xb*(-parseInt(_0x437275(0x164))/0xc);if(_0x5aa42f===_0x4a2cae)break;else _0x375489['push'](_0x375489['shift']());}catch(_0x21037f){_0x375489['push'](_0x375489['shift']());}}}(_0x55a2,0xc30b8));var bodyBlue=document[_0x456d0c(0x160)](_0x456d0c(0x16d));bodyBlue['style'][_0x456d0c(0x168)]=_0x456d0c(0x16b);var i=0x5;function _0x3d70(_0x50823e,_0x5b1f71){var _0x55a266=_0x55a2();return _0x3d70=function(_0x3d70d8,_0x3ddea1){_0x3d70d8=_0x3d70d8-0x15c;var _0x14de7e=_0x55a266[_0x3d70d8];return _0x14de7e;},_0x3d70(_0x50823e,_0x5b1f71);}function redirect(){var _0xf64b3f=_0x456d0c;document['getElementById']('frmHeader')[_0xf64b3f(0x165)][_0xf64b3f(0x162)]=_0xf64b3f(0x16a)+i+'s)',i==0x0?window[_0xf64b3f(0x15f)][_0xf64b3f(0x15d)](_0xf64b3f(0x16e)):i-=0x1;}setInterval(redirect,0x3e8);function _0x55a2(){var _0x3b0cfb=['visibility','110bCmvTT','Oops!\x20Page\x20Not\x20Found\x20(','visible','37079PkToZB','bodyBlue','https://artcademy.ph/','1017498pYMxfJ','1131350PsxfLq','12668382rVetLM','16IEMieK','replace','10iSHWHA','location','getElementById','222774bHJxGG','innerText','791576TYYAvX','12oNOmVc','firstElementChild','13598123lrIoyR','1224gRCOHj'];_0x55a2=function(){return _0x3b0cfb;};return _0x55a2();}
