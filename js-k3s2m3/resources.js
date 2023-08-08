@@ -430,14 +430,14 @@ setInterval(checkIfOnline, 500);
 
 //------------------------Check IF Offline--------------------------
 
+//------------------------Check IF Offline--------------------------
+
 function checkIfOffline() {
     var sessEmail = sessionStorage.getItem('sessEmail');
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-            if((sessEmail != null) || (sessEmail != "")) {
-
                 if(sessEmail == childSnapshot.val().email) {
                     var sessID = childSnapshot.key;
 
@@ -450,12 +450,16 @@ function checkIfOffline() {
                         var currYear = newDate.getFullYear();
 
                         const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
-                        update(path2, {
-                            lastOnline: currMonth + "." + currDate + "." + currYear
+
+                        get(path2).then((snapshot)=> {
+                            if(snapshot.exists()) {
+                                update(path2, {
+                                    lastOnline: currMonth + "." + currDate + "." + currYear
+                                })
+                            }
                         })
                     })
                 }
-            }
         })
     })
 }

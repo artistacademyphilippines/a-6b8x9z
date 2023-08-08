@@ -305,8 +305,6 @@ function checkIfOffline() {
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-            if((sessEmail != null) || (sessEmail != "")) {
-
                 if(sessEmail == childSnapshot.val().email) {
                     var sessID = childSnapshot.key;
 
@@ -319,12 +317,16 @@ function checkIfOffline() {
                         var currYear = newDate.getFullYear();
 
                         const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
-                        update(path2, {
-                            lastOnline: currMonth + "." + currDate + "." + currYear
+
+                        get(path2).then((snapshot)=> {
+                            if(snapshot.exists()) {
+                                update(path2, {
+                                    lastOnline: currMonth + "." + currDate + "." + currYear
+                                })
+                            }
                         })
                     })
                 }
-            }
         })
     })
 }
