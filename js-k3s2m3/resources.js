@@ -425,11 +425,11 @@ setInterval(checkIfOnline, 500);
 //------------------------Check IF Offline--------------------------
 
 function checkIfOffline() {
-
-    var sessEmail = sessionStorage.getItem('sessEmail');
+    
     const path = ref(db, 'accounts/trainees/');
 
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
         snapshot.forEach((childSnapshot)=> {
             
             if(sessEmail == childSnapshot.val().email) {
