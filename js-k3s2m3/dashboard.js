@@ -135,12 +135,12 @@ var card1, card2, card3 = null;
 //--------------------------------Load Cards---------------------------------------
 
 function loadCards() {
-    var append = "";
-
+    
     const path = ref(db, 'settings/cards/');
     onValue(path, (snapshot)=> {
+
+        var append = "";
         snapshot.forEach((childSnapshot)=> {
-            
             append+=`<div id="card${childSnapshot.key}" class="cards"><img src="${childSnapshot.val().link}" class="imgCards"></div>`;
         })
         frm2.innerHTML = append;
