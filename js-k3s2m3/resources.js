@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getDatabase, ref, onValue, update, get, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -395,14 +395,8 @@ function checkIfOnline() {
 
                             else if (childSnapshot.val().status == "deletion") {
 
-                                const currUser = auth.currentUser;
-
-                                deleteUser(currUser)
-                                .then(()=> {
-                                    
-                                    sessionStorage.clear();
-                                    window.location.replace("https://artcademy.ph/login");
-                                })
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
 
                             }
 

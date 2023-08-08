@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
 import { getDatabase, ref, onValue, update, get, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
 const firebaseConfig = {
@@ -263,15 +263,9 @@ function checkIfOnline() {
                             }
 
                             else if (childSnapshot.val().status == "deletion") {
-
-                                const currUser = auth.currentUser;
-
-                                deleteUser(currUser)
-                                .then(()=> {
-                                    
-                                    sessionStorage.clear();
-                                    window.location.replace("https://artcademy.ph/login");
-                                })
+    
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
 
                             }
 
@@ -300,33 +294,36 @@ setInterval(checkIfOnline, 500);
 //------------------------Check IF Offline--------------------------
 
 function checkIfOffline() {
+
     var sessEmail = sessionStorage.getItem('sessEmail');
     const path = ref(db, 'accounts/trainees/');
+
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-                if(sessEmail == childSnapshot.val().email) {
-                    var sessID = childSnapshot.key;
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
 
-                    var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
-                    onDisconnect(checkCon).set("offline")
-                    .then(()=> {
-                        var newDate = new Date();
-                        var currMonth = newDate.getMonth() + 1;
-                        var currDate = newDate.getDate();
-                        var currYear = newDate.getFullYear();
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/status/');
+                onDisconnect(checkCon).set("offline")
+                .then(()=> {
+                    
+                    var newDate = new Date();
+                    var currMonth = newDate.getMonth() + 1;
+                    var currDate = newDate.getDate();
+                    var currYear = newDate.getFullYear();
 
-                        const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/');
 
-                        get(path2).then((snapshot)=> {
-                            if(snapshot.exists()) {
-                                update(path2, {
-                                    lastOnline: currMonth + "." + currDate + "." + currYear
-                                })
-                            }
-                        })
+                    get(path2).then((snapshot)=> {
+                        if(snapshot.exists()) {
+                            update(path2, {
+                                lastOnline: currMonth + "." + currDate + "." + currYear
+                            })
+                        }
                     })
-                }
+                })
+            }
         })
     })
 }
