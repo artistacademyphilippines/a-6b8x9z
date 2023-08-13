@@ -58,10 +58,19 @@ bodyBlue.style.visibility = "visible";
 
 const rightCard = document.getElementById('rightCard');
 const imgCloud = document.getElementById('imgCloud');
-const divParticles = document.getElementById('divParticles');
+const divAdventurer = document.getElementById('divAdventurer');
+const divArtist = document.getElementById('divArtist');
+const divDev = document.getElementById('divDev');
 
 imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px)";
 
+//console.log(divAdventurer.offsetTop + ', ' + divAdventurer.offsetLeft);
+divAdventurer.style.width = rightCard.clientWidth * .40 + 'px';
+divArtist.style.width = rightCard.clientWidth * .30 + 'px';
+divDev.style.width = rightCard.clientWidth * .20 + 'px';
 window.addEventListener('resize', ()=> {
     imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px)";
+    divAdventurer.style.width = rightCard.clientWidth * .40 + 'px';
+    divArtist.style.width = rightCard.clientWidth * .30 + 'px';
+    divDev.style.width = rightCard.clientWidth * .20 + 'px';
 })
