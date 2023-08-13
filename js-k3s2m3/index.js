@@ -64,5 +64,4 @@ imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px
 
 window.addEventListener('resize', ()=> {
     imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px)";
-    console.log(rightCard.offsetWidth);
 })
