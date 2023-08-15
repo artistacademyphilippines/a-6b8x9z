@@ -88,7 +88,6 @@ onAuthStateChanged(auth, (user) => {
 
           var sessID = childSnapshot.key;
           var sessWarning = childSnapshot.val().warning;
-          console.log(user.email);
 
           //check if status is for deletion
 
@@ -147,7 +146,6 @@ onAuthStateChanged(auth, (user) => {
 
           else if (childSnapshot.val().status == "online") {
 
-            console.log(user.email);
             //check if current ip is the one used for login
             fetch("https://ipapi.co/ip")
             .then(res => res.text())
@@ -155,7 +153,7 @@ onAuthStateChanged(auth, (user) => {
 
             function getIP(IP) {
               get(ref(db,'accounts/trainees/' + sessID + '/')).then((snapshot)=> {
-                console.log(user.email);
+                console.log(snapshot.val().devices);
                 if(snapshot.val().devices == IP) {
                   window.location.replace('https://artcademy.ph/dashboard');
                 }
@@ -213,7 +211,7 @@ onAuthStateChanged(auth, (user) => {
   }
     
   else {
-    console.log('no user');
+
     bodyBlue.style.visibility = "visible";
       
   } 
