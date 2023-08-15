@@ -153,9 +153,9 @@ onAuthStateChanged(auth, (user) => {
 
             function getIP(IP) {
               get(ref(db,'accounts/trainees/' + sessID + '/')).then((snapshot)=> {
-                console.log(snapshot.val().devices);
+                console.log(snapshot.val().devices + ', IP: ' + IP);
                 if(snapshot.val().devices == IP) {
-                  window.location.replace('https://artcademy.ph/dashboard');
+                  //window.location.replace('https://artcademy.ph/dashboard');
                 }
                 else {
 
