@@ -1,1 +1,342 @@
-var _0x53e4c1=_0x24a4;(function(_0x42bc74,_0x43bbfc){var _0xb3aa89=_0x24a4,_0x5db12a=_0x42bc74();while(!![]){try{var _0xb8ba83=-parseInt(_0xb3aa89(0xcf))/0x1+parseInt(_0xb3aa89(0xbc))/0x2+-parseInt(_0xb3aa89(0xac))/0x3+-parseInt(_0xb3aa89(0x96))/0x4+-parseInt(_0xb3aa89(0xb5))/0x5*(parseInt(_0xb3aa89(0xaf))/0x6)+parseInt(_0xb3aa89(0x94))/0x7*(-parseInt(_0xb3aa89(0xce))/0x8)+parseInt(_0xb3aa89(0x8a))/0x9;if(_0xb8ba83===_0x43bbfc)break;else _0x5db12a['push'](_0x5db12a['shift']());}catch(_0x1df26b){_0x5db12a['push'](_0x5db12a['shift']());}}}(_0x27c6,0xb4398));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut,deleteUser}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,onDisconnect,set}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x53e4c1(0xa4),'authDomain':_0x53e4c1(0xb6),'databaseURL':_0x53e4c1(0xa8),'projectId':'projartcademyph-29663','storageBucket':_0x53e4c1(0x9f),'messagingSenderId':'651674935886','appId':_0x53e4c1(0xd2)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document[_0x53e4c1(0x86)]('bodyBlue');onAuthStateChanged(auth,_0x337565=>{var _0xb45705=_0x53e4c1;if(_0x337565){var _0x3689bb=sessionStorage['getItem'](_0xb45705(0xd4));_0x3689bb!=''&&_0x3689bb!=null?window[_0xb45705(0xbd)](_0xb45705(0xaa),function(){var _0x58c6fb=_0xb45705;bodyBlue[_0x58c6fb(0xb8)]['visibility']=_0x58c6fb(0x9b);}):signOut(auth);}else window[_0xb45705(0x9d)][_0xb45705(0xc3)]('https://artcademy.ph/login');});var t=0.002*window[_0x53e4c1(0x9e)],c=window[_0x53e4c1(0x9e)],scrollingBannerText=document[_0x53e4c1(0x86)](_0x53e4c1(0x8e));const scrollingBanner=document['getElementById'](_0x53e4c1(0xae));var bannerContainer=document[_0x53e4c1(0x86)](_0x53e4c1(0x91));function _0x24a4(_0x59c015,_0x466559){var _0x27c670=_0x27c6();return _0x24a4=function(_0x24a4fe,_0x3e7d3a){_0x24a4fe=_0x24a4fe-0x81;var _0x545111=_0x27c670[_0x24a4fe];return _0x545111;},_0x24a4(_0x59c015,_0x466559);}bannerContainer[_0x53e4c1(0xb8)][_0x53e4c1(0x99)]='translateX('+window[_0x53e4c1(0x9e)]+_0x53e4c1(0xbe);function checkBanner(){var _0x2c41f8=_0x53e4c1;const _0x16a2ac=ref(db,_0x2c41f8(0xbb));onValue(_0x16a2ac,_0x311279=>{var _0x1f2d5e=_0x2c41f8;_0x311279[_0x1f2d5e(0xc7)]()&&(scrollingBannerText[_0x1f2d5e(0xb2)]=_0x311279[_0x1f2d5e(0xa3)]()[_0x1f2d5e(0x8c)],_0x311279['val']()[_0x1f2d5e(0xd3)]===!![]?scrollingBanner[_0x1f2d5e(0xb8)]['visibility']='visible':scrollingBanner['style'][_0x1f2d5e(0x98)]=_0x1f2d5e(0x9c));});}checkBanner();function bannerAnimation(){var _0x378fc1=_0x53e4c1;c-=0.5,bannerContainer['style'][_0x378fc1(0x99)]=_0x378fc1(0x8d)+c+'px)',c<bannerContainer['offsetWidth']*-0x1&&(c=window[_0x378fc1(0x9e)],bannerContainer[_0x378fc1(0xb8)][_0x378fc1(0x99)]='translateX('+window[_0x378fc1(0x9e)]+'px)');}setInterval(bannerAnimation,t);var frm1=document['getElementById'](_0x53e4c1(0xb0)),frm2=document['getElementById'](_0x53e4c1(0xb7));function copyMe(){var _0x2c09c7=_0x53e4c1,_0x3f66ec=this;_0x3f66ec[_0x2c09c7(0xc4)](),_0x3f66ec[_0x2c09c7(0xc9)](),_0x3f66ec[_0x2c09c7(0xc0)](0x0,0x1869f),document[_0x2c09c7(0xa0)](_0x2c09c7(0xa9));}function getHeader(){var _0x1d09d0=_0x53e4c1,_0x119288='';const _0x3af8f5=ref(db,_0x1d09d0(0xd1));onValue(_0x3af8f5,_0x1fb22f=>{var _0x21db39=_0x1d09d0,_0x52c4c5=sessionStorage[_0x21db39(0x95)](_0x21db39(0xd4));_0x1fb22f[_0x21db39(0xb9)](_0x1c8703=>{var _0x32e6c5=_0x21db39;_0x52c4c5==_0x1c8703[_0x32e6c5(0xa3)]()[_0x32e6c5(0xc8)]&&(_0x119288=_0x32e6c5(0xc2)+_0x1c8703[_0x32e6c5(0xa3)]()['name']+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22traineeID\x22\x20value\x20=\x20\x22ID:\x20'+_0x1c8703[_0x32e6c5(0xd0)]+'\x22\x20readonly>');}),frm1['innerHTML']=_0x119288,document['getElementById'](_0x21db39(0x97))[_0x21db39(0xbd)]('click',copyMe);});}getHeader();const dot1=document[_0x53e4c1(0x86)](_0x53e4c1(0xab));dot1[_0x53e4c1(0xb8)]['backgroundColor']=_0x53e4c1(0xcb);const dot2=document[_0x53e4c1(0x86)](_0x53e4c1(0xa6)),dot3=document[_0x53e4c1(0x86)](_0x53e4c1(0xb3));var card1,card2,card3=null;function loadCards(){var _0x27525a=_0x53e4c1;const _0xf397c9=ref(db,_0x27525a(0xbf));onValue(_0xf397c9,_0x10096d=>{var _0x2fa653=_0x27525a,_0x21f124='';_0x10096d[_0x2fa653(0xb9)](_0x3e5404=>{var _0x494c36=_0x2fa653;_0x21f124+=_0x494c36(0x93)+_0x3e5404['key']+'\x22\x20class=\x22cards\x22><img\x20src=\x22'+_0x3e5404[_0x494c36(0xa3)]()[_0x494c36(0x89)]+_0x494c36(0x87);}),frm2['innerHTML']=_0x21f124,card1=document[_0x2fa653(0x86)](_0x2fa653(0x8f)),card2=document[_0x2fa653(0x86)](_0x2fa653(0x84)),card3=document['getElementById'](_0x2fa653(0xb4));});}loadCards();function slideCards(){var _0x24b612=_0x53e4c1,_0x408514=frm2[_0x24b612(0x81)],_0x334035=frm2[_0x24b612(0xcd)]-frm2[_0x24b612(0xca)],_0xac1a26=_0x408514/_0x334035*0x64;if(_0xac1a26<0x19)dot1[_0x24b612(0xb8)][_0x24b612(0x82)]=_0x24b612(0xcb),dot2[_0x24b612(0xb8)][_0x24b612(0x82)]=_0x24b612(0x88),dot3['style'][_0x24b612(0x82)]='transparent';else{if(_0xac1a26>=0x19&&_0xac1a26<=0x4b)dot1[_0x24b612(0xb8)][_0x24b612(0x82)]=_0x24b612(0x88),dot2[_0x24b612(0xb8)]['backgroundColor']='white',dot3[_0x24b612(0xb8)][_0x24b612(0x82)]=_0x24b612(0x88);else _0xac1a26>0x4b&&(dot1['style'][_0x24b612(0x82)]=_0x24b612(0x88),dot2[_0x24b612(0xb8)][_0x24b612(0x82)]='transparent',dot3[_0x24b612(0xb8)][_0x24b612(0x82)]=_0x24b612(0xcb));}}frm2[_0x53e4c1(0xbd)](_0x53e4c1(0x92),slideCards);var newCard=0x1;function tapCards(){var _0x346881=_0x53e4c1;if(this['id']=='dot1')card1[_0x346881(0xc5)](),newCard=0x1;else{if(this['id']=='dot2')card2[_0x346881(0xc5)](),newCard=0x2;else this['id']=='dot3'&&(card3[_0x346881(0xc5)](),newCard=0x3);}}dot1['addEventListener'](_0x53e4c1(0x83),tapCards),dot2[_0x53e4c1(0xbd)](_0x53e4c1(0x83),tapCards),dot3[_0x53e4c1(0xbd)]('click',tapCards);function _0x27c6(){var _0x166937=['copy','load','dot1','1837893YXoKdg','out','divBanner','4419462guXhfM','frm1','then','innerText','dot3','card3','5LJQHJn','projartcademyph-29663.firebaseapp.com','frm2','style','forEach','deletion','settings/banner','745880IlAlFZ','addEventListener','px)','settings/cards/','setSelectionRange','update','<div\x20id=\x22fullname\x22>','replace','focus','scrollIntoView','clear','exists','email','select','clientWidth','white','oAuth','scrollWidth','264KKiQFD','1236446qwtZXG','key','accounts/trainees/','1:651674935886:web:629aefbab24dd2a154991f','status','sessEmail','scrollLeft','backgroundColor','click','card2','suspended','getElementById','\x22\x20class=\x22imgCards\x22></div>','transparent','link','38048841QWcdiO','https://artcademy.ph/login','message','translateX(','pBanner','card1','getFullYear','bannerContainer','scroll','<div\x20id=\x22card','34433AQiPXI','getItem','4457632yUesPu','traineeID','visibility','transform','offline','visible','hidden','location','innerWidth','projartcademyph-29663.appspot.com','execCommand','getDate','getMonth','val','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','catch','dot2','code','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app'];_0x27c6=function(){return _0x166937;};return _0x27c6();}function playCards(){var _0x218e2a=_0x53e4c1;if(newCard==0x1)card1[_0x218e2a(0xc5)](),newCard+=0x1;else{if(newCard==0x2)card2[_0x218e2a(0xc5)](),newCard+=0x1;else newCard==0x3&&(card3[_0x218e2a(0xc5)](),newCard=0x1);}}setInterval(playCards,0xbb8);function checkIfOnline(){var _0x15c5c=_0x53e4c1,_0x3c7083=sessionStorage['getItem'](_0x15c5c(0xcc)),_0x5b1fea=sessionStorage[_0x15c5c(0x95)]('sessEmail');if(_0x3c7083==_0x15c5c(0xad)){const _0x3fa494=ref(db,'accounts/trainees/');get(_0x3fa494)[_0x15c5c(0xb1)](_0x4bc66b=>{_0x4bc66b['forEach'](_0x18ac24=>{var _0x58fd01=_0x24a4;if(_0x18ac24[_0x58fd01(0xa3)]()[_0x58fd01(0xc8)]==_0x5b1fea){var _0x5e677c=_0x18ac24['key'];update(ref(db,_0x58fd01(0xd1)+_0x5e677c+'/'),{'status':_0x58fd01(0x9a),'devices':0x0})['then'](()=>{var _0x38c3bb=_0x58fd01;signOut(auth)['then'](()=>{var _0x277833=_0x24a4;sessionStorage[_0x277833(0xc6)]();})[_0x38c3bb(0xa5)](_0x3c76a6=>{alert(_0x3c76a6['code']);});});}});});}else{var _0x3b8375=ref(db,'.info/connected');onValue(_0x3b8375,_0x1919ad=>{var _0x418ba9=_0x15c5c;if(_0x1919ad[_0x418ba9(0xa3)]()===!![]){var _0x5ce2e3=ref(db,_0x418ba9(0xd1));get(_0x5ce2e3)[_0x418ba9(0xb1)](_0x1a7ab7=>{var _0x390316=_0x418ba9;_0x1a7ab7[_0x390316(0xb9)](_0x3057b9=>{var _0x1bf6ff=_0x390316,_0x379f5b=sessionStorage[_0x1bf6ff(0x95)](_0x1bf6ff(0xd4));if(_0x3057b9['val']()[_0x1bf6ff(0xc8)]==_0x379f5b){var _0x2f28ce=_0x3057b9[_0x1bf6ff(0xd0)];if(_0x3057b9['val']()[_0x1bf6ff(0xd3)]==_0x1bf6ff(0x85))signOut(auth)[_0x1bf6ff(0xb1)](()=>{var _0x2d88f5=_0x1bf6ff;sessionStorage[_0x2d88f5(0xc6)]();})[_0x1bf6ff(0xa5)](_0x342a1e=>{var _0x49dc44=_0x1bf6ff;alert(_0x342a1e[_0x49dc44(0xa7)]);});else{if(_0x3057b9[_0x1bf6ff(0xa3)]()[_0x1bf6ff(0xd3)]==_0x1bf6ff(0xba))sessionStorage[_0x1bf6ff(0xc6)](),window['location'][_0x1bf6ff(0xc3)](_0x1bf6ff(0x8b));else{var _0x29a07e=new Date(),_0x559dfa=_0x29a07e[_0x1bf6ff(0xa2)]()+0x1,_0x22df5c=_0x29a07e[_0x1bf6ff(0xa1)](),_0x41f03e=_0x29a07e[_0x1bf6ff(0x90)]();update(ref(db,_0x1bf6ff(0xd1)+_0x2f28ce),{'status':'online','lastOnline':_0x559dfa+'.'+_0x22df5c+'.'+_0x41f03e})[_0x1bf6ff(0xa5)](_0x5b9d96=>{var _0x1ffc1f=_0x1bf6ff;alert(_0x5b9d96[_0x1ffc1f(0xa7)]);});}}}});});}});}}setInterval(checkIfOnline,0x1f4);function checkIfOffline(){var _0x346b22=_0x53e4c1;const _0xbae3b5=ref(db,_0x346b22(0xd1));onValue(_0xbae3b5,_0x4cf32a=>{var _0x1f7815=_0x346b22,_0xb1544e=sessionStorage['getItem'](_0x1f7815(0xd4));_0x4cf32a[_0x1f7815(0xb9)](_0x23abb3=>{var _0x3c949a=_0x1f7815;if(_0xb1544e==_0x23abb3[_0x3c949a(0xa3)]()[_0x3c949a(0xc8)]){var _0x4d94b2=_0x23abb3[_0x3c949a(0xd0)],_0x8565d=ref(db,_0x3c949a(0xd1)+_0x4d94b2+'/');onDisconnect(_0x8565d)[_0x3c949a(0xc1)]({'status':_0x3c949a(0x9a),'devices':0x0});}});});}checkIfOffline();
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+//--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        var sessEmail = sessionStorage.getItem("sessEmail");
+      
+        if((sessEmail != "") && (sessEmail != null)) {
+
+            window.addEventListener('load', function() {
+                bodyBlue.style.visibility = "visible";
+            })
+        
+        }
+        
+        else {
+          signOut(auth);
+        }
+        
+    }
+
+    else {
+      
+        window.location.replace('https://artcademy.ph/login');
+      
+    } 
+
+});
+
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+                
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+
+//---------------------------Get Header---------------------------------------
+
+var frm1 = document.getElementById("frm1");
+var frm2 = document.getElementById("frm2");
+
+function copyMe() {
+    var copyText = this;
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
+function getHeader() {
+
+    var append = "";
+
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot=> {
+    
+            if(sessEmail == childSnapshot.val().email) {
+                append = 
+
+                `<div id="fullname">${childSnapshot.val().name}</div>
+                <input type="text" id="traineeID" value = "ID: ${childSnapshot.key}" readonly>`;
+            }
+        }))
+        frm1.innerHTML = append;
+        document.getElementById('traineeID').addEventListener('click', copyMe);
+    })
+}
+getHeader();
+
+
+//-----------------------------------CARDS----------------------------------------
+
+const dot1 = document.getElementById('dot1');
+dot1.style.backgroundColor = "white";
+const dot2 = document.getElementById('dot2');
+const dot3 = document.getElementById('dot3');
+var card1, card2, card3 = null;
+
+//--------------------------------Load Cards---------------------------------------
+
+function loadCards() {
+    
+    const path = ref(db, 'settings/cards/');
+    onValue(path, (snapshot)=> {
+
+        var append = "";
+        snapshot.forEach((childSnapshot)=> {
+            append+=`<div id="card${childSnapshot.key}" class="cards"><img src="${childSnapshot.val().link}" class="imgCards"></div>`;
+        })
+        frm2.innerHTML = append;
+        card1 = document.getElementById('card1');
+        card2 = document.getElementById('card2');
+        card3 = document.getElementById('card3');
+    })
+}
+loadCards();
+
+//--------------------------------Slide Cards--------------------------------------
+
+function slideCards() {
+    var a = frm2.scrollLeft;
+    var b = frm2.scrollWidth - frm2.clientWidth;
+    var c = (a / b) * 100;
+
+    if (c < 25) {
+        dot1.style.backgroundColor = "white";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if((c >= 25) && (c <= 75)) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "white";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if(c > 75) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "white";
+    }
+
+}
+frm2.addEventListener("scroll", slideCards);
+
+
+//----------------------------------Tap Cards-----------------------------------
+var newCard = 1;
+
+function tapCards() {
+    if(this.id == 'dot1') {
+        card1.scrollIntoView();
+        newCard = 1;
+    }
+    else if(this.id == 'dot2') {
+        card2.scrollIntoView();
+        newCard = 2;
+    }
+    else if(this.id == 'dot3') {
+        card3.scrollIntoView();
+        newCard = 3;
+    }
+}
+dot1.addEventListener('click', tapCards);
+dot2.addEventListener('click', tapCards);
+dot3.addEventListener('click', tapCards);
+
+
+//----------------------------------Autoplay Cards--------------------------------
+
+function playCards() {
+    if(newCard == 1) {
+        card1.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 2) {
+        card2.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 3) {
+        card3.scrollIntoView();
+        newCard = 1;
+    }
+}
+setInterval(playCards, 3000);
+
+//------------------------Check IF Online (Multiple Tabs)--------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                if(childSnapshot.val().email == sessEmail) {
+                    var sessID = childSnapshot.key;
+
+                    update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                        status: "offline",
+                        devices: 0
+                    })
+                    .then(()=> {
+                        signOut(auth)
+                        .then(()=> {
+                            sessionStorage.clear();
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    })
+                }
+            })
+        })
+
+    }
+
+    else {
+
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) {
+                
+                var path2 = ref(db, 'accounts/trainees/');
+                
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        
+                        var sessEmail = sessionStorage.getItem('sessEmail');
+
+                        if(childSnapshot.val().email == sessEmail) {
+
+                            var sessID = childSnapshot.key;
+
+                            if(childSnapshot.val().status == "suspended") {
+                                signOut(auth)
+                                .then(()=> {
+                                    sessionStorage.clear();
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                }) 
+                            }
+
+                            else if (childSnapshot.val().status == "deletion") {
+    
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
+
+                            }
+
+                            else {
+                                var newDate = new Date();
+                                var currMonth = newDate.getMonth() + 1;
+                                var currDate = newDate.getDate();
+                                var currYear = newDate.getFullYear();
+            
+                                update(ref(db, 'accounts/trainees/' + sessID), {
+                                    status: "online",
+                                    lastOnline: currMonth + "." + currDate + "." + currYear
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                })
+                            }
+                        }
+                    })
+                })
+            }
+
+        });
+    }
+}
+setInterval(checkIfOnline, 500);
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
+    
+    const path = ref(db, 'accounts/trainees/');
+
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot)=> {
+            
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/');
+                onDisconnect(checkCon).update({
+                    status: "offline",
+                    devices: 0
+                })
+            }
+        })
+    })
+}
+
+checkIfOffline();
