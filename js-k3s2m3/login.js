@@ -88,6 +88,7 @@ onAuthStateChanged(auth, (user) => {
 
           var sessID = childSnapshot.key;
           var sessWarning = childSnapshot.val().warning;
+          console.log(childSnapshot.val().status);
 
           //check if status is for deletion
 
@@ -159,7 +160,7 @@ onAuthStateChanged(auth, (user) => {
                   window.location.replace('https://artcademy.ph/dashboard');
                 }
                 else {
-                  
+
                   //check if there are multiple warnings
                   if(sessWarning < 2) {
                     
