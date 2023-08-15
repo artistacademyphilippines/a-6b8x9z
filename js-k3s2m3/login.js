@@ -69,7 +69,7 @@ var bodyBlue = document.getElementById('bodyBlue');
 onAuthStateChanged(auth, (user) => {
 
   if (user) {
-
+    console.log(user.email);
     var sessEmail = "";
     const currUser = auth.currentUser;
 
@@ -213,7 +213,7 @@ onAuthStateChanged(auth, (user) => {
   }
     
   else {
-    console.log(user);
+    console.log('no user');
     bodyBlue.style.visibility = "visible";
       
   } 
