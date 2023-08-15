@@ -25,10 +25,10 @@ var bodyBlue = document.getElementById('bodyBlue');
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
-        console.log(user.email);
+    
         var sessEmail = sessionStorage.getItem("sessEmail");
       
-        if((sessEmail != "") && (sessEmail != null) && (sessEmail == user.email)) {
+        if((sessEmail != "") && (sessEmail != null)) {
 
         
             bodyBlue.style.visibility = "visible";
