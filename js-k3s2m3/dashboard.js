@@ -1,1 +1,342 @@
-var _0x13265c=_0x3591;(function(_0x394cca,_0x76c3f){var _0x219438=_0x3591,_0x3a4d85=_0x394cca();while(!![]){try{var _0x37ba01=-parseInt(_0x219438(0x208))/0x1+parseInt(_0x219438(0x210))/0x2+-parseInt(_0x219438(0x1f9))/0x3*(-parseInt(_0x219438(0x1ef))/0x4)+-parseInt(_0x219438(0x1cc))/0x5*(parseInt(_0x219438(0x209))/0x6)+parseInt(_0x219438(0x1db))/0x7*(-parseInt(_0x219438(0x1dc))/0x8)+parseInt(_0x219438(0x211))/0x9*(-parseInt(_0x219438(0x1d5))/0xa)+parseInt(_0x219438(0x1ff))/0xb*(parseInt(_0x219438(0x1e5))/0xc);if(_0x37ba01===_0x76c3f)break;else _0x3a4d85['push'](_0x3a4d85['shift']());}catch(_0x25e092){_0x3a4d85['push'](_0x3a4d85['shift']());}}}(_0x22f9,0x7a80c));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut,deleteUser}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,onDisconnect,set}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':'AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','authDomain':_0x13265c(0x1e3),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x13265c(0x1d1),'storageBucket':_0x13265c(0x1ed),'messagingSenderId':_0x13265c(0x1e6),'appId':_0x13265c(0x1d9)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document['getElementById'](_0x13265c(0x1d6));onAuthStateChanged(auth,_0x5768b8=>{var _0x28fb84=_0x13265c;if(_0x5768b8){var _0x1ee75d=sessionStorage[_0x28fb84(0x1e9)](_0x28fb84(0x204));_0x1ee75d!=''&&_0x1ee75d!=null&&_0x1ee75d==_0x5768b8[_0x28fb84(0x207)]?bodyBlue['style'][_0x28fb84(0x212)]=_0x28fb84(0x21a):signOut(auth);}else window['location'][_0x28fb84(0x1ce)](_0x28fb84(0x20c));});var t=0.002*window[_0x13265c(0x1e0)],c=window['innerWidth'],scrollingBannerText=document[_0x13265c(0x201)](_0x13265c(0x1f6));const scrollingBanner=document[_0x13265c(0x201)](_0x13265c(0x219));var bannerContainer=document[_0x13265c(0x201)](_0x13265c(0x1f1));bannerContainer[_0x13265c(0x1e1)][_0x13265c(0x20d)]=_0x13265c(0x1fa)+window['innerWidth']+_0x13265c(0x1d7);function checkBanner(){var _0x15df11=_0x13265c;const _0x318d5b=ref(db,_0x15df11(0x20b));onValue(_0x318d5b,_0x675eee=>{var _0x1e1e03=_0x15df11;_0x675eee['exists']()&&(scrollingBannerText[_0x1e1e03(0x1d0)]=_0x675eee[_0x1e1e03(0x20e)]()[_0x1e1e03(0x1da)],_0x675eee[_0x1e1e03(0x20e)]()[_0x1e1e03(0x203)]===!![]?scrollingBanner[_0x1e1e03(0x1e1)][_0x1e1e03(0x212)]=_0x1e1e03(0x21a):scrollingBanner[_0x1e1e03(0x1e1)]['visibility']=_0x1e1e03(0x1fd));});}function _0x22f9(){var _0x1037a2=['replace','transparent','innerText','projartcademyph-29663','getFullYear','offsetWidth','execCommand','130HtoWMu','bodyBlue','px)','\x22\x20readonly>','1:651674935886:web:629aefbab24dd2a154991f','message','75796MhpzwF','432rfqrBY','card2','location','scroll','innerWidth','style','scrollWidth','projartcademyph-29663.firebaseapp.com','addEventListener','2018172hCkjKC','651674935886','update','code','getItem','focus','backgroundColor','key','projartcademyph-29663.appspot.com','select','40AHoVtP','frm2','bannerContainer','out','clear','copy','online','pBanner','white','accounts/trainees/','134232uZCBbj','translateX(','card3','oAuth','hidden','catch','77eUQoOD','then','getElementById','settings/cards/','status','sessEmail','\x22\x20class=\x22cards\x22><img\x20src=\x22','frm1','email','133297vpPpfU','1282062BOQdRH','.info/connected','settings/banner','https://artcademy.ph/login','transform','val','dot3','1989266dDOXVF','673065iOiUHL','visibility','getMonth','offline','setSelectionRange','dot1','getDate','forEach','divBanner','visible','scrollIntoView','10uaUybc','click'];_0x22f9=function(){return _0x1037a2;};return _0x22f9();}checkBanner();function bannerAnimation(){var _0x66e635=_0x13265c;c-=0.5,bannerContainer['style'][_0x66e635(0x20d)]=_0x66e635(0x1fa)+c+_0x66e635(0x1d7),c<bannerContainer[_0x66e635(0x1d3)]*-0x1&&(c=window['innerWidth'],bannerContainer['style'][_0x66e635(0x20d)]=_0x66e635(0x1fa)+window[_0x66e635(0x1e0)]+_0x66e635(0x1d7));}setInterval(bannerAnimation,t);var frm1=document[_0x13265c(0x201)](_0x13265c(0x206)),frm2=document['getElementById'](_0x13265c(0x1f0));function copyMe(){var _0x4e0ecc=_0x13265c,_0x2675c5=this;_0x2675c5[_0x4e0ecc(0x1ea)](),_0x2675c5[_0x4e0ecc(0x1ee)](),_0x2675c5[_0x4e0ecc(0x215)](0x0,0x1869f),document[_0x4e0ecc(0x1d4)](_0x4e0ecc(0x1f4));}function getHeader(){var _0x5cab27=_0x13265c,_0x5db0f5='';const _0x1cab26=ref(db,_0x5cab27(0x1f8));onValue(_0x1cab26,_0x5d26d7=>{var _0x1508cb=_0x5cab27,_0x22b4c3=sessionStorage[_0x1508cb(0x1e9)]('sessEmail');_0x5d26d7[_0x1508cb(0x218)](_0x71cdcc=>{var _0x34f991=_0x1508cb;_0x22b4c3==_0x71cdcc[_0x34f991(0x20e)]()[_0x34f991(0x207)]&&(_0x5db0f5='<div\x20id=\x22fullname\x22>'+_0x71cdcc[_0x34f991(0x20e)]()['name']+'</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20id=\x22traineeID\x22\x20value\x20=\x20\x22ID:\x20'+_0x71cdcc[_0x34f991(0x1ec)]+_0x34f991(0x1d8));}),frm1['innerHTML']=_0x5db0f5,document[_0x1508cb(0x201)]('traineeID')[_0x1508cb(0x1e4)](_0x1508cb(0x1cd),copyMe);});}getHeader();const dot1=document[_0x13265c(0x201)](_0x13265c(0x216));dot1[_0x13265c(0x1e1)][_0x13265c(0x1eb)]=_0x13265c(0x1f7);const dot2=document[_0x13265c(0x201)]('dot2'),dot3=document[_0x13265c(0x201)](_0x13265c(0x20f));var card1,card2,card3=null;function loadCards(){var _0xad06ea=_0x13265c;const _0x50014e=ref(db,_0xad06ea(0x202));onValue(_0x50014e,_0x51e699=>{var _0x5776a2=_0xad06ea,_0x5c55b0='';_0x51e699[_0x5776a2(0x218)](_0x134f93=>{var _0x3448b4=_0x5776a2;_0x5c55b0+='<div\x20id=\x22card'+_0x134f93[_0x3448b4(0x1ec)]+_0x3448b4(0x205)+_0x134f93[_0x3448b4(0x20e)]()['link']+'\x22\x20class=\x22imgCards\x22></div>';}),frm2['innerHTML']=_0x5c55b0,card1=document['getElementById']('card1'),card2=document[_0x5776a2(0x201)](_0x5776a2(0x1dd)),card3=document[_0x5776a2(0x201)](_0x5776a2(0x1fb));});}loadCards();function slideCards(){var _0x3e61ef=_0x13265c,_0x2f7ee8=frm2['scrollLeft'],_0x485728=frm2[_0x3e61ef(0x1e2)]-frm2['clientWidth'],_0x21591f=_0x2f7ee8/_0x485728*0x64;if(_0x21591f<0x19)dot1[_0x3e61ef(0x1e1)][_0x3e61ef(0x1eb)]=_0x3e61ef(0x1f7),dot2[_0x3e61ef(0x1e1)]['backgroundColor']=_0x3e61ef(0x1cf),dot3[_0x3e61ef(0x1e1)][_0x3e61ef(0x1eb)]='transparent';else{if(_0x21591f>=0x19&&_0x21591f<=0x4b)dot1['style'][_0x3e61ef(0x1eb)]=_0x3e61ef(0x1cf),dot2[_0x3e61ef(0x1e1)][_0x3e61ef(0x1eb)]=_0x3e61ef(0x1f7),dot3['style'][_0x3e61ef(0x1eb)]=_0x3e61ef(0x1cf);else _0x21591f>0x4b&&(dot1[_0x3e61ef(0x1e1)][_0x3e61ef(0x1eb)]=_0x3e61ef(0x1cf),dot2[_0x3e61ef(0x1e1)]['backgroundColor']=_0x3e61ef(0x1cf),dot3[_0x3e61ef(0x1e1)]['backgroundColor']=_0x3e61ef(0x1f7));}}frm2[_0x13265c(0x1e4)](_0x13265c(0x1df),slideCards);var newCard=0x1;function tapCards(){var _0x5a5883=_0x13265c;if(this['id']=='dot1')card1[_0x5a5883(0x21b)](),newCard=0x1;else{if(this['id']=='dot2')card2[_0x5a5883(0x21b)](),newCard=0x2;else this['id']==_0x5a5883(0x20f)&&(card3[_0x5a5883(0x21b)](),newCard=0x3);}}dot1['addEventListener'](_0x13265c(0x1cd),tapCards),dot2[_0x13265c(0x1e4)]('click',tapCards),dot3[_0x13265c(0x1e4)](_0x13265c(0x1cd),tapCards);function playCards(){var _0x39192a=_0x13265c;if(newCard==0x1)card1[_0x39192a(0x21b)](),newCard+=0x1;else{if(newCard==0x2)card2['scrollIntoView'](),newCard+=0x1;else newCard==0x3&&(card3[_0x39192a(0x21b)](),newCard=0x1);}}function _0x3591(_0x269048,_0x2093fc){var _0x22f91d=_0x22f9();return _0x3591=function(_0x3591aa,_0xc6d7ac){_0x3591aa=_0x3591aa-0x1cc;var _0x3bad99=_0x22f91d[_0x3591aa];return _0x3bad99;},_0x3591(_0x269048,_0x2093fc);}setInterval(playCards,0xbb8);function checkIfOnline(){var _0x4e6857=_0x13265c,_0x33ede9=sessionStorage['getItem'](_0x4e6857(0x1fc)),_0x2edd57=sessionStorage['getItem'](_0x4e6857(0x204));if(_0x33ede9==_0x4e6857(0x1f2)){const _0x28e746=ref(db,'accounts/trainees/');get(_0x28e746)[_0x4e6857(0x200)](_0x59fb86=>{var _0x327ee4=_0x4e6857;_0x59fb86[_0x327ee4(0x218)](_0x5d1e93=>{var _0x446c78=_0x327ee4;if(_0x5d1e93['val']()[_0x446c78(0x207)]==_0x2edd57){var _0x38b541=_0x5d1e93[_0x446c78(0x1ec)];update(ref(db,_0x446c78(0x1f8)+_0x38b541+'/'),{'status':_0x446c78(0x214),'devices':0x0})[_0x446c78(0x200)](()=>{var _0x15a8f4=_0x446c78;signOut(auth)[_0x15a8f4(0x200)](()=>{var _0x48cb0b=_0x15a8f4;sessionStorage[_0x48cb0b(0x1f3)]();})[_0x15a8f4(0x1fe)](_0x919ce7=>{var _0x1c15ec=_0x15a8f4;alert(_0x919ce7[_0x1c15ec(0x1e8)]);});});}});});}else{var _0x5ea212=ref(db,_0x4e6857(0x20a));onValue(_0x5ea212,_0x4d8c58=>{var _0x324fed=_0x4e6857;if(_0x4d8c58[_0x324fed(0x20e)]()===!![]){var _0xaa6edf=ref(db,_0x324fed(0x1f8));get(_0xaa6edf)[_0x324fed(0x200)](_0x31ecc0=>{var _0x92145c=_0x324fed;_0x31ecc0[_0x92145c(0x218)](_0x1d8975=>{var _0x24cef6=_0x92145c,_0xe1d2a4=sessionStorage[_0x24cef6(0x1e9)](_0x24cef6(0x204));if(_0x1d8975['val']()['email']==_0xe1d2a4){var _0x188349=_0x1d8975[_0x24cef6(0x1ec)];if(_0x1d8975[_0x24cef6(0x20e)]()[_0x24cef6(0x203)]=='suspended')signOut(auth)[_0x24cef6(0x200)](()=>{var _0x567d7b=_0x24cef6;sessionStorage[_0x567d7b(0x1f3)]();})[_0x24cef6(0x1fe)](_0x4f5abc=>{var _0x22ff1c=_0x24cef6;alert(_0x4f5abc[_0x22ff1c(0x1e8)]);});else{if(_0x1d8975['val']()[_0x24cef6(0x203)]=='deletion')sessionStorage['clear'](),window[_0x24cef6(0x1de)][_0x24cef6(0x1ce)]('https://artcademy.ph/login');else{var _0x3f1382=new Date(),_0x362820=_0x3f1382[_0x24cef6(0x213)]()+0x1,_0x31149c=_0x3f1382[_0x24cef6(0x217)](),_0x506f3c=_0x3f1382[_0x24cef6(0x1d2)]();update(ref(db,_0x24cef6(0x1f8)+_0x188349),{'status':_0x24cef6(0x1f5),'lastOnline':_0x362820+'.'+_0x31149c+'.'+_0x506f3c})[_0x24cef6(0x1fe)](_0x855727=>{var _0x4a56a1=_0x24cef6;alert(_0x855727[_0x4a56a1(0x1e8)]);});}}}});});}});}}setInterval(checkIfOnline,0x1f4);function checkIfOffline(){var _0x5972db=_0x13265c;const _0x560789=ref(db,_0x5972db(0x1f8));onValue(_0x560789,_0x5c4686=>{var _0x5adce4=_0x5972db,_0x5ad0c8=sessionStorage[_0x5adce4(0x1e9)](_0x5adce4(0x204));_0x5c4686[_0x5adce4(0x218)](_0x3ce356=>{var _0x4cf6c9=_0x5adce4;if(_0x5ad0c8==_0x3ce356[_0x4cf6c9(0x20e)]()[_0x4cf6c9(0x207)]){var _0x3b5e51=_0x3ce356[_0x4cf6c9(0x1ec)],_0x15b2db=ref(db,_0x4cf6c9(0x1f8)+_0x3b5e51+'/');onDisconnect(_0x15b2db)[_0x4cf6c9(0x1e7)]({'status':_0x4cf6c9(0x214),'devices':0x0});}});});}checkIfOffline();
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+//--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+        console.log(user.email);
+        var sessEmail = sessionStorage.getItem("sessEmail");
+      
+        if((sessEmail != "") && (sessEmail != null) && (sessEmail == user.email)) {
+
+        
+            bodyBlue.style.visibility = "visible";
+       
+        
+        }
+        
+        else {
+          signOut(auth);
+        }
+        
+    }
+
+    else {
+      
+        window.location.replace('https://artcademy.ph/login');
+      
+    } 
+
+});
+
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+                
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+
+//---------------------------Get Header---------------------------------------
+
+var frm1 = document.getElementById("frm1");
+var frm2 = document.getElementById("frm2");
+
+function copyMe() {
+    var copyText = this;
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
+function getHeader() {
+
+    var append = "";
+
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot=> {
+    
+            if(sessEmail == childSnapshot.val().email) {
+                append = 
+
+                `<div id="fullname">${childSnapshot.val().name}</div>
+                <input type="text" id="traineeID" value = "ID: ${childSnapshot.key}" readonly>`;
+            }
+        }))
+        frm1.innerHTML = append;
+        document.getElementById('traineeID').addEventListener('click', copyMe);
+    })
+}
+getHeader();
+
+
+//-----------------------------------CARDS----------------------------------------
+
+const dot1 = document.getElementById('dot1');
+dot1.style.backgroundColor = "white";
+const dot2 = document.getElementById('dot2');
+const dot3 = document.getElementById('dot3');
+var card1, card2, card3 = null;
+
+//--------------------------------Load Cards---------------------------------------
+
+function loadCards() {
+    
+    const path = ref(db, 'settings/cards/');
+    onValue(path, (snapshot)=> {
+
+        var append = "";
+        snapshot.forEach((childSnapshot)=> {
+            append+=`<div id="card${childSnapshot.key}" class="cards"><img src="${childSnapshot.val().link}" class="imgCards"></div>`;
+        })
+        frm2.innerHTML = append;
+        card1 = document.getElementById('card1');
+        card2 = document.getElementById('card2');
+        card3 = document.getElementById('card3');
+    })
+}
+loadCards();
+
+//--------------------------------Slide Cards--------------------------------------
+
+function slideCards() {
+    var a = frm2.scrollLeft;
+    var b = frm2.scrollWidth - frm2.clientWidth;
+    var c = (a / b) * 100;
+
+    if (c < 25) {
+        dot1.style.backgroundColor = "white";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if((c >= 25) && (c <= 75)) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "white";
+        dot3.style.backgroundColor = "transparent";
+    }
+
+    else if(c > 75) {
+        dot1.style.backgroundColor = "transparent";
+        dot2.style.backgroundColor = "transparent";
+        dot3.style.backgroundColor = "white";
+    }
+
+}
+frm2.addEventListener("scroll", slideCards);
+
+
+//----------------------------------Tap Cards-----------------------------------
+var newCard = 1;
+
+function tapCards() {
+    if(this.id == 'dot1') {
+        card1.scrollIntoView();
+        newCard = 1;
+    }
+    else if(this.id == 'dot2') {
+        card2.scrollIntoView();
+        newCard = 2;
+    }
+    else if(this.id == 'dot3') {
+        card3.scrollIntoView();
+        newCard = 3;
+    }
+}
+dot1.addEventListener('click', tapCards);
+dot2.addEventListener('click', tapCards);
+dot3.addEventListener('click', tapCards);
+
+
+//----------------------------------Autoplay Cards--------------------------------
+
+function playCards() {
+    if(newCard == 1) {
+        card1.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 2) {
+        card2.scrollIntoView();
+        newCard +=1;
+    }
+    else if(newCard == 3) {
+        card3.scrollIntoView();
+        newCard = 1;
+    }
+}
+setInterval(playCards, 3000);
+
+//------------------------Check IF Online (Multiple Tabs)--------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                if(childSnapshot.val().email == sessEmail) {
+                    var sessID = childSnapshot.key;
+
+                    update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                        status: "offline",
+                        devices: 0
+                    })
+                    .then(()=> {
+                        signOut(auth)
+                        .then(()=> {
+                            sessionStorage.clear();
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    })
+                }
+            })
+        })
+
+    }
+
+    else {
+
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) {
+                
+                var path2 = ref(db, 'accounts/trainees/');
+                
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        
+                        var sessEmail = sessionStorage.getItem('sessEmail');
+
+                        if(childSnapshot.val().email == sessEmail) {
+
+                            var sessID = childSnapshot.key;
+
+                            if(childSnapshot.val().status == "suspended") {
+                                signOut(auth)
+                                .then(()=> {
+                                    sessionStorage.clear();
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                }) 
+                            }
+
+                            else if (childSnapshot.val().status == "deletion") {
+    
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
+
+                            }
+
+                            else {
+                                var newDate = new Date();
+                                var currMonth = newDate.getMonth() + 1;
+                                var currDate = newDate.getDate();
+                                var currYear = newDate.getFullYear();
+            
+                                update(ref(db, 'accounts/trainees/' + sessID), {
+                                    status: "online",
+                                    lastOnline: currMonth + "." + currDate + "." + currYear
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                })
+                            }
+                        }
+                    })
+                })
+            }
+
+        });
+    }
+}
+setInterval(checkIfOnline, 500);
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
+    
+    const path = ref(db, 'accounts/trainees/');
+
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot)=> {
+            
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/');
+                onDisconnect(checkCon).update({
+                    status: "offline",
+                    devices: 0
+                })
+            }
+        })
+    })
+}
+
+checkIfOffline();
