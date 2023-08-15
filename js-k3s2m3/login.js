@@ -147,36 +147,33 @@ onAuthStateChanged(auth, (user) => {
           else if (childSnapshot.val().status == "online") {
 
             //check if current ip is the one used for login
-            
-
-                  //check if there are multiple warnings
-                  if(sessWarning < 2) {
+          
+            //check if there are multiple warnings
+            if(sessWarning < 2) {
                     
-                    update(ref(db, 'accounts/trainees/' + sessID), {
-                      warning: sessWarning + 1,
-                      status: "suspended"
-                    })
-                    .then(()=> {
-                      signOut(auth)
-                      .then(()=> {
-                        alertMsg.innerText = "Account has been temporarily suspended";
-                        alertMsg.style.opacity = "1";
-                        loginEmail.value = "";
-                        loginPw.value = "";
-                        sessionStorage.clear();
-                      })
-                    })
-                  }
+              update(ref(db, 'accounts/trainees/' + sessID), {
+                warning: sessWarning + 1,
+                status: "suspended"
+              })
+              .then(()=> {
+                signOut(auth)
+                .then(()=> {
+                    alertMsg.innerText = "Account has been temporarily suspended";
+                    alertMsg.style.opacity = "1";
+                    loginEmail.value = "";
+                    loginPw.value = "";
+                    sessionStorage.clear();
+                  })
+                })
+              }
 
-                  else {
-                    update(ref(db, 'accounts/trainees/' + sessID), {
-                      status: "deletion"
-                    })
-                  }
+              else {
+                update(ref(db, 'accounts/trainees/' + sessID), {
+                status: "deletion"
+                })
+              }
           }
           
-          }
-
           else if(childSnapshot.val().status == "offline") {
             
             fetch("https://ipapi.co/ip")
@@ -191,6 +188,7 @@ onAuthStateChanged(auth, (user) => {
                 window.location.replace('https://artcademy.ph/dashboard');
               })
             }
+          }
           }
         })
       
