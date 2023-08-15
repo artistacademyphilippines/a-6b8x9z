@@ -1,1 +1,253 @@
-var _0x112108=_0x18ea;(function(_0x2f5465,_0x355b96){var _0x1d939d=_0x18ea,_0x2c01e1=_0x2f5465();while(!![]){try{var _0x5510dd=-parseInt(_0x1d939d(0x134))/0x1+parseInt(_0x1d939d(0x14e))/0x2+-parseInt(_0x1d939d(0x145))/0x3*(parseInt(_0x1d939d(0x148))/0x4)+-parseInt(_0x1d939d(0x127))/0x5*(-parseInt(_0x1d939d(0x13e))/0x6)+-parseInt(_0x1d939d(0x14d))/0x7*(-parseInt(_0x1d939d(0x110))/0x8)+-parseInt(_0x1d939d(0x13a))/0x9+parseInt(_0x1d939d(0x138))/0xa;if(_0x5510dd===_0x355b96)break;else _0x2c01e1['push'](_0x2c01e1['shift']());}catch(_0x465c93){_0x2c01e1['push'](_0x2c01e1['shift']());}}}(_0x3320,0xb5944));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js';import{getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut,deleteUser}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js';function _0x3320(){var _0x55e003=['bannerContainer','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','exists','63917WVvHjP','1868182KUHMcb','then','/batch/','hidden','accounts/trainees/','courses/','innerWidth','suspended','Account\x20has\x20been\x20temporarily\x20suspended','https://artcademy.ph/dashboard','querySelector','message','776lgyGws','sessPw','pageshow','settings/banner','match','projartcademyph-29663.appspot.com','1:651674935886:web:629aefbab24dd2a154991f','keydown','btnLogin','#txtPw','offline','Enter','currentUser','forEach','projartcademyph-29663.firebaseapp.com','#alertMessage','log','setItem','code','warning','replace','location','val','4215KNLRIL','visible','divBanner','catch','opacity','addEventListener','getItem','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','devices','value','px)','clear','email','694067FDjMhN','sessEmail','getElementById','Email\x20or\x20password\x20is\x20incorrect','10277470zIVqKn','status','12688668vFxjZb','innerText','#txtEmail','transform','4986kikEsd','pBanner','visibility','/trainees/','style','translateX(','deletion','489kYmCvA','651674935886','projartcademyph-29663','17188TAaZgz','click'];_0x3320=function(){return _0x55e003;};return _0x3320();}import{getDatabase,ref,onValue,get,set,update,remove}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js';const firebaseConfig={'apiKey':_0x112108(0x14b),'authDomain':_0x112108(0x11e),'databaseURL':_0x112108(0x12e),'projectId':_0x112108(0x147),'storageBucket':_0x112108(0x115),'messagingSenderId':_0x112108(0x146),'appId':_0x112108(0x116)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var t=0.002*window[_0x112108(0x154)],c=window[_0x112108(0x154)],scrollingBannerText=document[_0x112108(0x136)](_0x112108(0x13f));const scrollingBanner=document[_0x112108(0x136)](_0x112108(0x129));var bannerContainer=document['getElementById'](_0x112108(0x14a));bannerContainer[_0x112108(0x142)]['transform']=_0x112108(0x143)+window[_0x112108(0x154)]+_0x112108(0x131);function checkBanner(){var _0x2f1f01=_0x112108;const _0x5bbb6f=ref(db,_0x2f1f01(0x113));onValue(_0x5bbb6f,_0x2156f8=>{var _0x2a1559=_0x2f1f01;_0x2156f8[_0x2a1559(0x14c)]()&&(scrollingBannerText['innerText']=_0x2156f8[_0x2a1559(0x126)]()[_0x2a1559(0x10f)],_0x2156f8[_0x2a1559(0x126)]()[_0x2a1559(0x139)]===!![]?scrollingBanner['style'][_0x2a1559(0x140)]=_0x2a1559(0x128):scrollingBanner[_0x2a1559(0x142)][_0x2a1559(0x140)]=_0x2a1559(0x151));});}checkBanner();function bannerAnimation(){var _0x16e5f=_0x112108;c-=0.5,bannerContainer[_0x16e5f(0x142)][_0x16e5f(0x13d)]=_0x16e5f(0x143)+c+'px)',c<bannerContainer['offsetWidth']*-0x1&&(c=window[_0x16e5f(0x154)],bannerContainer['style'][_0x16e5f(0x13d)]='translateX('+window[_0x16e5f(0x154)]+_0x16e5f(0x131));}setInterval(bannerAnimation,t);var loginEmail=document['querySelector'](_0x112108(0x13c)),loginPw=document[_0x112108(0x158)](_0x112108(0x119));const btnLogin=document['getElementById'](_0x112108(0x118));var alertMsg=document['querySelector'](_0x112108(0x11f)),bodyBlue=document[_0x112108(0x136)]('bodyBlue');onAuthStateChanged(auth,_0x2baf48=>{var _0x195ffc=_0x112108;if(_0x2baf48){var _0x2d77d6='';const _0x50b7c3=auth[_0x195ffc(0x11c)];loginEmail['value']!=''&&loginEmail[_0x195ffc(0x130)]!=null?_0x2d77d6=loginEmail[_0x195ffc(0x130)]:_0x2d77d6=sessionStorage[_0x195ffc(0x12d)](_0x195ffc(0x135));const _0x5cce79=ref(db,_0x195ffc(0x152));onValue(_0x5cce79,_0x16010e=>{var _0x259176=_0x195ffc;_0x16010e[_0x259176(0x11d)](_0x1b606d=>{var _0x30c07c=_0x259176,_0x4b2adb=_0x1b606d['key'],_0x39d4=_0x1b606d[_0x30c07c(0x126)]()[_0x30c07c(0x123)],_0x9cf74b=_0x1b606d[_0x30c07c(0x126)]()[_0x30c07c(0x12f)];if(_0x1b606d[_0x30c07c(0x126)]()[_0x30c07c(0x133)]==_0x2d77d6){if(_0x1b606d['val']()[_0x30c07c(0x139)]==_0x30c07c(0x144)){const _0x368d3a=ref(db,_0x30c07c(0x153));onValue(_0x368d3a,_0x4cd2a1=>{var _0x1766a2=_0x30c07c;_0x4cd2a1['forEach'](_0x1fa3c7=>{var _0x4e3a26=_0x18ea,_0x135329=_0x1fa3c7['key'];const _0x1ee157=ref(db,_0x4e3a26(0x153)+_0x135329+_0x4e3a26(0x150));get(_0x1ee157)['then'](_0xbf58f0=>{_0xbf58f0['forEach'](_0x5e806b=>{var _0x3d9901=_0x18ea,_0x554ee2=_0x5e806b['key'];const _0xf2945=ref(db,_0x3d9901(0x153)+_0x135329+_0x3d9901(0x150)+_0x554ee2+_0x3d9901(0x141)+_0x4b2adb);remove(_0xf2945);});});}),remove(ref(db,_0x1766a2(0x152)+_0x4b2adb))[_0x1766a2(0x14f)](()=>{var _0x1a4822=_0x1766a2;deleteUser(_0x50b7c3)[_0x1a4822(0x14f)](()=>{var _0x55f324=_0x1a4822;alertMsg[_0x55f324(0x13b)]='Account\x20has\x20been\x20permanently\x20removed',alertMsg['style'][_0x55f324(0x12b)]='1',loginEmail[_0x55f324(0x130)]='',loginPw[_0x55f324(0x130)]='',sessionStorage[_0x55f324(0x132)]();});});});}else{if(_0x1b606d[_0x30c07c(0x126)]()[_0x30c07c(0x139)]==_0x30c07c(0x155))signOut(auth)[_0x30c07c(0x14f)](()=>{var _0x2e925d=_0x30c07c;alertMsg[_0x2e925d(0x13b)]=_0x2e925d(0x156),alertMsg[_0x2e925d(0x142)][_0x2e925d(0x12b)]='1',loginEmail['value']='',loginPw[_0x2e925d(0x130)]='',sessionStorage[_0x2e925d(0x132)]();});else{if(_0x1b606d[_0x30c07c(0x126)]()[_0x30c07c(0x139)]=='online')_0x9cf74b==0x1?_0x39d4<0x2?update(ref(db,_0x30c07c(0x152)+_0x4b2adb),{'warning':_0x39d4+0x1,'status':'suspended'})[_0x30c07c(0x14f)](()=>{var _0xedd916=_0x30c07c;signOut(auth)[_0xedd916(0x14f)](()=>{var _0x4fcea0=_0xedd916;alertMsg[_0x4fcea0(0x13b)]='Account\x20has\x20been\x20temporarily\x20suspended',alertMsg['style']['opacity']='1',loginEmail[_0x4fcea0(0x130)]='',loginPw[_0x4fcea0(0x130)]='',sessionStorage[_0x4fcea0(0x132)]();});}):update(ref(db,'accounts/trainees/'+_0x4b2adb),{'status':_0x30c07c(0x144)}):window[_0x30c07c(0x125)][_0x30c07c(0x124)](_0x30c07c(0x157));else _0x1b606d[_0x30c07c(0x126)]()['status']==_0x30c07c(0x11a)&&update(ref(db,_0x30c07c(0x152)+_0x4b2adb+'/'),{'devices':0x1})[_0x30c07c(0x14f)](()=>{var _0x2a27da=_0x30c07c;window[_0x2a27da(0x125)][_0x2a27da(0x124)](_0x2a27da(0x157));});}}}});});}else console[_0x195ffc(0x120)](_0x2baf48),bodyBlue[_0x195ffc(0x142)][_0x195ffc(0x140)]='visible';});function validateLogin(){var _0x5389aa=_0x112108,_0x5c7218=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;loginEmail[_0x5389aa(0x130)][_0x5389aa(0x114)](_0x5c7218)&&loginPw[_0x5389aa(0x130)]!=''?signInWithEmailAndPassword(auth,loginEmail['value'],loginPw[_0x5389aa(0x130)])[_0x5389aa(0x14f)](()=>{var _0x25a7bb=_0x5389aa;sessionStorage['setItem'](_0x25a7bb(0x135),loginEmail['value']),sessionStorage[_0x25a7bb(0x121)](_0x25a7bb(0x111),loginPw[_0x25a7bb(0x130)]);})[_0x5389aa(0x12a)](_0x5c2f1c=>{var _0x5d13fd=_0x5389aa;alert(_0x5c2f1c[_0x5d13fd(0x122)]+',\x20'+_0x5c2f1c[_0x5d13fd(0x10f)]),console[_0x5d13fd(0x120)](_0x5c2f1c[_0x5d13fd(0x122)]);}):(alertMsg[_0x5389aa(0x13b)]=_0x5389aa(0x137),alertMsg[_0x5389aa(0x142)][_0x5389aa(0x12b)]='1');}function pressEnter(_0x15efb7){var _0x322837=_0x112108;_0x15efb7[_0x322837(0x122)]===_0x322837(0x11b)&&validateLogin();}btnLogin['addEventListener'](_0x112108(0x149),validateLogin),loginEmail[_0x112108(0x12c)](_0x112108(0x117),pressEnter),loginPw[_0x112108(0x12c)](_0x112108(0x117),pressEnter);function _0x18ea(_0x7079cd,_0x2d09c8){var _0x332053=_0x3320();return _0x18ea=function(_0x18eada,_0x47b48b){_0x18eada=_0x18eada-0x10f;var _0x3ecf0a=_0x332053[_0x18eada];return _0x3ecf0a;},_0x18ea(_0x7079cd,_0x2d09c8);}function clearText(){var _0x561436=_0x112108;document[_0x561436(0x158)](_0x561436(0x13c))[_0x561436(0x130)]='',document[_0x561436(0x158)]('#txtPw')[_0x561436(0x130)]='';}window['addEventListener'](_0x112108(0x112),clearText);
+//------------------------Firebase--------------------
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut, deleteUser } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getDatabase, ref, onValue, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+
+  //---------------------Functions---------------------
+  var loginEmail = document.querySelector('#txtEmail');
+  var loginPw = document.querySelector('#txtPw');
+  const btnLogin = document.getElementById('btnLogin');
+  var alertMsg = document.querySelector('#alertMessage');
+  
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+
+    var sessEmail = "";
+    const currUser = auth.currentUser;
+
+    if((loginEmail.value != "") && (loginEmail.value != null)) {
+      sessEmail = loginEmail.value;
+    }
+    else {
+      sessEmail = sessionStorage.getItem('sessEmail');
+    }
+    
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+      snapshot.forEach((childSnapshot)=> {
+
+        var sessID = childSnapshot.key;
+        var sessWarning = childSnapshot.val().warning;
+        var sessDevices = childSnapshot.val().devices;
+
+        if(childSnapshot.val().email == sessEmail) {
+
+          //check if status is for deletion
+
+          if(childSnapshot.val().status == "deletion") { //if account status is for deletion
+            
+            //delete courses and batches records first
+            const path2 = ref(db, 'courses/');
+            onValue(path2, (snapshot)=> {
+            
+                snapshot.forEach((childSnapshot)=> {
+                  //get course name
+                  var sessCourses = childSnapshot.key;
+
+                  const path3 = ref(db, 'courses/' + sessCourses + '/batch/');
+                  get(path3).then((snapshot)=> {
+                     
+                      snapshot.forEach((childSnapshot)=> {
+                        //get batch no.
+                        var sessBatch = childSnapshot.key;
+
+                        const path4 = ref(db, 'courses/' + sessCourses + '/batch/' + sessBatch + '/trainees/' + sessID);
+                        remove(path4);
+
+                      })
+                    
+                  })
+                })
+              
+                remove(ref(db, 'accounts/trainees/' + sessID))
+                .then(()=> {
+                  deleteUser(currUser)
+                  .then(()=> {
+                    
+                      alertMsg.innerText = "Account has been permanently removed";
+                      alertMsg.style.opacity = "1";
+                      loginEmail.value = "";
+                      loginPw.value = "";
+                      sessionStorage.clear();
+                    
+                  })
+                })
+              
+            })
+          }
+
+          else if (childSnapshot.val().status == "suspended") { // check if account is suspended
+            signOut(auth)
+            .then(()=> {
+              alertMsg.innerText = "Account has been temporarily suspended";
+              alertMsg.style.opacity = "1";
+              loginEmail.value = "";
+              loginPw.value = "";
+              sessionStorage.clear();
+            })
+          }
+
+          else if (childSnapshot.val().status == "online") {
+            console.log(sessDevices);
+            //check if how many login devices are there, if 1 only, go to dashboard
+            if(sessDevices == 1) {
+              //check if there are multiple warnings
+              if(sessWarning < 2) {
+                
+                update(ref(db, 'accounts/trainees/' + sessID), {
+                  warning: sessWarning + 1,
+                  status: "suspended"
+                })
+                .then(()=> {
+                  signOut(auth)
+                  .then(()=> {
+                    alertMsg.innerText = "Account has been temporarily suspended";
+                    alertMsg.style.opacity = "1";
+                    loginEmail.value = "";
+                    loginPw.value = "";
+                    sessionStorage.clear();
+                  })
+                })
+              }
+
+              else {
+                update(ref(db, 'accounts/trainees/' + sessID), {
+                  status: "deletion"
+                })
+              }
+            }
+
+            else {
+              window.location.replace('https://artcademy.ph/dashboard');
+            }
+
+          }
+
+          else if(childSnapshot.val().status == "offline") {
+            update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+              devices: 1
+            })
+            .then(()=> {
+              window.location.replace('https://artcademy.ph/dashboard');
+            })
+          }
+        }
+      })
+    })
+
+  }
+    
+  else {
+    console.log(user);
+    bodyBlue.style.visibility = "visible";
+      
+  } 
+
+  });
+
+  //---------------------validate login--------------------
+
+  function validateLogin() {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if ((loginEmail.value.match(validRegex)) && (loginPw.value != "")) { //check if login fields valid
+
+      signInWithEmailAndPassword(auth, loginEmail.value, loginPw.value)
+      .then(()=> {
+        sessionStorage.setItem("sessEmail", loginEmail.value);
+        sessionStorage.setItem("sessPw", loginPw.value);
+
+      })
+      .catch((error)=> {
+        if((error.code == "auth/wrong-password") || (error.code == "auth/user-not-found")) {
+          alertMsg.innerText = "Email or password is incorrect";
+          alertMsg.style.opacity = "1";
+        }
+      })
+      
+
+    }
+    else {
+      alertMsg.innerText = "Email or password is incorrect";
+      alertMsg.style.opacity = "1";
+    }
+  }
+
+  //-------------on enter, use function login---------------
+  function pressEnter(e) {
+    if(e.code === "Enter") {
+      validateLogin();
+    }
+  }
+
+  btnLogin.addEventListener("click", validateLogin);
+  loginEmail.addEventListener("keydown", pressEnter);
+  loginPw.addEventListener("keydown", pressEnter);
+
+//-------------------------Reset Texts---------------------
+
+function clearText() {
+  document.querySelector('#txtEmail').value = "";
+  document.querySelector('#txtPw').value = "";
+}
+window.addEventListener("pageshow", clearText);
+
+
