@@ -28,7 +28,7 @@ onAuthStateChanged(auth, (user) => {
     
         var sessEmail = sessionStorage.getItem("sessEmail");
       
-        if((sessEmail != "") && (sessEmail != null)) {
+        if(sessEmail == user.email) {
 
         
             bodyBlue.style.visibility = "visible";

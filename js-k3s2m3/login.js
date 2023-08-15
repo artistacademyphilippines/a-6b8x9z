@@ -77,7 +77,7 @@ onAuthStateChanged(auth, (user) => {
       sessEmail = loginEmail.value;
     }
     else {
-      sessEmail = user.email;
+      sessEmail = sessionStorage.getItem('sessEmail');
     }
     
     const path = ref(db, 'accounts/trainees/');
@@ -147,17 +147,7 @@ onAuthStateChanged(auth, (user) => {
           else if (childSnapshot.val().status == "online") {
 
             //check if current ip is the one used for login
-            fetch("https://ipapi.co/ip")
-            .then(res => res.text())
-            .then(IP => getIP(IP));
-
-            function getIP(IP) {
-              get(ref(db,'accounts/trainees/' + sessID + '/')).then((snapshot)=> {
-                console.log(snapshot.val().devices + ', IP: ' + IP);
-                if(snapshot.val().devices == IP) {
-                  //window.location.replace('https://artcademy.ph/dashboard');
-                }
-                else {
+            
 
                   //check if there are multiple warnings
                   if(sessWarning < 2) {
@@ -183,9 +173,7 @@ onAuthStateChanged(auth, (user) => {
                       status: "deletion"
                     })
                   }
-                }
-              })
-            }
+          }
           
           }
 
@@ -204,8 +192,8 @@ onAuthStateChanged(auth, (user) => {
               })
             }
           }
-        }
-      })
+        })
+      
     })
 
   }
