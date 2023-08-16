@@ -151,7 +151,7 @@ onAuthStateChanged(auth, (user) => {
           else if (childSnapshot.val().status == "online") {
 
             //check if current ip is the one used for login
-          
+            
             //check if there are multiple warnings
             if(sessWarning < 2) {
                     
@@ -189,7 +189,7 @@ onAuthStateChanged(auth, (user) => {
                 devices: IP
               })
               .then(()=> {
-                window.location.replace('https://artcademy.ph/dashboard');
+                window.location.href = 'https://artcademy.ph/dashboard';
               })
             }
           }
