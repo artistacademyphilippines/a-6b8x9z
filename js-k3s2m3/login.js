@@ -76,8 +76,12 @@ onAuthStateChanged(auth, (user) => {
     if((loginEmail.value != "") && (loginEmail.value != null)) {
       sessEmail = loginEmail.value;
     }
-    else {
+    else if ((sessionStorage.getItem('sessEmail') != null) && (sessionStorage.getItem('sessEmail') != "")) {
       sessEmail = sessionStorage.getItem('sessEmail');
+    }
+      
+    else {
+      sessEmail = user.email;
     }
     
     const path = ref(db, 'accounts/trainees/');
