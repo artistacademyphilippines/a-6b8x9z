@@ -76,12 +76,8 @@ onAuthStateChanged(auth, (user) => {
     if((loginEmail.value != "") && (loginEmail.value != null)) {
       sessEmail = loginEmail.value;
     }
-    else if ((sessionStorage.getItem('sessEmail') != null) && (sessionStorage.getItem('sessEmail') != "")) {
-      sessEmail = sessionStorage.getItem('sessEmail');
-    }
-      
     else {
-      sessEmail = user.email;
+      sessEmail = sessionStorage.getItem('sessEmail');
     }
     
     const path = ref(db, 'accounts/trainees/');
@@ -91,6 +87,7 @@ onAuthStateChanged(auth, (user) => {
         if(childSnapshot.val().email == sessEmail) {
 
           var sessID = childSnapshot.key;
+          var sessIP = childSnapshot.val().devices;
           var sessWarning = childSnapshot.val().warning;
 
           //check if status is for deletion
@@ -150,8 +147,10 @@ onAuthStateChanged(auth, (user) => {
 
           else if (childSnapshot.val().status == "online") {
 
-            //check if current ip is the one used for login
+            console.log(sessIP);
             
+            //check if current ip is the one used for login
+            /*
             //check if there are multiple warnings
             if(sessWarning < 2) {
                     
@@ -176,6 +175,7 @@ onAuthStateChanged(auth, (user) => {
                 status: "deletion"
                 })
               }
+              */
           }
           
           else if(childSnapshot.val().status == "offline") {
