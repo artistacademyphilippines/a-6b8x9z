@@ -76,8 +76,11 @@ onAuthStateChanged(auth, (user) => {
     if((loginEmail.value != "") && (loginEmail.value != null)) {
       sessEmail = loginEmail.value;
     }
-    else {
+    else if (sessionStorage.getItem('sessEmail') !== null) {
       sessEmail = sessionStorage.getItem('sessEmail');
+    }
+    else {
+      sessEmail = user.email;
     }
     
     const path = ref(db, 'accounts/trainees/');
@@ -146,9 +149,9 @@ onAuthStateChanged(auth, (user) => {
           }
 
           else if (childSnapshot.val().status == "online") {
-
+            console.log(sessEmail);
             console.log(sessIP);
-            
+
             //check if current ip is the one used for login
             /*
             //check if there are multiple warnings
