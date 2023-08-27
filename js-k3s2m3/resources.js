@@ -39,7 +39,7 @@ onAuthStateChanged(auth, (user) => {
                 get(path).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
 
-                        sessIP = childSnapshot.val().devices;
+                        var sessIP = childSnapshot.val().devices;
 
                         if (user.email == childSnapshot.val().email) {
 
