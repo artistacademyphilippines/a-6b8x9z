@@ -442,7 +442,7 @@ function checkIfOnline() {
                                 var currDate = newDate.getDate();
                                 var currYear = newDate.getFullYear();
             
-                                fetch("https://ipapi.co/ip")
+                                fetch("https://ipapi.co/ip/")
                                 .then(res => res.text())
                                 .then(IP => getIP(IP));
 
