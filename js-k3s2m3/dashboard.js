@@ -28,7 +28,7 @@ onAuthStateChanged(auth, (user) => {
     
         if((sessEmail == user.email) && (sessEmail !== null)) {
             
-            fetch("https://ipapi.co/ip/")
+            fetch("https://api.ipify.org/?format=text&callback=getIP/")
             .then(res => res.text())
             .then(IP => getIP(IP));
 
@@ -307,7 +307,7 @@ function checkIfOnline() {
                                 var currDate = newDate.getDate();
                                 var currYear = newDate.getFullYear();
                                 
-                                fetch("https://ipapi.co/ip/")
+                                fetch("https://api.ipify.org/?format=text&callback=getIP/")
                                 .then(res => res.text())
                                 .then(IP => getIP(IP));
 

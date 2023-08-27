@@ -150,7 +150,7 @@ onAuthStateChanged(auth, (user) => {
 
           else if (childSnapshot.val().status == "online") {
 
-            fetch("https://ipapi.co/ip/")
+            fetch("https://api.ipify.org/?format=text&callback=getIP/")
             .then(res => res.text())
             .then(IP => getIP(IP));
 
@@ -192,7 +192,7 @@ onAuthStateChanged(auth, (user) => {
           
           else if(childSnapshot.val().status == "offline") {
             
-            fetch("https://ipapi.co/ip/")
+            fetch("https://api.ipify.org/?format=text&callback=getIP/")
             .then(res => res.text())
             .then(IP => getIP(IP));
 
