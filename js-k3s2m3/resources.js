@@ -30,7 +30,7 @@ onAuthStateChanged(auth, (user) => {
 
         if((sessEmail == user.email) && (sessEmail !== null)) {
 
-            fetch("https://ipapi.co/ip")
+            fetch("https://ipapi.co/ip/")
             .then(res => res.text())
             .then(IP => getIP(IP));
 
