@@ -35,6 +35,7 @@ onAuthStateChanged(auth, (user) => {
             .then(IP => getIP(IP));
 
             function getIP(IP) {
+                console.log(IP);
                 const path = ref(db, 'accounts/trainees/');
                 get(path).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
