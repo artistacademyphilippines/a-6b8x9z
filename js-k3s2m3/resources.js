@@ -1,1 +1,494 @@
-var _0x57082f=_0x2502;(function(_0x1b3531,_0x218352){var _0x1df096=_0x2502,_0x2142d7=_0x1b3531();while(!![]){try{var _0x46c035=-parseInt(_0x1df096(0x167))/0x1+-parseInt(_0x1df096(0x162))/0x2+-parseInt(_0x1df096(0x14f))/0x3*(-parseInt(_0x1df096(0x135))/0x4)+-parseInt(_0x1df096(0x137))/0x5*(-parseInt(_0x1df096(0x15b))/0x6)+parseInt(_0x1df096(0x151))/0x7+parseInt(_0x1df096(0x180))/0x8*(-parseInt(_0x1df096(0x16f))/0x9)+parseInt(_0x1df096(0x138))/0xa*(parseInt(_0x1df096(0x172))/0xb);if(_0x46c035===_0x218352)break;else _0x2142d7['push'](_0x2142d7['shift']());}catch(_0x247e9a){_0x2142d7['push'](_0x2142d7['shift']());}}}(_0x2730,0x2c2fc));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut,deleteUser}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,onDisconnect,set}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x57082f(0x17e),'authDomain':_0x57082f(0x152),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x57082f(0x17f),'storageBucket':_0x57082f(0x141),'messagingSenderId':'651674935886','appId':_0x57082f(0x13d)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var sessEmail=sessionStorage[_0x57082f(0x164)](_0x57082f(0x176)),bodyBlue=document['getElementById'](_0x57082f(0x154));onAuthStateChanged(auth,_0x7a1d5=>{var _0x5c64e8=_0x57082f;if(_0x7a1d5){if(sessEmail==_0x7a1d5['email']&&sessEmail!==null){fetch(_0x5c64e8(0x186))[_0x5c64e8(0x14b)](_0x457c2f=>_0x457c2f[_0x5c64e8(0x18e)]())[_0x5c64e8(0x14b)](_0xcc530d=>_0x15be9e(_0xcc530d));function _0x15be9e(_0x3b6718){var _0x5913f2=_0x5c64e8;const _0x385122=ref(db,_0x5913f2(0x148));get(_0x385122)[_0x5913f2(0x14b)](_0x404c1a=>{var _0x57bcd4=_0x5913f2;_0x404c1a[_0x57bcd4(0x189)](_0x433759=>{var _0x1adb67=_0x57bcd4;_0x7a1d5[_0x1adb67(0x16c)]==_0x433759[_0x1adb67(0x159)]()[_0x1adb67(0x16c)]&&(_0x3b6718==_0x433759[_0x1adb67(0x159)]()['devices']&&(bodyBlue[_0x1adb67(0x16e)][_0x1adb67(0x14c)]=_0x1adb67(0x14a)));});});}}else signOut(auth);}else window['location'][_0x5c64e8(0x13c)](_0x5c64e8(0x145));});var dropCourse=document[_0x57082f(0x182)](_0x57082f(0x179));function loadCourse(){var _0x204b17=_0x57082f,_0x5b06d5='<option\x20value=\x22Select\x20Course\x22\x20class=\x22dropOption\x22>Select\x20Course</option>';const _0x347c63=ref(db,_0x204b17(0x148));get(_0x347c63)[_0x204b17(0x14b)](_0x2c685b=>{var _0x49e527=_0x204b17;_0x2c685b[_0x49e527(0x189)](_0x2033e6=>{var _0x301ed2=_0x49e527;if(_0x2033e6[_0x301ed2(0x159)]()[_0x301ed2(0x16c)]==sessEmail){var _0x5ae724=_0x2033e6[_0x301ed2(0x13f)];const _0x37b98e=ref(db,_0x301ed2(0x148)+_0x5ae724+'/courses/');get(_0x37b98e)[_0x301ed2(0x14b)](_0x550e42=>{var _0x4ef45a=_0x301ed2;_0x550e42[_0x4ef45a(0x189)](_0x57cf22=>{var _0x5cd878=_0x4ef45a;_0x5b06d5+=_0x5cd878(0x147)+_0x57cf22[_0x5cd878(0x13f)]+_0x5cd878(0x142)+_0x57cf22['key']+_0x5cd878(0x144);}),dropCourse[_0x4ef45a(0x15e)]=_0x5b06d5;});}});});}loadCourse();function loadCerti(){var _0x231dd9=_0x57082f,_0x3196b5=document['getElementById'](_0x231dd9(0x181));if(dropCourse[_0x231dd9(0x166)]!=_0x231dd9(0x13e)){var _0x1b954d='';const _0x30344e=ref(db,'accounts/trainees/');get(_0x30344e)['then'](_0x262f41=>{var _0xc0b73d=_0x231dd9;_0x262f41[_0xc0b73d(0x189)](_0x995f4=>{var _0x7214f0=_0xc0b73d;if(_0x995f4['val']()[_0x7214f0(0x16c)]==sessEmail){var _0x38b1fb=_0x995f4[_0x7214f0(0x13f)];const _0x24ff4b=ref(db,'accounts/trainees/'+_0x38b1fb+_0x7214f0(0x140)+dropCourse[_0x7214f0(0x166)]+_0x7214f0(0x17d));get(_0x24ff4b)[_0x7214f0(0x14b)](_0x300827=>{var _0xf72eef=_0x7214f0;_0x300827[_0xf72eef(0x189)](_0x368358=>{var _0x29dc1d=_0xf72eef,_0x5c8d9c=_0x368358[_0x29dc1d(0x13f)];const _0x539416=ref(db,'courses/'+dropCourse['value']+_0x29dc1d(0x17d)+_0x5c8d9c+'/');get(_0x539416)[_0x29dc1d(0x14b)](_0x5075d4=>{var _0x464abc=_0x29dc1d;_0x1b954d+=_0x464abc(0x149)+dropCourse[_0x464abc(0x166)]+'_'+_0x5c8d9c+_0x464abc(0x18d)+_0x5075d4[_0x464abc(0x159)]()[_0x464abc(0x183)]+_0x464abc(0x18f),_0x3196b5[_0x464abc(0x15e)]=_0x1b954d;});});});}});});}}const black=document[_0x57082f(0x182)]('black');var btnPlayTrainingVids=document[_0x57082f(0x146)](_0x57082f(0x18b));function playTrainingVids(){var _0x4774dc=_0x57082f,_0x2be9ff=this[_0x4774dc(0x16a)][_0x4774dc(0x153)][0x0][_0x4774dc(0x15f)];black['style']['opacity']=0x1,black[_0x4774dc(0x16e)]['background']=_0x4774dc(0x14d),black[_0x4774dc(0x16e)][_0x4774dc(0x14c)]=_0x4774dc(0x14a),black[_0x4774dc(0x16e)][_0x4774dc(0x158)]=_0x4774dc(0x15d);const _0xb64b56=ref(db,_0x4774dc(0x148));get(_0xb64b56)[_0x4774dc(0x14b)](_0x2627c6=>{var _0x4cfad5=_0x4774dc;_0x2627c6[_0x4cfad5(0x189)](_0x319535=>{var _0x117053=_0x4cfad5;if(_0x319535[_0x117053(0x159)]()['email']==sessEmail){var _0x246483=_0x319535['key'];const _0x409322=ref(db,_0x117053(0x148)+_0x246483+_0x117053(0x140)+dropCourse[_0x117053(0x166)]+_0x117053(0x17d));get(_0x409322)[_0x117053(0x14b)](_0x20c8b3=>{var _0x473719=_0x117053;_0x20c8b3[_0x473719(0x189)](_0x34277e=>{var _0xb45c89=_0x473719,_0x15460c=_0x34277e['key'];const _0x27d909=ref(db,_0xb45c89(0x17b)+dropCourse[_0xb45c89(0x166)]+'/batch/'+_0x15460c+_0xb45c89(0x15a)+_0x2be9ff+'/');get(_0x27d909)[_0xb45c89(0x14b)](_0x1819fa=>{var _0x49c937=_0xb45c89;black[_0x49c937(0x15e)]=_0x49c937(0x155)+_0x1819fa['val']()[_0x49c937(0x150)]+_0x49c937(0x13b);var _0x19de8c=_0x1819fa[_0x49c937(0x159)]()[_0x49c937(0x178)];update(ref(db,_0x49c937(0x17b)+dropCourse[_0x49c937(0x166)]+_0x49c937(0x17d)+_0x15460c+_0x49c937(0x15a)+_0x2be9ff+'/'),{'views':_0x19de8c+0x1});});});});}});});}function loadTrainingVideos(){var _0x510bbe=_0x57082f,_0x340821=document[_0x510bbe(0x182)]('divTrainingVids');if(dropCourse[_0x510bbe(0x166)]!=_0x510bbe(0x13e)){var _0x535525='';const _0x4d8b6a=ref(db,_0x510bbe(0x148));get(_0x4d8b6a)[_0x510bbe(0x14b)](_0x51a0b7=>{_0x51a0b7['forEach'](_0x5a342e=>{var _0x3fdf2b=_0x2502;if(_0x5a342e[_0x3fdf2b(0x159)]()[_0x3fdf2b(0x16c)]==sessEmail){var _0x238d24=_0x5a342e[_0x3fdf2b(0x13f)];const _0x22c9da=ref(db,_0x3fdf2b(0x148)+_0x238d24+_0x3fdf2b(0x140)+dropCourse[_0x3fdf2b(0x166)]+'/batch/');get(_0x22c9da)['then'](_0x387c28=>{var _0x156599=_0x3fdf2b;_0x387c28[_0x156599(0x189)](_0x371530=>{var _0xa160ea=_0x156599,_0x1a1ff6=_0x371530[_0xa160ea(0x13f)];const _0x3a745f=ref(db,_0xa160ea(0x17b)+dropCourse[_0xa160ea(0x166)]+_0xa160ea(0x17d)+_0x1a1ff6+_0xa160ea(0x15a));get(_0x3a745f)[_0xa160ea(0x14b)](_0x2ed212=>{var _0x5327f7=_0xa160ea;_0x2ed212[_0x5327f7(0x189)](_0x1abdc1=>{var _0x53f675=_0x5327f7;_0x535525+=_0x53f675(0x143)+(dropCourse['value']+'_'+_0x1a1ff6+'_'+_0x1abdc1[_0x53f675(0x13f)])+'</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayTrainingVids\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22clickLines\x22></div>';}),_0x340821[_0x5327f7(0x15e)]=_0x535525;for(var _0x462570=0x0;_0x462570<btnPlayTrainingVids['length'];_0x462570++){btnPlayTrainingVids[_0x462570][_0x5327f7(0x173)]('click',playTrainingVids);}});});});}});});}}function _0x2502(_0x2c2811,_0x567fde){var _0x2730a0=_0x2730();return _0x2502=function(_0x2502c2,_0x2e84f0){_0x2502c2=_0x2502c2-0x133;var _0x534e7b=_0x2730a0[_0x2502c2];return _0x534e7b;},_0x2502(_0x2c2811,_0x567fde);}function _0x2730(){var _0x50d691=['<option\x20value=\x22','accounts/trainees/','\x20<div\x20class=\x22clickables\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>','visible','then','visibility','rgba(0,0,0,0.3)','code','3kCsMdR','link','1960168VlwbRk','projartcademyph-29663.firebaseapp.com','children','bodyBlue','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<iframe\x20src=\x22','click','divBasicFiles','transition','val','/trainingVideos/','6VIxFXh','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<iframe\x20src=\x22','opacity\x20.5s','innerHTML','innerText','downloads','out','420364JxnrDB','background','getItem','href','value','76892cLQPhG','opacity','update','parentElement','getFullYear','email','status','style','83691rojbQt','location','/resources/public/files/','11dZjAte','addEventListener','change','/resources/public/videos/','sessEmail','.info/connected','views','dropCourse','getDate','courses/','deletion','/batch/','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','projartcademyph-29663','248njozGd','divCerti','getElementById','certificates','<div\x20class=\x22clickables\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>','catch','https://ipapi.co/ip','clear','divOtherVids','forEach','btnPlayOtherVids','btnPlayTrainingVids','oAuth','</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDownload.png\x22\x20onclick=\x22window.open(\x27','text','\x27)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22clickLines\x22></div>','length','</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDownload.png\x22\x20class=\x22btnBasicFiles\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22clickLines\x22></div>','625172glTrjy','offline','589255yfEZtd','2021630uYRkIu','suspended','btnBasicFiles','\x22\x20allowfullscreen\x20allowtransparency\x20allow=\x22autoplay\x22\x20scrolling=\x22no\x22\x20frameborder=\x220\x22></iframe>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','replace','1:651674935886:web:629aefbab24dd2a154991f','Select\x20Course','key','/courses/','projartcademyph-29663.appspot.com','\x22\x20class=\x22dropOption\x22>','<div\x20class=\x22clickables\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h2>','</option>','https://artcademy.ph/login','getElementsByClassName'];_0x2730=function(){return _0x50d691;};return _0x2730();}var btnPlayOtherVids=document[_0x57082f(0x146)](_0x57082f(0x18a));function playOtherVids(){var _0x1daf80=_0x57082f,_0x38824d=this[_0x1daf80(0x16a)]['children'][0x0]['innerText'];black['style'][_0x1daf80(0x168)]=0x1,black[_0x1daf80(0x16e)][_0x1daf80(0x163)]=_0x1daf80(0x14d),black['style'][_0x1daf80(0x14c)]='visible',black['style'][_0x1daf80(0x158)]=_0x1daf80(0x15d);const _0x252cbb=ref(db,_0x1daf80(0x17b)+dropCourse[_0x1daf80(0x166)]+_0x1daf80(0x175)+_0x38824d+'/');get(_0x252cbb)[_0x1daf80(0x14b)](_0x3aec77=>{var _0x5c2e37=_0x1daf80;black[_0x5c2e37(0x15e)]=_0x5c2e37(0x15c)+_0x3aec77[_0x5c2e37(0x159)]()[_0x5c2e37(0x150)]+'\x22\x20allowfullscreen\x20allowtransparency\x20allow=\x22autoplay\x22\x20scrolling=\x22no\x22\x20frameborder=\x220\x22></iframe>\x0a\x20\x20\x20\x20\x20\x20\x20\x20';var _0x31eba3=_0x3aec77[_0x5c2e37(0x159)]()[_0x5c2e37(0x178)];update(ref(db,_0x5c2e37(0x17b)+dropCourse[_0x5c2e37(0x166)]+'/resources/public/videos/'+_0x38824d+'/'),{'views':_0x31eba3+0x1});});}function loadOtherVideos(){var _0x247d8c=_0x57082f,_0xfa5ddf=document[_0x247d8c(0x182)](_0x247d8c(0x188));if(dropCourse[_0x247d8c(0x166)]!=_0x247d8c(0x13e)){var _0x5ae9d2='';const _0x5690fd=ref(db,_0x247d8c(0x17b)+dropCourse[_0x247d8c(0x166)]+_0x247d8c(0x175));get(_0x5690fd)[_0x247d8c(0x14b)](_0x3cbda5=>{var _0x49bad3=_0x247d8c;_0x3cbda5['forEach'](_0x4f5357=>{var _0x6b587c=_0x2502;_0x5ae9d2+=_0x6b587c(0x184)+_0x4f5357['key']+'</h2>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayOtherVids\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22clickLines\x22></div>';}),_0xfa5ddf[_0x49bad3(0x15e)]=_0x5ae9d2;for(var _0x3a11ce=0x0;_0x3a11ce<btnPlayOtherVids[_0x49bad3(0x133)];_0x3a11ce++){btnPlayOtherVids[_0x3a11ce][_0x49bad3(0x173)](_0x49bad3(0x156),playOtherVids);}});}}var btnBasicFiles=document[_0x57082f(0x146)](_0x57082f(0x13a));function downloadBasicFiles(){var _0x71430d=_0x57082f,_0xdeb8a8=this[_0x71430d(0x16a)]['children'][0x0][_0x71430d(0x15f)];const _0x2e5011=ref(db,'courses/'+dropCourse['value']+_0x71430d(0x171)+_0xdeb8a8+'/');get(_0x2e5011)[_0x71430d(0x14b)](_0x209479=>{var _0x115774=_0x71430d;window['location'][_0x115774(0x165)]=_0x209479['val']()['link'],newDownload=_0x209479[_0x115774(0x159)]()[_0x115774(0x160)]+0x1,update(_0x2e5011,{'downloads':newDownload});});}function loadBasicFiles(){var _0x230373=_0x57082f,_0x237180=document[_0x230373(0x182)](_0x230373(0x157));if(dropCourse['value']!='Select\x20Course'){var _0x38be3a='';const _0x33862b=ref(db,_0x230373(0x17b)+dropCourse['value']+_0x230373(0x171));get(_0x33862b)['then'](_0x24aaf0=>{var _0x1c2f8f=_0x230373;_0x24aaf0['forEach'](_0x36399d=>{var _0x418dc7=_0x2502;_0x38be3a+=_0x418dc7(0x184)+_0x36399d[_0x418dc7(0x13f)]+_0x418dc7(0x134);}),_0x237180[_0x1c2f8f(0x15e)]=_0x38be3a;for(var _0x28ce76=0x0;_0x28ce76<btnBasicFiles['length'];_0x28ce76++){btnBasicFiles[_0x28ce76]['addEventListener'](_0x1c2f8f(0x156),downloadBasicFiles);}});}}function clearFields(){var _0x5a71b0=_0x57082f;dropCourse[_0x5a71b0(0x166)]==_0x5a71b0(0x13e)&&(document['getElementById'](_0x5a71b0(0x157))['innerHTML']='',document['getElementById'](_0x5a71b0(0x188))[_0x5a71b0(0x15e)]='',document[_0x5a71b0(0x182)]('divTrainingVids')[_0x5a71b0(0x15e)]='',document[_0x5a71b0(0x182)]('divCerti')[_0x5a71b0(0x15e)]='');}dropCourse[_0x57082f(0x173)](_0x57082f(0x174),loadCerti),dropCourse[_0x57082f(0x173)](_0x57082f(0x174),loadTrainingVideos),dropCourse['addEventListener']('change',loadOtherVideos),dropCourse[_0x57082f(0x173)](_0x57082f(0x174),loadBasicFiles),dropCourse['addEventListener'](_0x57082f(0x174),clearFields);function checkIfOnline(){var _0x3a3e1e=_0x57082f,_0x59792=sessionStorage[_0x3a3e1e(0x164)](_0x3a3e1e(0x18c)),_0x245854=sessionStorage[_0x3a3e1e(0x164)](_0x3a3e1e(0x176));if(_0x59792==_0x3a3e1e(0x161)){const _0x24dc35=ref(db,_0x3a3e1e(0x148));get(_0x24dc35)[_0x3a3e1e(0x14b)](_0x1307f5=>{var _0x512e3b=_0x3a3e1e;_0x1307f5[_0x512e3b(0x189)](_0x2a549a=>{var _0x28fc5b=_0x512e3b;if(_0x2a549a[_0x28fc5b(0x159)]()['email']==_0x245854){var _0x1c8a45=_0x2a549a['key'];update(ref(db,_0x28fc5b(0x148)+_0x1c8a45+'/'),{'status':_0x28fc5b(0x136),'devices':0x0})['then'](()=>{var _0x435ff8=_0x28fc5b;signOut(auth)[_0x435ff8(0x14b)](()=>{var _0x4b92b9=_0x435ff8;sessionStorage[_0x4b92b9(0x187)]();})[_0x435ff8(0x185)](_0xfc11bd=>{var _0x4e94b4=_0x435ff8;alert(_0xfc11bd[_0x4e94b4(0x14e)]);});});}});});}else{var _0x413c25=ref(db,_0x3a3e1e(0x177));onValue(_0x413c25,_0x373b64=>{var _0x1d4081=_0x3a3e1e;if(_0x373b64[_0x1d4081(0x159)]()===!![]){var _0x156f10=ref(db,_0x1d4081(0x148));get(_0x156f10)[_0x1d4081(0x14b)](_0x273c0d=>{_0x273c0d['forEach'](_0x3a9590=>{var _0x34270c=_0x2502,_0x2fa1ef=sessionStorage[_0x34270c(0x164)](_0x34270c(0x176));if(_0x3a9590[_0x34270c(0x159)]()[_0x34270c(0x16c)]==_0x2fa1ef){var _0x307826=_0x3a9590[_0x34270c(0x13f)];if(_0x3a9590[_0x34270c(0x159)]()[_0x34270c(0x16d)]==_0x34270c(0x139))signOut(auth)[_0x34270c(0x14b)](()=>{var _0x18c3c3=_0x34270c;sessionStorage[_0x18c3c3(0x187)]();})[_0x34270c(0x185)](_0x24b7c9=>{var _0x243bd7=_0x34270c;alert(_0x24b7c9[_0x243bd7(0x14e)]);});else{if(_0x3a9590[_0x34270c(0x159)]()[_0x34270c(0x16d)]==_0x34270c(0x17c))sessionStorage['clear'](),window[_0x34270c(0x170)][_0x34270c(0x13c)](_0x34270c(0x145));else{var _0x431081=new Date(),_0x4fa840=_0x431081['getMonth']()+0x1,_0xfde0ee=_0x431081[_0x34270c(0x17a)](),_0x34bce7=_0x431081[_0x34270c(0x16b)]();fetch(_0x34270c(0x186))[_0x34270c(0x14b)](_0x401dc8=>_0x401dc8[_0x34270c(0x18e)]())[_0x34270c(0x14b)](_0x2ffe3c=>_0x2adfa4(_0x2ffe3c));function _0x2adfa4(_0x23f6b1){var _0x4158da=_0x34270c;update(ref(db,_0x4158da(0x148)+_0x307826),{'devices':_0x23f6b1,'status':'online','lastOnline':_0x4fa840+'.'+_0xfde0ee+'.'+_0x34bce7})[_0x4158da(0x185)](_0x11cf85=>{var _0x1c083c=_0x4158da;alert(_0x11cf85[_0x1c083c(0x14e)]);});}}}}});});}});}}setInterval(checkIfOnline,0x1f4);function checkIfOffline(){var _0x54f7b1=_0x57082f;const _0x29d65b=ref(db,_0x54f7b1(0x148));onValue(_0x29d65b,_0x57766d=>{var _0x4d47fa=_0x54f7b1,_0x34e4d0=sessionStorage['getItem'](_0x4d47fa(0x176));_0x57766d[_0x4d47fa(0x189)](_0x14cb74=>{var _0x2adee8=_0x4d47fa;if(_0x34e4d0==_0x14cb74[_0x2adee8(0x159)]()['email']){var _0x58b6e8=_0x14cb74[_0x2adee8(0x13f)],_0x34e2ae=ref(db,'accounts/trainees/'+_0x58b6e8+'/');onDisconnect(_0x34e2ae)[_0x2adee8(0x169)]({'status':_0x2adee8(0x136),'devices':0x0});}});});}checkIfOffline();
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut, deleteUser} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, onDisconnect, set } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+//--check first if user is currently logged in
+
+var sessEmail = sessionStorage.getItem("sessEmail");
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+        console.log(user.email, sessEmail);
+
+        if((sessEmail == user.email) && (sessEmail !== null)) {
+
+            fetch("https://ipapi.co/ip")
+            .then(res => res.text())
+            .then(IP => getIP(IP));
+
+            function getIP(IP) {
+                const path = ref(db, 'accounts/trainees/');
+                get(path).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        console.log(childSnapshot.val().email);
+                        if (user.email == childSnapshot.val().email) {
+                            if (IP == childSnapshot.val().devices) {
+                                console.log(childSnapshot.val().devices);
+                                bodyBlue.style.visibility = "visible";
+                            }
+                        }
+                    })
+                })
+            }
+        }
+        
+        else {
+          signOut(auth);
+        }
+
+    }
+
+    else {
+      
+        window.location.replace('https://artcademy.ph/login');
+      
+    } 
+
+});
+
+
+//--------------------------Load Course---------------------------
+
+var dropCourse = document.getElementById('dropCourse');
+
+function loadCourse() {
+    var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
+
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().email == sessEmail) {
+                
+                var sessID = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+                    })
+                    dropCourse.innerHTML = append;
+                })
+
+            }
+        })
+        
+    })
+
+}
+loadCourse();
+
+//--------------------------Load Certificate-----------------------
+
+function loadCerti() {
+
+    var divCerti = document.getElementById('divCerti');
+    
+    if(dropCourse.value != "Select Course") {
+
+        var append = "";
+
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+            
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                    get(path2).then((snapshot)=> {
+                        snapshot.forEach((childSnapshot)=> {
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
+                            get(path3).then((snapshot)=> {
+                                append+= 
+                                ` <div class="clickables">
+                                    <h2>${dropCourse.value}_${sessBatch}</h2>
+                                    <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
+                                </div>
+                                <div class="clickLines"></div>`;
+                                divCerti.innerHTML = append;
+                            })
+                           
+                        })
+                       
+                    })
+               
+                }
+                
+            })
+         
+        })
+    }
+
+}
+
+//---------------------------Training Videos-----------------------
+const black = document.getElementById('black');
+var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids');
+
+function playTrainingVids() {
+    var vidTitle = this.parentElement.children[0].innerText;
+    
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+    
+    
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+    
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().email == sessEmail) {
+
+                var sessID = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+
+                        var sessBatch = childSnapshot.key;
+                        const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/');
+                        get(path3).then((snapshot)=> {
+                            
+                            black.innerHTML = `
+                            <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                            `;
+
+                            var oldViews = snapshot.val().views;
+
+                            update(ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/'), {
+                                views: oldViews + 1
+                            })
+                        })
+                    
+                    })
+                 
+                })
+                
+            }
+           
+        })
+     
+    }) 
+    
+}
+
+function loadTrainingVideos() {
+
+    var divTrainingVids = document.getElementById('divTrainingVids');
+
+    if(dropCourse.value != "Select Course") {
+
+        var append = "";
+    
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+        
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+                    get(path2).then((snapshot)=> {
+                        snapshot.forEach((childSnapshot)=> {
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
+                            get(path3).then((snapshot)=> {
+                                snapshot.forEach((childSnapshot)=> {
+                                    append += 
+                                    `<div class="clickables">
+                                        <h2>${dropCourse.value + '_' + sessBatch + '_' + childSnapshot.key}</h2>
+                                        <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
+                                    </div>
+                                    <div class="clickLines"></div>`;
+                                })
+
+                                divTrainingVids.innerHTML = append;
+
+                                for(var a = 0; a < btnPlayTrainingVids.length; a++) {
+                                    btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
+                                }
+                                
+                            })
+                            
+                        })
+                        
+                    })
+                    
+                }
+                
+            })
+            
+        })
+    }
+}
+
+//----------------------------Other Videos--------------------------
+
+var btnPlayOtherVids = document.getElementsByClassName('btnPlayOtherVids');
+
+function playOtherVids() {
+
+    var vidTitle = this.parentElement.children[0].innerText;
+    
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle + '/');
+    get(path).then((snapshot)=> {
+
+        black.innerHTML = `
+        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        `;
+
+        var oldViews = snapshot.val().views;
+
+        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle + '/') , {
+            views: oldViews + 1
+        })
+
+    })
+}
+
+function loadOtherVideos() {
+
+    var divOtherVids = document.getElementById('divOtherVids');
+
+    if(dropCourse.value != "Select Course") {
+
+        var append = "";
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/');
+
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+
+                append += 
+                `<div class="clickables">
+                    <h2>${childSnapshot.key}</h2>
+                    <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVids">
+                </div>
+                <div class="clickLines"></div>`;
+                
+            })
+            
+            divOtherVids.innerHTML = append;
+            for(var a = 0; a < btnPlayOtherVids.length; a++) {
+                btnPlayOtherVids[a].addEventListener('click', playOtherVids);
+            }
+        })
+        
+    }
+
+}
+
+//-----------------------------Basic Files-------------------------
+
+var btnBasicFiles = document.getElementsByClassName('btnBasicFiles');
+
+function downloadBasicFiles() {
+    var fileName = this.parentElement.children[0].innerText;
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + fileName + '/');
+    get(path).then((snapshot)=> {
+        window.location.href = snapshot.val().link;
+
+        newDownload = snapshot.val().downloads + 1;
+
+        update(path, {
+            downloads: newDownload
+        })
+    })
+}
+
+function loadBasicFiles() {
+
+    var divBasicFiles = document.getElementById('divBasicFiles');
+
+    if(dropCourse.value != "Select Course") {
+        var append = "";
+
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/');
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                append += 
+                `<div class="clickables">
+                    <h2>${childSnapshot.key}</h2>
+                    <img src="img-h6rv2c/btnDownload.png" class="btnBasicFiles">
+                </div>
+                <div class="clickLines"></div>`;
+            })
+
+            divBasicFiles.innerHTML = append;
+            for(var a = 0; a < btnBasicFiles.length; a++) {
+                btnBasicFiles[a].addEventListener('click', downloadBasicFiles);
+            }
+        })
+    }
+}
+
+function clearFields() {
+    if(dropCourse.value == "Select Course") {
+        document.getElementById('divBasicFiles').innerHTML = "";
+        document.getElementById('divOtherVids').innerHTML = "";
+        document.getElementById('divTrainingVids').innerHTML = "";
+        document.getElementById('divCerti').innerHTML = "";
+    }
+}
+
+dropCourse.addEventListener('change', loadCerti);
+dropCourse.addEventListener('change', loadTrainingVideos);
+dropCourse.addEventListener('change', loadOtherVideos);
+dropCourse.addEventListener('change', loadBasicFiles);
+dropCourse.addEventListener('change', clearFields);
+
+//------------------------Check IF Online (Multiple Tabs)--------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                if(childSnapshot.val().email == sessEmail) {
+                    var sessID = childSnapshot.key;
+
+                    update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                        status: "offline",
+                        devices: 0
+                    })
+                    .then(()=> {
+                        signOut(auth)
+                        .then(()=> {
+                            sessionStorage.clear();
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    })
+                }
+            })
+        })
+
+    }
+
+    else {
+
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) {
+                
+                var path2 = ref(db, 'accounts/trainees/');
+                
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        
+                        var sessEmail = sessionStorage.getItem('sessEmail');
+
+                        if(childSnapshot.val().email == sessEmail) {
+
+                            var sessID = childSnapshot.key;
+
+                            if(childSnapshot.val().status == "suspended") {
+                                signOut(auth)
+                                .then(()=> {
+                                    sessionStorage.clear();
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                }) 
+                            }
+
+                            else if (childSnapshot.val().status == "deletion") {
+    
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
+
+                            }
+
+                            else {
+                                var newDate = new Date();
+                                var currMonth = newDate.getMonth() + 1;
+                                var currDate = newDate.getDate();
+                                var currYear = newDate.getFullYear();
+            
+                                fetch("https://ipapi.co/ip")
+                                .then(res => res.text())
+                                .then(IP => getIP(IP));
+
+                                function getIP(IP) {
+                                    update(ref(db, 'accounts/trainees/' + sessID), {
+                                        devices: IP,
+                                        status: "online",
+                                        lastOnline: currMonth + "." + currDate + "." + currYear
+                                    })
+                                    .catch((error)=> {
+                                        alert(error.code);
+                                    })
+                                }
+                            }
+                        }
+                    })
+                })
+            }
+
+        });
+    }
+}
+setInterval(checkIfOnline, 500);
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
+    
+    const path = ref(db, 'accounts/trainees/');
+
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot)=> {
+            
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/');
+                onDisconnect(checkCon).update({
+                    status: "offline",
+                    devices: 0
+                })
+            }
+        })
+    })
+}
+
+checkIfOffline();
