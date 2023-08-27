@@ -38,7 +38,8 @@ onAuthStateChanged(auth, (user) => {
                 const path = ref(db, 'accounts/trainees/');
                 get(path).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
-
+                        console.log(childSnapshot);
+                        
                         var sessIP = childSnapshot.val().devices;
 
                         if (user.email == childSnapshot.val().email) {
