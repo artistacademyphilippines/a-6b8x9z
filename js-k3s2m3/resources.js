@@ -26,8 +26,7 @@ var bodyBlue = document.getElementById('bodyBlue');
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
-        console.log(user.email, sessEmail);
-
+        
         if((sessEmail == user.email) && (sessEmail !== null)) {
 
             fetch("https://api.ipify.org/?format=text&callback=getIP/")
@@ -35,14 +34,14 @@ onAuthStateChanged(auth, (user) => {
             .then(IP => getIP(IP));
 
             function getIP(IP) {
-                console.log(IP);
+                
                 const path = ref(db, 'accounts/trainees/');
                 get(path).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
-                        console.log(childSnapshot.val().email);
+                        console.log("user email: " + user.email + " childSnapshot: " + childSnapshot.val().email)
                         if (user.email == childSnapshot.val().email) {
                             if (IP == childSnapshot.val().devices) {
-                                console.log(childSnapshot.val().devices);
+                                
                                 bodyBlue.style.visibility = "visible";
                             }
                         }
