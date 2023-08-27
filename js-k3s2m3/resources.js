@@ -38,10 +38,14 @@ onAuthStateChanged(auth, (user) => {
                 const path = ref(db, 'accounts/trainees/');
                 get(path).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
-                        
+
+                        sessIP = childSnapshot.val().devices;
+
                         if (user.email == childSnapshot.val().email) {
-                            console.log("online IP: " + IP + " childSnapshot: " + childSnapshot.val().devices);
-                            if (IP == childSnapshot.val().devices) {
+
+                            console.log("online IP: " + IP + " childSnapshot: " + sessIP);
+
+                            if (IP == sessIP) {
                                 
                                 bodyBlue.style.visibility = "visible";
                             }
