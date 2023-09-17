@@ -258,8 +258,7 @@ function loadCerti() {
                                     <div class="tableFileID"></div>   
                                     <div class="tableFileTitle"><h1>${dropCourse.value}-${sessBatch}</h1></div>                        
                                     <div class="tableFileControls">
-                                        <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}', '_blank');">
-                                
+                                        <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}');">
                                     </div>
                                 </div>
                                 <div class="bannerLine"></div>`;
@@ -384,7 +383,7 @@ function loadTrainingVideos() {
 function playAppVids() {
     
     var fileTitle = this.parentElement.parentElement.children[1].innerText;
-    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
     console.log('appNo: ' + appNo + ' fileTitle: ' + fileTitle);
 
@@ -397,7 +396,7 @@ function playAppVids() {
     get(path).then((snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
-            
+
             console.log(childSnapshot.val().videoTitle);
 
             if(childSnapshot.val().videoTitle == fileTitle) {
@@ -439,7 +438,7 @@ function loadAppData() {
                             <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
                             <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
                             <div class="tableFileControls">
-                                <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${childSnapshot.val().fileLink}', '_blank');">
+                                <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${childSnapshot.val().fileLink}');">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                             </div>
                         </div>
