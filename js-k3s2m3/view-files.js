@@ -386,6 +386,8 @@ function playAppVids() {
     var fileTitle = this.parentElement.parentElement.children[1].innerText;
     var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
+    console.log('appNo: ' + appNo + ' fileTitle: ' + fileTitle);
+
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
@@ -395,6 +397,8 @@ function playAppVids() {
     get(path).then((snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
+            
+            console.log(childSnapshot.val().videoTitle);
 
             if(childSnapshot.val().videoTitle == fileTitle) {
 
