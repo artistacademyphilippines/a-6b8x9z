@@ -347,8 +347,10 @@ function playTrainingVids() {
             get(path).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
 
+                    console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
+                    
                     if(childSnapshot.key == vidTitle) {
-                        console.log(childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
+                        
                         black.innerHTML = `
                         <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
                         `;
