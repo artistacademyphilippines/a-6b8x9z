@@ -295,9 +295,7 @@ function playTrainingVids() {
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
     get(path).then((snapshot)=> {
 
-        for(var a=0; a < snapshot.size; a++) {
-
-            console.log(a);
+        for(var a=1; a <= snapshot.size; a++) {
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
             get(path2).then((snapshot)=> {
