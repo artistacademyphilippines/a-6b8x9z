@@ -322,7 +322,7 @@ function playTrainingVids() {
             })
         })
     })
-
+})
 }
 
 function loadTrainingVideos() {
