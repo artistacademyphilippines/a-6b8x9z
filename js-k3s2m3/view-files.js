@@ -346,8 +346,9 @@ function playTrainingVids() {
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
             get(path).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
-                    if(childSnapshot.key == vidTitle) {
 
+                    if(childSnapshot.key == vidTitle) {
+                        console.log(childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
                         black.innerHTML = `
                         <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
                         `;
