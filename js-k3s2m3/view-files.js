@@ -258,7 +258,7 @@ function loadCerti() {
                                     <div class="tableFileID"></div>   
                                     <div class="tableFileTitle"><h1>${dropCourse.value}-${sessBatch}</h1></div>                        
                                     <div class="tableFileControls">
-                                        <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
+                                        <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}', '_blank');">
                                 
                                     </div>
                                 </div>
