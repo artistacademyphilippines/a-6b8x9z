@@ -295,10 +295,10 @@ function playTrainingVids() {
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
     get(path).then((snapshot)=> {
 
-        console.log(snapshot.size)
-        
         for(var a=1; a < snapshot.size; a++) {
 
+            console.log(a);
+            
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
             get(path2).then((snapshot)=> {
                 
