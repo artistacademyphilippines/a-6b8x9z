@@ -119,7 +119,8 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 //-------------------------Tables--------------------------------
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
-
+const btnPlayFile = document.getElementsByClassName('btnPlayFile');
+const btnDownloadFile = document.getElementsByClassName('btnDownloadFile');
 
 function loadCourse() {
     var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
@@ -464,7 +465,6 @@ function loadAppData() {
                 divAppTable[a-1].innerHTML = append2[a];
                 
                 for(var z = 0; z < tableFileControls.length; z++) {
-                    btnDelFile[z].addEventListener('click', deleteFile);
                     btnPlayFile[z].addEventListener('click', playFile);
                     btnDownloadFile[z].addEventListener('click', downloadFile);
                 }
@@ -475,7 +475,6 @@ function loadAppData() {
     })
 
 }
-
 
 //---------------------------Expand & Collapse---------------------
 
