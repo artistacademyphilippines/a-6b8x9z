@@ -331,9 +331,10 @@ function playTrainingVids() {
      
     }) 
     */
- 
-    var vidTitle = this.parentElement.parentElement.children[1].innerText;
 
+    var vidTitle = this.parentElement.parentElement.children[1].innerText;
+    console.log(vidTitle);
+    
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
@@ -513,8 +514,8 @@ function loadBtnExpand() {
     }    
 }
 
-//------------------------Check IF Online (Multiple Tabs)--------------------------
 
+//------------------------Check IF Online (Multiple Tabs)--------------------------
 
 function checkIfOnline() {
 
