@@ -295,14 +295,17 @@ function playTrainingVids() {
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
     get(path).then((snapshot)=> {
 
-        for(var a=1; a <= snapshot.size; a++) {
+        snapshot.forEach((childSnapshot)=> {
 
-            const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
+            console.log(childSnapshot.key)
+            var newKey = childSnapshot.key;
+
+            const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/');
             get(path2).then((snapshot)=> {
                 
                 snapshot.forEach((childSnapshot)=> {
 
-                console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
+                //console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
                     
                 if(childSnapshot.key == vidTitle) {
                         
@@ -310,16 +313,14 @@ function playTrainingVids() {
                         <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
                         `;
 
-                        var oldViews = childSnapshot.val().views;
+                    var oldViews = childSnapshot.val().views;
 
-                        update(ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/' + vidTitle), {
-                            views: oldViews + 1
-                        })
-                    }
-                })
+                    update(ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/' + vidTitle + '/'), {
+                        views: oldViews + 1
+                    })
+                }
             })
-
-        }
+        })
     })
 
 }
