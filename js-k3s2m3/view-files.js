@@ -333,8 +333,7 @@ function playTrainingVids() {
     */
 
     var vidTitle = this.parentElement.parentElement.children[1].innerText;
-    console.log(vidTitle);
-    
+
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
@@ -350,10 +349,10 @@ function playTrainingVids() {
                     if(childSnapshot.key == vidTitle) {
 
                         black.innerHTML = `
-                        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                        <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
                         `;
 
-                        var oldViews = snapshot.val().views;
+                        var oldViews = childSnapshot.val().views;
 
                         update(ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/' + vidTitle), {
                             views: oldViews + 1
