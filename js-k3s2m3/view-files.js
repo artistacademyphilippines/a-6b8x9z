@@ -297,7 +297,6 @@ function playTrainingVids() {
 
         snapshot.forEach((childSnapshot)=> {
 
-            console.log(childSnapshot.key)
             var newKey = childSnapshot.key;
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/');
@@ -310,7 +309,7 @@ function playTrainingVids() {
                 if(childSnapshot.key == vidTitle) {
                         
                     black.innerHTML = `
-                        <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                        <iframe src="${childSnapshot.val().link}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
                         `;
 
                     var oldViews = childSnapshot.val().views;
