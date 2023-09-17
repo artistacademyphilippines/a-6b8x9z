@@ -120,7 +120,7 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
-const btnDownloadFile = document.getElementsByClassName('btnDownloadFile');
+const tableFileControls = document.getElementsByClassName('tableFileControls');
 
 function loadCourse() {
     var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
@@ -303,11 +303,10 @@ function playTrainingVids() {
             get(path2).then((snapshot)=> {
                 
                 snapshot.forEach((childSnapshot)=> {
-
-                //console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
                     
                 if(childSnapshot.key == vidTitle) {
                         
+                    //mixdrop.co
                     black.innerHTML = `
                         <iframe src="${childSnapshot.val().link}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
                         `;
@@ -382,6 +381,39 @@ function loadTrainingVideos() {
 
 //----------------------------Load All App Data--------------------
 
+function playAppVids() {
+    
+    var fileTitle = this.parentElement.parentElement.children[1].innerText;
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
+    get(path).then((snapshot)=> {
+        
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().videoTitle == fileTitle) {
+
+                var newKey = childSnapshot.key;
+
+                black.innerHTML = 
+                    `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
+
+                var oldViews = childSnapshot.val().videoViews;
+                
+                update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
+                    videoViews: oldViews + 1
+                })
+            }
+            
+        })
+    })
+}
+
 function loadAppData() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
@@ -400,10 +432,10 @@ function loadAppData() {
                     if(childSnapshot.val().fileLink != "") {
                         append+= 
                         `<div class="tableFileEntry">     
-                            <div class="tableFileID"></div>                        
+                            <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
                             <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
                             <div class="tableFileControls">
-                                <img src="img-h6rv2c/btnDownload.png" class="btnDownloadFile">
+                                <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${childSnapshot.val().fileLink}', '_blank');">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                             </div>
                         </div>
@@ -413,7 +445,7 @@ function loadAppData() {
                     else {
                         append+= 
                         `<div class="tableFileEntry">     
-                            <div class="tableFileID"></div>                        
+                            <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
                             <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
                             <div class="tableFileControls">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
@@ -428,8 +460,7 @@ function loadAppData() {
                 divAppTable[a-1].innerHTML = append2[a];
                 
                 for(var z = 0; z < tableFileControls.length; z++) {
-                    btnPlayFile[z].addEventListener('click', playFile);
-                    btnDownloadFile[z].addEventListener('click', downloadFile);
+                    btnPlayFile[z].addEventListener('click', playAppVids);
                 }
             })
             
