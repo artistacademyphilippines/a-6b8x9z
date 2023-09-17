@@ -284,54 +284,6 @@ function loadCerti() {
 
 function playTrainingVids() {
 
-    /*
-    var vidTitle = this.parentElement.parentElement.children[0].innerText;
-    
-    black.style.opacity = 1;
-    black.style.background = "rgba(0,0,0,0.3)";
-    black.style.visibility = "visible";
-    black.style.transition = "opacity .5s";
-    
-    
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-    
-        snapshot.forEach((childSnapshot)=> {
-
-            if(childSnapshot.val().email == sessEmail) {
-
-                var sessID = childSnapshot.key;
-
-                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                get(path2).then((snapshot)=> {
-                    snapshot.forEach((childSnapshot)=> {
-
-                        var sessBatch = childSnapshot.key;
-                        const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/');
-                        get(path3).then((snapshot)=> {
-                            
-                            black.innerHTML = `
-                            <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
-                            `;
-
-                            var oldViews = snapshot.val().views;
-
-                            update(ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/' + vidTitle + '/'), {
-                                views: oldViews + 1
-                            })
-                        })
-                    
-                    })
-                 
-                })
-                
-            }
-           
-        })
-     
-    }) 
-    */
-
     var vidTitle = this.parentElement.parentElement.children[1].innerText;
 
     black.style.opacity = 1;
@@ -339,12 +291,15 @@ function playTrainingVids() {
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
 
+    console.log(vidTitle);
+
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
     get(path).then((snapshot)=> {
 
         for(var a=1; a < snapshot.size; a++) {
+
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
-            get(path).then((snapshot)=> {
+            get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
 
                     console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
@@ -363,6 +318,7 @@ function playTrainingVids() {
                     }
                 })
             })
+
         }
     })
 
