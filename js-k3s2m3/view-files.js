@@ -291,11 +291,12 @@ function playTrainingVids() {
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
 
-    console.log(vidTitle);
 
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
     get(path).then((snapshot)=> {
 
+        console.log(snapshot.size)
+        
         for(var a=1; a < snapshot.size; a++) {
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
