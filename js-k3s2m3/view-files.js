@@ -261,7 +261,8 @@ function loadCerti() {
                                         <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}')">
                                 
                                     </div>
-                                </div>`;
+                                </div>
+                                <div class="bannerLine"></div>`;
                                
                                 divCertiTable.innerHTML = append;
                             })
@@ -396,7 +397,8 @@ function loadTrainingVideos() {
                                         <div class="tableFileControls">
                                             <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
                                         </div>
-                                    </div>`;
+                                    </div>
+                                    <div class="bannerLine"></div>`;
                                 })
 
                                 divTrainingTable.innerHTML = append;
@@ -445,7 +447,8 @@ function loadAppData() {
                                 <img src="img-h6rv2c/btnDownload.png" class="btnDownloadFile">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                             </div>
-                        </div>`;
+                        </div>
+                        <div class="bannerLine"></div>`;
                     }
 
                     else {
@@ -456,7 +459,8 @@ function loadAppData() {
                             <div class="tableFileControls">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                             </div>
-                        </div>`;
+                        </div>
+                        <div class="bannerLine"></div>`;
                     }
                     
                 })
