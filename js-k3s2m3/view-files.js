@@ -300,23 +300,22 @@ function playTrainingVids() {
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/');
             get(path2).then((snapshot)=> {
-                snapshot.forEach((childSnapshot)=> {
-
-                    console.log(vidTitle + ' ' + childSnapshot.key + ' ' + childSnapshot.val().link + ' ' + childSnapshot.val().views);
+                
+                console.log(vidTitle + ' ' + snapshot.key + ' ' + snapshot.val().link + ' ' + snapshot.val().views);
                     
-                    if(childSnapshot.key == vidTitle) {
+                if(snapshot.key == vidTitle) {
                         
-                        black.innerHTML = `
-                        <iframe src="${childSnapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+                    black.innerHTML = `
+                        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
                         `;
 
-                        var oldViews = childSnapshot.val().views;
+                        var oldViews = snapshot.val().views;
 
                         update(ref(db, 'courses/' + dropCourse.value + '/batch/Batch ' + a + '/trainingVideos/' + vidTitle), {
                             views: oldViews + 1
                         })
                     }
-                })
+                
             })
 
         }
