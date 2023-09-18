@@ -121,6 +121,7 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 const frm = document.getElementsByClassName('frm');
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
+const tableFileEntry = document.getElementsByClassName('tableFileEntry');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
 const tableFileControls = document.getElementsByClassName('tableFileControls');
 
@@ -513,7 +514,8 @@ function addNotifications() {
                                 if(childSnapshot.val().new) {
                                     //+2 to skip certi and training FRM
                                     //frm[newAppNo+1].children[2].children[newFileNo-1].children[0].children[0].style.visibility = "visible";
-                                    console.log(frm[newAppNo + 1].children[2].getElementsByClassName('tableFileEntry'));
+                                    console.log(frm[newAppNo + 1].children[2].getElementsByClassName('tableFileEntry')[newFileNo-1]);
+                                    //frm[newAppNo + 1].children[2].getElementsByClassName('tableFileEntry')[newFileNo-1];
                                 }
                             })
                         })
