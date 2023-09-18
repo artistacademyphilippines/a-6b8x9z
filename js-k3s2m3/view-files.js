@@ -226,6 +226,11 @@ function loadAppTable() {
             // 2) next, add event listeners to btnExpand to all tables
             loadBtnExpand();
         })    
+        
+    // 3) next, load the contents for all tables
+    loadCerti();
+    loadTrainingVideos();
+    loadAppData();
 }
 
 //--------------------------Load Certificate-----------------------
@@ -543,10 +548,6 @@ function showHideRes() {
         
     }
 
-     // 3) next, load the contents for all tables
-    loadCerti();
-    loadTrainingVideos();
-    loadAppData();
 }
 
 function loadBtnExpand() {
