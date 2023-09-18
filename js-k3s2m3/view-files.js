@@ -225,11 +225,13 @@ function loadAppTable() {
 
             // 2) next, add event listeners to btnExpand to all tables
             loadBtnExpand();
-            // 3) next, load the contents for all tables
+            // 3) next, load the content for the first 2 tables
             loadCerti();
             loadTrainingVideos();
-            loadAppData();
-        })   
+            
+        })
+        // 4) load all the data from apps
+        loadAppData();   
 }
 
 //--------------------------Load Certificate-----------------------
@@ -513,7 +515,7 @@ function addNotifications() {
                                     
                                     //+2 to skip certi and training FRM
                                     //frm[newAppNo+1].children[2].children[newFileNo-1].children[0].children[0].style.visibility = "visible";
-                                    console.log(frm[2]);
+                                    console.log(frm[newAppNo+1]);
                                 }
                             })
                         })
