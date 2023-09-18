@@ -228,10 +228,9 @@ function loadAppTable() {
             // 3) next, load the content for the first 2 tables
             loadCerti();
             loadTrainingVideos();
-            
-        })
-        // 4) load all the data from apps
-        loadAppData();   
+            // 4) load all the data from apps
+            loadAppData();  
+        })   
 }
 
 //--------------------------Load Certificate-----------------------
