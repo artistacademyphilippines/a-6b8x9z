@@ -464,13 +464,13 @@ function loadAppData() {
 
                 divAppTable[a-1].innerHTML = append2[a];
 
-                addNotifications();
-                
                 for(var z = 0; z < tableFileControls.length; z++) {
                     btnPlayFile[z].addEventListener('click', playAppVids);
                 }
             })
         }
+
+        addNotifications();
 
     })
 
@@ -489,6 +489,8 @@ function addNotifications() {
                 //get TID
                 var newKey = childSnapshot.key;
 
+                console.log('TID: ' + newKey);
+                
                 const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
                 onValue(path2, (snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
