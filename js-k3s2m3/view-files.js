@@ -479,6 +479,7 @@ function loadAppData() {
 //----------------------------Notifications------------------------
 
 function addNotifications() {
+    console.log('add notif im here');
     const path = ref(db, 'accounts/trainees/');
     onValue(path, (snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
