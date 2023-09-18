@@ -242,9 +242,8 @@ function loadCerti() {
 
         const path = ref(db, 'accounts/trainees/');
 
-        onValue(path, (snapshot)=> {
+        get(path).then((snapshot)=> {
 
-            
             snapshot.forEach((childSnapshot)=> {
 
                 if(childSnapshot.val().email == sessEmail) {
@@ -253,13 +252,13 @@ function loadCerti() {
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
 
-                    onValue(path2, (snapshot)=> {
+                    get(path2).then((snapshot)=> {
                         var append = "";
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
                             
-                            onValue(path3, (snapshot)=> {
+                            get(path3).then((snapshot)=> {
                                 
                                 append+= 
 
@@ -338,9 +337,7 @@ function loadTrainingVideos() {
     if(dropCourse.value != "Select Course") {
 
         const path = ref(db, 'accounts/trainees/');
-        onValue(path, (snapshot)=> {
-
-            
+        get(path).then((snapshot)=> {
 
             snapshot.forEach((childSnapshot)=> {
 
@@ -350,7 +347,7 @@ function loadTrainingVideos() {
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
 
-                    onValue(path2, (snapshot)=> {
+                    get(path2).then((snapshot)=> {
                         var append = "";
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
@@ -431,14 +428,14 @@ function loadAppData() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
 
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
 
         for(var a = 1; a <= snapshot.size; a++) {
             var append = "";
             var append2 = [];
             const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a + '/files/');
             
-            onValue(path2, (snapshot)=>{  
+            get(path2).then((snapshot)=>{  
 
                 snapshot.forEach((childSnapshot)=> {   
                     
@@ -488,7 +485,7 @@ function loadAppData() {
 function showNotifications() {
    
     const path = ref(db, 'accounts/trainees/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             //get the user/trainee info
             if(childSnapshot.val().email == sessEmail) {
@@ -497,13 +494,13 @@ function showNotifications() {
                 var newKey = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
-                onValue(path2, (snapshot)=> {
+                get(path2).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         //get App Number
                         var newAppNo = Number(childSnapshot.key);
 
                         const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
-                        onValue(path3, (snapshot)=> {
+                        get(path3).then((snapshot)=> {
                             snapshot.forEach((childSnapshot)=> {
 
                                 //get File Number
