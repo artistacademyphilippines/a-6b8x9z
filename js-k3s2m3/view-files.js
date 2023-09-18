@@ -301,14 +301,14 @@ function playTrainingVids() {
 
 
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
 
         snapshot.forEach((childSnapshot)=> {
 
             var newKey = childSnapshot.key;
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/');
-            onValue(path2, (snapshot)=> {
+            get(path2).then((snapshot)=> {
                 
                 snapshot.forEach((childSnapshot)=> {
                     
@@ -340,7 +340,7 @@ function loadTrainingVideos() {
         const path = ref(db, 'accounts/trainees/');
         onValue(path, (snapshot)=> {
 
-            var append = "";
+            
 
             snapshot.forEach((childSnapshot)=> {
 
@@ -351,7 +351,7 @@ function loadTrainingVideos() {
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
 
                     onValue(path2, (snapshot)=> {
-
+                        var append = "";
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
@@ -403,7 +403,7 @@ function playAppVids() {
     black.style.transition = "opacity .5s";
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
 
