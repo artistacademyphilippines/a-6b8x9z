@@ -226,7 +226,7 @@ function loadAppTable() {
             // 2) next, add event listeners to btnExpand to all tables
             loadBtnExpand();
         })    
-        
+
     // 3) next, load the contents for all tables
     loadCerti();
     loadTrainingVideos();
@@ -503,17 +503,15 @@ function addNotifications() {
                         //get App Number
                         var newAppNo = childSnapshot.key;
 
-                        console.log('app No: ' + newAppNo);
-
                         const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
                         onValue(path3, (snapshot)=> {
                             snapshot.forEach((childSnapshot)=> {
 
                                 //get File Number
                                 var newFileNo = childSnapshot.key;
-                                console.log('file No: ' + newFileNo);
-
+                            
                                 if(childSnapshot.val().new) {
+                                    console.log(childSnapshot.val().new);
                                     //+2 to skip certi and training FRM
                                     frm[newAppNo+2].children[2].children[newFileNo].children[0].children[0].style.visibility = "visible";
                                 }
