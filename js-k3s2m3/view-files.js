@@ -118,10 +118,8 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 
 //-------------------------Tables--------------------------------
 
-const frm = document.getElementsByClassName('frm');
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
-const tableFileEntry = document.getElementsByClassName('tableFileEntry');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
 const tableFileControls = document.getElementsByClassName('tableFileControls');
 
