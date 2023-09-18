@@ -202,7 +202,7 @@ dropCourse.addEventListener('change', showTables);
 function loadAppTable() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
         var append = "";
         snapshot.forEach((childSnapshot)=> {
             
@@ -482,12 +482,12 @@ function loadAppData() {
 
     })
 
-    addNotifications();
+    showNotifications();
 }
 
 //----------------------------Notifications------------------------
 
-function addNotifications() {
+function showNotifications() {
    
     const path = ref(db, 'accounts/trainees/');
     onValue(path, (snapshot)=> {
@@ -513,14 +513,10 @@ function addNotifications() {
                             
                                 if(childSnapshot.val().new) {
                                 
-                                    //console.log(frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1]);
-                                    //console.log(tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible");
-                                    //frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1].children[0].children[0].style.visibility = "visible"
                                     var getFrm = resources.children[newAppNo+1];
-                                    //var getAppTable = getFrm.children[2].getElementsByClassName('tableFileEntry');
+                                    
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-                                    console.log(newFileNo);
-                                    //console.log(getAppTable[newFileNo-1].children[0].children[0]);
+                                    
                                     getAppTable[newFileNo-1].children[0].children[0].style.visibility = "visible";
                                     
                                 }
