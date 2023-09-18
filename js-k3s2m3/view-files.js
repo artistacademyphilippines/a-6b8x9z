@@ -479,7 +479,7 @@ function loadAppData() {
 //----------------------------Notifications------------------------
 
 function addNotifications() {
-    console.log('add notif im here');
+   
     const path = ref(db, 'accounts/trainees/');
     onValue(path, (snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
@@ -489,13 +489,13 @@ function addNotifications() {
                 //get TID
                 var newKey = childSnapshot.key;
 
-                console.log('TID: ' + newKey);
-                
                 const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
                 onValue(path2, (snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         //get App Number
-                        newAppNo = childSnapshot.key;
+                        var newAppNo = childSnapshot.key;
+
+                        console.log('app No: ' + newAppNo);
 
                         const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
                         onValue(path3, (snapshot)=> {
@@ -503,6 +503,7 @@ function addNotifications() {
 
                                 //get File Number
                                 var newFileNo = childSnapshot.key;
+                                console.log('file No: ' + newFileNo);
 
                                 if(childSnapshot.val().new) {
                                     //+2 to skip certi and training FRM
