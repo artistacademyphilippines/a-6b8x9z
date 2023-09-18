@@ -504,17 +504,18 @@ function showNotifications() {
                             snapshot.forEach((childSnapshot)=> {
 
                                 //get File Number
-                                var newFileNo = Number(childSnapshot.key);
-                            
-                                if(childSnapshot.val().new) {
+                                var newFileName = childSnapshot.key;
+                                console.log(newFileName);
                                 
-                                    var getFrm = resources.children[newAppNo+1];
+                                //if(childSnapshot.val().new) {
+                                
+                                //    var getFrm = resources.children[newAppNo+1];
                                     
-                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+                                //    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
                                     
-                                    getAppTable[newFileNo-1].children[0].children[0].style.visibility = "visible";
+                                //    getAppTable[newFileNo-1].children[0].children[0].style.visibility = "visible";
                                     
-                                }
+                                //}
                             })
                         })
                     })
