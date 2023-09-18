@@ -513,9 +513,7 @@ function addNotifications() {
                             
                                 if(childSnapshot.val().new) {
                                     //+2 to skip certi and training FRM
-                                    //frm[newAppNo+1].children[2].children[newFileNo-1].children[0].children[0].style.visibility = "visible";
-                                    //console.log(frm[newAppNo + 1].children[2].getElementsByClassName('tableFileEntry')[newFileNo]);
-                                    console.log('newFileNo: ' + newFileNo);
+                                    console.log(frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1]);
                                     //console.log(tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible");
                                     frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1].children[0].children[0].style.visibility = "visible"
                                 }
