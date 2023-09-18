@@ -519,7 +519,14 @@ function addNotifications() {
                                     var getFrm = resources.children[newAppNo+1];
                                     //var getAppTable = getFrm.children[2].getElementsByClassName('tableFileEntry');
                                     var getAppTable = getFrm.children[2];
-                                    console.log(getAppTable);
+                                    console.log(getAppTable.classList.length);
+                                    for(var a=0; a < getAppTable.classList.length; a++) {
+                                        console.log(getAppTable.classList.item(a));
+                                        if(getAppTable.classList.item(a) == "tableFileEntry") {
+
+                                        }
+                                    }
+                                    
                                 }
                             })
                         })
