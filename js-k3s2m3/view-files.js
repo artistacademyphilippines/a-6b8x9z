@@ -520,7 +520,7 @@ function addNotifications() {
                                     //var getAppTable = getFrm.children[2].getElementsByClassName('tableFileEntry');
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
 
-                                    console.log(getAppTable);
+                                    getAppTable[newFileNo+1].children[0].children[0].style.visibility = "visible";
                                     
                                 }
                             })
