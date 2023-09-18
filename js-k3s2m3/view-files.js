@@ -505,17 +505,21 @@ function showNotifications() {
 
                                 //get File Number
                                 var newFileName = childSnapshot.key;
-                                console.log(newFileName);
                                 
-                                //if(childSnapshot.val().new) {
+                                if(childSnapshot.val().new) {
                                 
-                                //    var getFrm = resources.children[newAppNo+1];
+                                    var getFrm = resources.children[newAppNo+1];
+                    
+                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
                                     
-                                //    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+                                    for(var a = 0; a < getAppTable.length; a++) {
+                                        if(getAppTable[a].children[1].innerText == newFileName) {
+                                            getAppTable[a].children[0].children[0].style.visibility = "visible";
+                                        }
+                                    }
                                     
-                                //    getAppTable[newFileNo-1].children[0].children[0].style.visibility = "visible";
                                     
-                                //}
+                                }
                             })
                         })
                     })
