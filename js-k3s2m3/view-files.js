@@ -517,7 +517,7 @@ function addNotifications() {
                                     //console.log(frm[newAppNo + 1].children[2].getElementsByClassName('tableFileEntry')[newFileNo]);
                                     console.log('newFileNo: ' + newFileNo);
                                     //console.log(tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible");
-                                    tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible"
+                                    frm[newAppNo + 1].children[2].tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible"
                                 }
                             })
                         })
