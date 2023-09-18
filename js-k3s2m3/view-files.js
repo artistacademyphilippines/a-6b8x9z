@@ -512,10 +512,12 @@ function addNotifications() {
                                 var newFileNo = Number(childSnapshot.key);
                             
                                 if(childSnapshot.val().new) {
-                                    //+2 to skip certi and training FRM
-                                    console.log(frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1]);
+                                
+                                    //console.log(frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1]);
                                     //console.log(tableFileEntry[newFileNo - 1].children[0].children[0].style.visibility = "visible");
-                                    frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1].children[0].children[0].style.visibility = "visible"
+                                    //frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1].children[0].children[0].style.visibility = "visible"
+                                    var getFrm = resources.children[newAppNo-1];
+                                    console.log(getFrm);
                                 }
                             })
                         })
