@@ -128,7 +128,7 @@ function loadCourse() {
     var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
-    onValue(path, (snapshot)=> {
+    get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
 
             if(childSnapshot.val().email == sessEmail) {
