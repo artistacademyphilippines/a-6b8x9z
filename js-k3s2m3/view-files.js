@@ -467,7 +467,7 @@ function loadAppData() {
 
                 console.log(append2[a]);
                 console.log(divAppTable[a-1])
-                //divAppTable[a-1].innerHTML = append2[a];
+                divAppTable[a-1].innerHTML = append2[a];
 
                 for(var z = 0; z < tableFileControls.length; z++) {
                     btnPlayFile[z].addEventListener('click', playAppVids);
