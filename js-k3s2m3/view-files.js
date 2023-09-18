@@ -136,7 +136,7 @@ function loadCourse() {
                 var sessID = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
-                onValue(path2, (snapshot)=> {
+                get(path2).then((snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
                     })
