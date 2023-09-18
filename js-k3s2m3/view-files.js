@@ -236,11 +236,11 @@ function loadCerti() {
 
     if(dropCourse.value != "Select Course") {
 
-        var append = "";
-
         const path = ref(db, 'accounts/trainees/');
+
         onValue(path, (snapshot)=> {
-            
+
+            var append = "";
             snapshot.forEach((childSnapshot)=> {
 
                 if(childSnapshot.val().email == sessEmail) {
@@ -248,7 +248,9 @@ function loadCerti() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+
                     onValue(path2, (snapshot)=> {
+
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
@@ -331,11 +333,11 @@ function loadTrainingVideos() {
 
     if(dropCourse.value != "Select Course") {
 
-        var append = "";
-    
         const path = ref(db, 'accounts/trainees/');
         onValue(path, (snapshot)=> {
-        
+
+            var append = "";
+
             snapshot.forEach((childSnapshot)=> {
 
                 if(childSnapshot.val().email == sessEmail) {
@@ -343,7 +345,9 @@ function loadTrainingVideos() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+
                     onValue(path2, (snapshot)=> {
+
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
@@ -470,10 +474,9 @@ function loadAppData() {
             })
         }
 
-        addNotifications();
-
     })
 
+    addNotifications();
 }
 
 //----------------------------Notifications------------------------
