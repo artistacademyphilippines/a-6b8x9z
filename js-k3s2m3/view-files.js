@@ -117,6 +117,8 @@ const black = document.getElementById('black');
 var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids');
 
 //-------------------------Tables--------------------------------
+
+const frm = document.getElementsByClassName('frm');
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
@@ -126,7 +128,7 @@ function loadCourse() {
     var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
 
     const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
 
             if(childSnapshot.val().email == sessEmail) {
@@ -134,7 +136,7 @@ function loadCourse() {
                 var sessID = childSnapshot.key;
 
                 const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
-                get(path2).then((snapshot)=> {
+                onValue(path2, (snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
                     })
@@ -199,7 +201,7 @@ dropCourse.addEventListener('change', showTables);
 function loadAppTable() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
         var append = "";
         snapshot.forEach((childSnapshot)=> {
             
@@ -237,7 +239,7 @@ function loadCerti() {
         var append = "";
 
         const path = ref(db, 'accounts/trainees/');
-        get(path).then((snapshot)=> {
+        onValue(path, (snapshot)=> {
             
             snapshot.forEach((childSnapshot)=> {
 
@@ -246,11 +248,12 @@ function loadCerti() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                    get(path2).then((snapshot)=> {
+                    onValue(path2, (snapshot)=> {
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
-                            get(path3).then((snapshot)=> {
+                            
+                            onValue(path3, (snapshot)=> {
                                 
                                 append+= 
 
@@ -292,14 +295,14 @@ function playTrainingVids() {
 
 
     const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
 
         snapshot.forEach((childSnapshot)=> {
 
             var newKey = childSnapshot.key;
 
             const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/');
-            get(path2).then((snapshot)=> {
+            onValue(path2, (snapshot)=> {
                 
                 snapshot.forEach((childSnapshot)=> {
                     
@@ -331,7 +334,7 @@ function loadTrainingVideos() {
         var append = "";
     
         const path = ref(db, 'accounts/trainees/');
-        get(path).then((snapshot)=> {
+        onValue(path, (snapshot)=> {
         
             snapshot.forEach((childSnapshot)=> {
 
@@ -340,11 +343,12 @@ function loadTrainingVideos() {
                     var sessID = childSnapshot.key;
 
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
-                    get(path2).then((snapshot)=> {
+                    onValue(path2, (snapshot)=> {
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
-                            get(path3).then((snapshot)=> {
+                            
+                            onValue(path3, (snapshot)=> {
                                 snapshot.forEach((childSnapshot)=> {
                                     append += 
 
@@ -391,7 +395,7 @@ function playAppVids() {
     black.style.transition = "opacity .5s";
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
-    get(path).then((snapshot)=> {
+    onValue(path, (snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
 
@@ -405,7 +409,7 @@ function playAppVids() {
 
                 var oldViews = childSnapshot.val().videoViews;
                 console.log(childSnapshot.val().videoViews);
-                
+
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
                 })
@@ -459,16 +463,56 @@ function loadAppData() {
                 append2[a] = append;
 
                 divAppTable[a-1].innerHTML = append2[a];
+
+                addNotifications();
                 
                 for(var z = 0; z < tableFileControls.length; z++) {
                     btnPlayFile[z].addEventListener('click', playAppVids);
                 }
             })
-            
         }
 
     })
 
+}
+
+//----------------------------Notifications------------------------
+
+function addNotifications() {
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            //get the user/trainee info
+            if(childSnapshot.val().email == sessEmail) {
+                
+                //get TID
+                var newKey = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
+                onValue(path2, (snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        //get App Number
+                        newAppNo = childSnapshot.key;
+
+                        const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
+                        onValue(path3, (snapshot)=> {
+                            snapshot.forEach((childSnapshot)=> {
+
+                                //get File Number
+                                var newFileNo = childSnapshot.key;
+
+                                if(childSnapshot.val().new) {
+                                    //+2 to skip certi and training FRM
+                                    frm[newAppNo+2].children[2].children[newFileNo].children[0].children[0].style.visibility = "visible";
+                                }
+
+                            })
+                        })
+                    })
+                })
+            }
+        })
+    })
 }
 
 //---------------------------Expand & Collapse---------------------
@@ -515,7 +559,7 @@ function checkIfOnline() {
     if(oAuth == "out") {
 
         const path = ref(db, 'accounts/trainees/');
-        get(path).then((snapshot)=> {
+        onValue(path, (snapshot)=> {
             snapshot.forEach((childSnapshot)=> {
                 if(childSnapshot.val().email == sessEmail) {
                     var sessID = childSnapshot.key;
@@ -547,7 +591,7 @@ function checkIfOnline() {
                 
                 var path2 = ref(db, 'accounts/trainees/');
                 
-                get(path2).then((snapshot)=> {
+                onValue(path2, (snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         
                         var sessEmail = sessionStorage.getItem('sessEmail');
