@@ -244,7 +244,7 @@ function loadCerti() {
 
         onValue(path, (snapshot)=> {
 
-            var append = "";
+            
             snapshot.forEach((childSnapshot)=> {
 
                 if(childSnapshot.val().email == sessEmail) {
@@ -254,7 +254,7 @@ function loadCerti() {
                     const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
 
                     onValue(path2, (snapshot)=> {
-
+                        var append = "";
                         snapshot.forEach((childSnapshot)=> {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
@@ -356,7 +356,7 @@ function loadTrainingVideos() {
                             var sessBatch = childSnapshot.key;
                             const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
                             
-                            onValue(path3, (snapshot)=> {
+                            get(path3).then((snapshot)=> {
                                 snapshot.forEach((childSnapshot)=> {
                                     append += 
 
