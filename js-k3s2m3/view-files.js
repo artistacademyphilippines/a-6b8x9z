@@ -501,14 +501,14 @@ function addNotifications() {
                 onValue(path2, (snapshot)=> {
                     snapshot.forEach((childSnapshot)=> {
                         //get App Number
-                        var newAppNo = childSnapshot.key;
+                        var newAppNo = Number(childSnapshot.key);
 
                         const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
                         onValue(path3, (snapshot)=> {
                             snapshot.forEach((childSnapshot)=> {
 
                                 //get File Number
-                                var newFileNo = childSnapshot.key;
+                                var newFileNo = Number(childSnapshot.key);
                             
                                 if(childSnapshot.val().new) {
                                     
