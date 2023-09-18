@@ -519,8 +519,8 @@ function addNotifications() {
                                     var getFrm = resources.children[newAppNo+1];
                                     //var getAppTable = getFrm.children[2].getElementsByClassName('tableFileEntry');
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-
-                                    getAppTable[newFileNo+1].children[0].children[0].style.visibility = "visible";
+                                    console.log(getAppTable[newFileNo]);
+                                    //getAppTable[newFileNo+1].children[0].children[0].style.visibility = "visible";
                                     
                                 }
                             })
