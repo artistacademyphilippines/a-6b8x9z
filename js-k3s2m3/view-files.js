@@ -511,10 +511,9 @@ function addNotifications() {
                                 var newFileNo = Number(childSnapshot.key);
                             
                                 if(childSnapshot.val().new) {
-                                    console.log(newAppNo)
                                     //+2 to skip certi and training FRM
                                     //frm[newAppNo+1].children[2].children[newFileNo-1].children[0].children[0].style.visibility = "visible";
-                                    console.log(frm[newAppNo]);
+                                    console.log(frm[newAppNo + 1]);
                                 }
                             })
                         })
