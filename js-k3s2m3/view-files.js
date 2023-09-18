@@ -518,15 +518,9 @@ function addNotifications() {
                                     //frm[newAppNo + 1].children[2].document.getElementsByClassName('tableFileEntry')[newFileNo - 1].children[0].children[0].style.visibility = "visible"
                                     var getFrm = resources.children[newAppNo+1];
                                     //var getAppTable = getFrm.children[2].getElementsByClassName('tableFileEntry');
-                                    var getAppTable = getFrm.children[2];
+                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
 
-                                    console.log(getAppTable.childElementCount);
-                                    for(var a=0; a < getAppTable.classList.length; a++) {
-                                        //console.log(getAppTable.classList.item(a));
-                                        if(getAppTable.classList.item(a) == "tableFileEntry") {
-
-                                        }
-                                    }
+                                    console.log(getAppTable);
                                     
                                 }
                             })
