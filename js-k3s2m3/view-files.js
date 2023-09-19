@@ -543,7 +543,8 @@ function showNotifications() {
                                     console.log(newAppNo);
                                     console.log(getFrm);
                                     
-                                    console.log(getAppTable[a].children[1].innerText);
+                                    console.log(getAppTable[0].children[1].innerText);
+                                    console.log(getAppTable[1].children[1].innerText);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
 
