@@ -465,9 +465,8 @@ function loadAppData() {
                 })
                 append2[a] = append;
 
-                console.log(a);
-                console.log(append2[a]);
-                //console.log(divAppTable[a-1])
+                console.log('a value: ' + a);
+                console.log('divAppTable: ' + divAppTable)
                 //divAppTable[a-1].innerHTML = append2[a];
 
                 for(var z = 0; z < tableFileControls.length; z++) {
