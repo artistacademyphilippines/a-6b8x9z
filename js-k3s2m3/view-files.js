@@ -501,10 +501,9 @@ function loadAppData() {
                 }
             })
         }
-
+        showNotifications();
     })
 
-    showNotifications();
 }
 
 //----------------------------Notifications------------------------
