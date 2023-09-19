@@ -426,16 +426,23 @@ function downloadAppFiles() {
     var fileTitle = this.parentElement.parentElement.children[1].innerText;
     var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
-    if(childSnapshot.val().videoTitle == fileTitle) {
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
+    get(path).then((snapshot)=> {
+        
+        snapshot.forEach((childSnapshot)=> {
 
-        var newKey = childSnapshot.key;
+        if(childSnapshot.val().videoTitle == fileTitle) {
 
-        var oldDownloads = childSnapshot.val().downloads;
+            var newKey = childSnapshot.key;
 
-        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
-            downloads: oldDownloads + 1
-        })
-    }
+            var oldDownloads = childSnapshot.val().downloads;
+
+            update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
+                downloads: oldDownloads + 1
+            })
+        }
+    })
+})
 }
 
 function loadAppData() {
