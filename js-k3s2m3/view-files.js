@@ -403,18 +403,20 @@ function playAppVids() {
     get(path).then((snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
-            console.log(childSnapshot.val().vidTitle + ', ' + fileTitle)
+            console.log(childSnapshot.val().videoTitle + ', ' + fileTitle)
 
             if(childSnapshot.val().videoTitle == fileTitle) {
 
                 var newKey = childSnapshot.key;
-                
+
                 console.log(newKey);
 
                 black.innerHTML = 
                     `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
 
                 var oldViews = childSnapshot.val().videoViews;
+                
+                console.log(oldViews);
 
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
