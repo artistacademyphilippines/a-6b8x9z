@@ -119,6 +119,7 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 //-------------------------Tables--------------------------------
 
 const divAppTable = document.getElementsByClassName('divAppTable');
+const tableFileEntry = document.getElementsByClassName('tableFileEntry');
 const btnExpand = document.getElementsByClassName('btnExpand');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
 const btnDownloadFile = document.getElementsByClassName('btnDownloadFile');
@@ -516,7 +517,14 @@ function checkNotifs() {
                 snapshot.forEach((childSnapshot)=> {
                     var getTitle = childSnapshot.val().videoTitle;
 
-                    console.log(localStorage.getItem(getTitle));
+                    if(localStorage.getItem(getTitle) == null) {
+                        localStorage.setItem(getTitle, true)
+
+                        for(var a = 0; a < tableFileEntry.length; a++) {
+                            var fileTitle = tableFileEntry[a].children[1].innerText;
+                            console.log(getTitle + ' ' + fileTitle);
+                        }
+                    }
                 })
             })
         })
