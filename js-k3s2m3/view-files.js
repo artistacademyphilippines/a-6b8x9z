@@ -540,10 +540,10 @@ function showNotifications() {
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
 
                                     
-                                    console.log(newAppNo);
-                                    console.log(getFrm);
+                                    //console.log(newAppNo);
+                                    //console.log(getFrm);
                                     
-                                    console.log(getAppTable[0].children[1].innerText);
+                                    //console.log(getAppTable[0].children[1].innerText);
                                     console.log(getAppTable[1].children[1].innerText);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
