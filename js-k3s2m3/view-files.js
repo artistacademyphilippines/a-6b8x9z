@@ -544,7 +544,7 @@ function showNotifications() {
                                     console.log(getFrm);
                                     
                                     //console.log(getAppTable[0].children[1].innerText);
-                                    console.log(getFrm.children[2]);
+                                    console.log(getFrm.children[2].childElementCount);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
 
