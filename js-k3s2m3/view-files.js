@@ -499,18 +499,21 @@ function loadAppData() {
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 }
+                showNotifications();
             })
             showNotifications();
         }
+        showNotifications();
         
     })
-
+    showNotifications();
 }
 
 //----------------------------Notifications------------------------
 
 function showNotifications() {
     
+    console.log('show notifs!')
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
