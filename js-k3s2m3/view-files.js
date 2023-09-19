@@ -390,7 +390,7 @@ function loadTrainingVideos() {
 //----------------------------Load All App Data--------------------
 
 function playAppVids() {
-    console.log('btnPlayFile was clicked!')
+    
     var fileTitle = this.parentElement.parentElement.children[1].innerText;
     var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
@@ -403,20 +403,17 @@ function playAppVids() {
     get(path).then((snapshot)=> {
         
         snapshot.forEach((childSnapshot)=> {
-            console.log(childSnapshot.val().videoTitle + ', ' + fileTitle)
 
             if(childSnapshot.val().videoTitle == fileTitle) {
 
                 var newKey = childSnapshot.key;
 
-                console.log(newKey);
+                console.log(appNo);
 
                 black.innerHTML = 
                     `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
 
                 var oldViews = childSnapshot.val().videoViews;
-                
-                console.log(oldViews);
 
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
