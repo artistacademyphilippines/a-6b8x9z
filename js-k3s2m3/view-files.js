@@ -548,6 +548,68 @@ function showNotifications() {
                                         }
                                     }                    
                                 }
+
+                                else {
+
+                                    var getFrm = resources.children[newAppNo+1];
+                                    
+                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+
+                                    for(var a = 0; a < getAppTable.length; a++) {
+
+                                        if(getAppTable[a].children[1].innerText == newFileName) {
+                                            getAppTable[a].children[0].children[0].style.visibility = "hidden";
+                                        }
+                                    } 
+
+                                }
+                            })
+                        })
+                    })
+                })
+            }
+        })
+    })
+}
+
+function hideNotifications() {
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            //get the user/trainee info
+            if(childSnapshot.val().email == sessEmail) {
+                
+                //get TID
+                var newKey = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        //get App Number
+                        var newAppNo = Number(childSnapshot.key);
+
+                        const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
+                        get(path3).then((snapshot)=> {
+                            snapshot.forEach((childSnapshot)=> {
+
+                                //get File Number
+                                var newFileName = childSnapshot.key;
+                                
+                                if(childSnapshot.val().new) {
+                                
+                                    var getFrm = resources.children[newAppNo+1];
+                                    
+                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+
+                                    for(var a = 0; a < getAppTable.length; a++) {
+
+                                        if(getAppTable[a].children[1].innerText == newFileName) {
+                                            getAppTable[a].children[0].children[0].style.visibility = "hidden";
+                                        }
+                                    }
+                                    
+                                    remove(ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/' + newFileName));
+                                }
                             })
                         })
                     })
