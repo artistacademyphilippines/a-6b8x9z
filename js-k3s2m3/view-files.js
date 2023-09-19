@@ -538,18 +538,19 @@ function showNotifications() {
                                     var getFrm = resources.children[newAppNo+1];
                                     
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+
                                     
                                     console.log(newAppNo);
                                     console.log(getFrm);
-                                    console.log(getAppTable[0]);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
+
+                                        console.log(getAppTable[a].children[1].innerText);
+                                        
                                         if(getAppTable[a].children[1].innerText == newFileName) {
                                             getAppTable[a].children[0].children[0].style.visibility = "visible";
                                         }
-                                    }
-                                    
-                                    
+                                    }                    
                                 }
                             })
                         })
