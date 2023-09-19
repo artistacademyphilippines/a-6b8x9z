@@ -510,7 +510,7 @@ function loadAppData() {
 //----------------------------Notifications------------------------
 
 function showNotifications() {
-    console.log('show notifs here!')
+    
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
@@ -536,8 +536,12 @@ function showNotifications() {
                                 if(childSnapshot.val().new) {
                                 
                                     var getFrm = resources.children[newAppNo+1];
-                    
+                                    
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+                                    
+                                    console.log(newAppNo);
+                                    console.log(getFrm);
+                                    console.log(getAppTable);
                                     
                                     for(var a = 0; a < getAppTable.length; a++) {
                                         if(getAppTable[a].children[1].innerText == newFileName) {
