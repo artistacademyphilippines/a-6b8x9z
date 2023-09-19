@@ -497,14 +497,11 @@ function loadAppData() {
                 //add downloadFiles
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
-                }
-
-                checkNotifs();
+                } 
             })
-         
+
+            checkNotifs();
         }
-        
-        
     })
 
 }
