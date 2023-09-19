@@ -510,7 +510,7 @@ function loadAppData() {
 //----------------------------Notifications------------------------
 
 function showNotifications() {
-   
+    console.log('show notifs here!')
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
