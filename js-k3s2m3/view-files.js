@@ -456,7 +456,7 @@ function loadAppData() {
         console.log(snapshot.size)
         for(var a = 1; a <= snapshot.size; a++) {
 
-            console('a: ' + a);
+            console.log('a: ' + a);
             var append = "";
             var append2 = [];
             const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a + '/files/');
