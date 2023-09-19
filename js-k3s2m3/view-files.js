@@ -417,6 +417,8 @@ function playAppVids() {
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
                 })
+
+                hideNotifs(fileTitle);
             }
         })
     })
@@ -516,49 +518,44 @@ function checkNotifs() {
             get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
                     var getTitle = childSnapshot.val().videoTitle;
+                    var getNotif = childSnapshot.val().notify;
 
+                    //checking if the title already exists in local storage
+                    //if not, add it with true value means the red dot should be on
                     if(localStorage.getItem(getTitle) == null) {
-                        localStorage.setItem(getTitle, true)
-
-                        for(var a = 0; a < tableFileEntry.length; a++) {
-                            var fileTitle = tableFileEntry[a].children[1].innerText;
-                            console.log(getTitle + ' ' + fileTitle);
-                        }
+                        localStorage.setItem(getTitle, getNotif)
                     }
+                    else {
+                        getNotif = localStorage.getItem(getTitle);
+                    }
+
+                    //search all tableFileEntry class to get their titles
+                    for(var a = 0; a < tableFileEntry.length; a++) {
+                        var fileTitle = tableFileEntry[a].children[1].innerText;
+
+                        //match the title
+                        if(getTitle == fileTitle) {
+                            if(getNotif == "true") {
+                                tableFileEntry[a].children[0].children[0].style.visibility = "visible";
+                            } 
+                            else {
+                                tableFileEntry[a].children[0].children[0].style.visibility = "hidden";
+                            }
+                        }
+                    }   
                 })
             })
         })
     })
 }
-function showNotifications() {  
-    if(childSnapshot.val().new) {
-                                
-        var getFrm = resources.children[newAppNo+1];
-                                    
-        var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
 
-        for(var a = 0; a < getAppTable.length; a++) {
-            if(getAppTable[a].children[1].innerText == newFileName) {
-                getAppTable[a].children[0].children[0].style.visibility = "visible";
-            }
-        }                    
-    }
+function hideNotifs(fileTitle) {
 
-    else {
+    localStorage.setItem(fileTitle, "false");
 
-        var getFrm = resources.children[newAppNo+1];
-                                    
-        var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-
-        for(var a = 0; a < getAppTable.length; a++) {
-
-            if(getAppTable[a].children[1].innerText == newFileName) {
-                getAppTable[a].children[0].children[0].style.visibility = "hidden";
-            }
-        } 
-    }                        
+    checkNotifs();
+    
 }
-
 
 //---------------------------Expand & Collapse---------------------
 
