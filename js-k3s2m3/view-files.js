@@ -541,8 +541,8 @@ function showNotifications() {
                                     
                                     console.log(newAppNo);
                                     console.log(getFrm);
-                                    console.log(getAppTable);
-                                    
+                                    console.log(getAppTable[0]);
+
                                     for(var a = 0; a < getAppTable.length; a++) {
                                         if(getAppTable[a].children[1].innerText == newFileName) {
                                             getAppTable[a].children[0].children[0].style.visibility = "visible";
