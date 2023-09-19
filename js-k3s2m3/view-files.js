@@ -416,6 +416,8 @@ function playAppVids() {
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
                 })
+
+                hideNotifications();
             }
             
         })
