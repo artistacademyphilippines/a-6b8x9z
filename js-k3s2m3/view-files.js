@@ -501,7 +501,7 @@ function loadAppData() {
                 }
                 showNotifications();
             })
-            //showNotifications();
+         
         }
         
         
@@ -513,7 +513,6 @@ function loadAppData() {
 
 function showNotifications() {
     
-    console.log('show notifs!')
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
@@ -541,15 +540,6 @@ function showNotifications() {
                                     var getFrm = resources.children[newAppNo+1];
                                     
                                     var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-
-                                    
-                                    //console.log(newAppNo);
-                                    //console.log(getFrm);
-                                    
-                                    //console.log(getAppTable[0].children[1].innerText);
-                                    //console.log(getFrm.children[0]);
-                                    //console.log(getFrm.children[1]);
-                                    console.log(getFrm.children[2]);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
 
