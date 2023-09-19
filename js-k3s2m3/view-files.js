@@ -541,10 +541,10 @@ function showNotifications() {
 
                                     
                                     //console.log(newAppNo);
-                                    //console.log(getFrm);
+                                    console.log(getFrm);
                                     
                                     //console.log(getAppTable[0].children[1].innerText);
-                                    console.log(getAppTable.length);
+                                    console.log(getFrm.children[2]);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
 
