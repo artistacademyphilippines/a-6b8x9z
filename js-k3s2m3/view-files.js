@@ -469,9 +469,10 @@ function loadAppData() {
 
                 
                 for(var z = 0; z < tableFileControls.length; z++) {
-                    console.log(z)
-                    console.log(tableFileControls.length)
-                    console.log(btnPlayFile)
+                    //console.log(z)
+                    //console.log(tableFileControls.length)
+                    //console.log(btnPlayFile)
+                    console.log(btnPlayFile[z])
                     //btnPlayFile[z].addEventListener('click', playAppVids);
                 }
             })
