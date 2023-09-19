@@ -121,7 +121,7 @@ var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids')
 const divAppTable = document.getElementsByClassName('divAppTable');
 const btnExpand = document.getElementsByClassName('btnExpand');
 const btnPlayFile = document.getElementsByClassName('btnPlayFile');
-const tableFileControls = document.getElementsByClassName('tableFileControls');
+const btnDownloadFile = document.getElementsByClassName('btnDownloadFile');
 
 function loadCourse() {
     var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
@@ -408,8 +408,6 @@ function playAppVids() {
 
                 var newKey = childSnapshot.key;
 
-                console.log(appNo);
-
                 black.innerHTML = 
                     `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
 
@@ -422,6 +420,22 @@ function playAppVids() {
             
         })
     })
+}
+
+function downloadAppFiles() {
+    var fileTitle = this.parentElement.parentElement.children[1].innerText;
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
+
+    if(childSnapshot.val().videoTitle == fileTitle) {
+
+        var newKey = childSnapshot.key;
+
+        var oldDownloads = childSnapshot.val().downloads;
+
+        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
+            downloads: oldDownloads + 1
+        })
+    }
 }
 
 function loadAppData() {
@@ -445,7 +459,7 @@ function loadAppData() {
                             <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
                             <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
                             <div class="tableFileControls">
-                                <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${childSnapshot.val().fileLink}');">
+                                <img src="img-h6rv2c/btnDownload.png" class = "btnDownloadFile" onclick="window.open('${childSnapshot.val().fileLink}');">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                             </div>
                         </div>
@@ -469,9 +483,14 @@ function loadAppData() {
 
                 divAppTable[a-2].innerHTML = append2[a];
 
-                
+                //add playAppVids 
                 for(var z = 0; z < btnPlayFile.length; z++) {
                     btnPlayFile[z].addEventListener('click', playAppVids);
+                }
+
+                //add downloadFiles
+                for(var z = 0; z < btnDownloadFile.length; z++) {
+                    btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 }
             })
         }
