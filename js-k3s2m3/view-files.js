@@ -542,11 +542,11 @@ function showNotifications() {
                                     
                                     console.log(newAppNo);
                                     console.log(getFrm);
+                                    
+                                    console.log(getAppTable[a].children[1].innerText);
 
                                     for(var a = 0; a < getAppTable.length; a++) {
 
-                                        console.log(getAppTable[a].children[1].innerText);
-                                        
                                         if(getAppTable[a].children[1].innerText == newFileName) {
                                             getAppTable[a].children[0].children[0].style.visibility = "visible";
                                         }
