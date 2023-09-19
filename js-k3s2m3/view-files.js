@@ -490,7 +490,7 @@ function loadAppData() {
                 })
                 append2[a] = append;
 
-                console.log(a);
+                console.log(divAppTable.length);
                 console.log(append2[a]);
 
                 //divAppTable[a-2].innerHTML = append2[a];
