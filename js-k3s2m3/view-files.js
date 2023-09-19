@@ -499,7 +499,7 @@ function loadAppData() {
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 }
-                showNotifications();
+                //showNotifications();
             })
             showNotifications();
         }
@@ -544,7 +544,7 @@ function showNotifications() {
 
                                     
                                     //console.log(newAppNo);
-                                    console.log(getFrm);
+                                    //console.log(getFrm);
                                     
                                     //console.log(getAppTable[0].children[1].innerText);
                                     //console.log(getFrm.children[0]);
