@@ -407,6 +407,8 @@ function playAppVids() {
             if(childSnapshot.val().videoTitle == fileTitle) {
 
                 var newKey = childSnapshot.key;
+                console.log('newKey' + newKey);
+                console.log('videoViews: ' + childSnapshot.val().videoViews);
 
                 black.innerHTML = 
                     `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
