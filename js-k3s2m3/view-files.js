@@ -491,7 +491,7 @@ function loadAppData() {
                 append2[a] = append;
 
                 console.log(a);
-                console.log(divAppTable[a]);
+                console.log(append2[a]);
 
                 //divAppTable[a-2].innerHTML = append2[a];
 
