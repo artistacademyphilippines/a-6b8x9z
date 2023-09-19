@@ -494,9 +494,10 @@ function loadAppData() {
                 append2[a] = append;
 
                 
-                //console.log(append2[a]);
+                console.log(divAppTable[0]);
+                console.log(divAppTable[1]);
 
-                divAppTable[a-1].innerHTML = append2[a];
+                //divAppTable[a-2].innerHTML = append2[a];
 
                 //add playAppVids 
                 for(var z = 0; z < btnPlayFile.length; z++) {
