@@ -500,8 +500,9 @@ function loadAppData() {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 }
             })
+            showNotifications();
         }
-        showNotifications();
+        
     })
 
 }
