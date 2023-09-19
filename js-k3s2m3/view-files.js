@@ -416,10 +416,7 @@ function playAppVids() {
                 update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
                     videoViews: oldViews + 1
                 })
-
-                hideNotifications();
             }
-            
         })
     })
 }
@@ -501,7 +498,8 @@ function loadAppData() {
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 }
-                showNotifications();
+
+                checkNotifs();
             })
          
         }
@@ -513,113 +511,48 @@ function loadAppData() {
 
 //----------------------------Notifications------------------------
 
-function showNotifications() {
-    
-    const path = ref(db, 'accounts/trainees/');
+function checkNotifs() {
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
-            //get the user/trainee info
-            if(childSnapshot.val().email == sessEmail) {
-                
-                //get TID
-                var newKey = childSnapshot.key;
-
-                const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
-                get(path2).then((snapshot)=> {
-                    snapshot.forEach((childSnapshot)=> {
-                        //get App Number
-                        var newAppNo = Number(childSnapshot.key);
-
-                        const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
-                        get(path3).then((snapshot)=> {
-                            snapshot.forEach((childSnapshot)=> {
-
-                                //get File Number
-                                var newFileName = childSnapshot.key;
-                                
-                                if(childSnapshot.val().new) {
-                                
-                                    var getFrm = resources.children[newAppNo+1];
-                                    
-                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-
-                                    for(var a = 0; a < getAppTable.length; a++) {
-
-                                        if(getAppTable[a].children[1].innerText == newFileName) {
-                                            getAppTable[a].children[0].children[0].style.visibility = "visible";
-                                        }
-                                    }                    
-                                }
-
-                                else {
-
-                                    var getFrm = resources.children[newAppNo+1];
-                                    
-                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
-
-                                    for(var a = 0; a < getAppTable.length; a++) {
-
-                                        if(getAppTable[a].children[1].innerText == newFileName) {
-                                            getAppTable[a].children[0].children[0].style.visibility = "hidden";
-                                        }
-                                    } 
-
-                                }
-                            })
-                        })
-                    })
+            const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + childSnapshot.key + '/files/');
+            get(path2).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
+                    console.log(childSnapshot.val().videoTitle)
                 })
-            }
+            })
         })
     })
 }
-
-function hideNotifications() {
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            //get the user/trainee info
-            if(childSnapshot.val().email == sessEmail) {
-                
-                //get TID
-                var newKey = childSnapshot.key;
-
-                const path2 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/')
-                get(path2).then((snapshot)=> {
-                    snapshot.forEach((childSnapshot)=> {
-                        //get App Number
-                        var newAppNo = Number(childSnapshot.key);
-
-                        const path3 = ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/');
-                        get(path3).then((snapshot)=> {
-                            snapshot.forEach((childSnapshot)=> {
-
-                                //get File Number
-                                var newFileName = childSnapshot.key;
+function showNotifications() {  
+    if(childSnapshot.val().new) {
                                 
-                                if(childSnapshot.val().new) {
-                                
-                                    var getFrm = resources.children[newAppNo+1];
+        var getFrm = resources.children[newAppNo+1];
                                     
-                                    var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+        var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
 
-                                    for(var a = 0; a < getAppTable.length; a++) {
-
-                                        if(getAppTable[a].children[1].innerText == newFileName) {
-                                            getAppTable[a].children[0].children[0].style.visibility = "hidden";
-                                        }
-                                    }
-                                    
-                                    remove(ref(db, 'accounts/trainees/' + newKey + '/courses/' + dropCourse.value + '/notifications/' + newAppNo + '/' + newFileName));
-                                }
-                            })
-                        })
-                    })
-                })
+        for(var a = 0; a < getAppTable.length; a++) {
+            if(getAppTable[a].children[1].innerText == newFileName) {
+                getAppTable[a].children[0].children[0].style.visibility = "visible";
             }
-        })
-    })
+        }                    
+    }
+
+    else {
+
+        var getFrm = resources.children[newAppNo+1];
+                                    
+        var getAppTable = getFrm.children[2].querySelectorAll('.tableFileEntry');
+
+        for(var a = 0; a < getAppTable.length; a++) {
+
+            if(getAppTable[a].children[1].innerText == newFileName) {
+                getAppTable[a].children[0].children[0].style.visibility = "hidden";
+            }
+        } 
+    }                        
 }
+
 
 //---------------------------Expand & Collapse---------------------
 
