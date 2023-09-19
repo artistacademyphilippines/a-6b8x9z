@@ -514,7 +514,9 @@ function checkNotifs() {
             const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + childSnapshot.key + '/files/');
             get(path2).then((snapshot)=> {
                 snapshot.forEach((childSnapshot)=> {
-                    console.log(childSnapshot.val().videoTitle)
+                    var getTitle = childSnapshot.val().videoTitle;
+
+                    console.log(localStorage.getItem(getTitle));
                 })
             })
         })
