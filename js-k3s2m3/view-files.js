@@ -468,12 +468,10 @@ function loadAppData() {
                 divAppTable[a-2].innerHTML = append2[a];
 
                 
-                for(var z = 0; z < tableFileControls.length; z++) {
-                    //console.log(z)
-                    //console.log(tableFileControls.length)
-                    //console.log(btnPlayFile)
+                for(var z = 0; z < btnPlayFile.length; z++) {
+                    
                     console.log(btnPlayFile[z])
-                    //btnPlayFile[z].addEventListener('click', playAppVids);
+                    btnPlayFile[z].addEventListener('click', playAppVids);
                 }
             })
         }
