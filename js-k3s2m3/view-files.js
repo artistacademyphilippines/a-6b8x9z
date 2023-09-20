@@ -461,7 +461,7 @@ function loadAppData() {
             var append2 = [];
             const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a + '/files/');
             
-            get(path2).then((snapshot)=>{  
+            onValue(path2, (snapshot)=>{  
 
                 snapshot.forEach((childSnapshot)=> {   
                     
