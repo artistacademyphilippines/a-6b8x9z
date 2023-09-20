@@ -453,10 +453,9 @@ function loadAppData() {
 
     onValue(path,(snapshot)=> {
 
-        
         for(var a = 1; a <= snapshot.size; a++) {
 
-            console.log('a: ' + a);
+            //console.log('a: ' + a);
             var append = "";
             var append2 = [];
             const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a + '/files/');
@@ -493,12 +492,12 @@ function loadAppData() {
                 })
                 append2[a] = append;
 
-                console.log('a: ' + a);
+                //console.log('a: ' + a);
                 //console.log(divAppTable[0]);
                 //console.log('a: ' + a);
                 //console.log(divAppTable[1]);
 
-                //divAppTable[a-2].innerHTML = append2[a];
+                divAppTable[a-2].innerHTML = append2[a];
 
                 //add playAppVids 
                 for(var z = 0; z < btnPlayFile.length; z++) {
