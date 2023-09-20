@@ -497,7 +497,7 @@ function loadAppData() {
                 //console.log('a: ' + a);
                 //console.log(divAppTable[1]);
 
-                divAppTable[a-2].innerHTML = append2[a];
+                divAppTable[a-1].innerHTML = append2[a];
 
                 //add playAppVids 
                 for(var z = 0; z < btnPlayFile.length; z++) {
@@ -508,7 +508,7 @@ function loadAppData() {
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 } 
-                //checkNotifs();
+                checkNotifs();
             })            
         }
         
