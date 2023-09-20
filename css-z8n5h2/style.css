@@ -13,22 +13,22 @@ img{
 }
 
 a:link {
-  color: white;
+  color: #4F5B81;
 }
 
 /* visited link */
 a:visited {
-  color: white;
+  color: #4F5B81;
 }
 
 /* mouse over link */
 a:hover {
-  color: white;
+  color:#4F5B81;
 }
 
 /* selected link */
 a:active {
-  color: white;
+  color: #4F5B81;
 }
 
 body {
