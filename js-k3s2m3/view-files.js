@@ -451,7 +451,7 @@ function loadAppData() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
 
-    get(path).then((snapshot)=> {
+    onValue(path,(snapshot)=> {
 
         
         for(var a = 1; a <= snapshot.size; a++) {
