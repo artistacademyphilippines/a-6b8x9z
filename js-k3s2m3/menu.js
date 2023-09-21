@@ -11,7 +11,7 @@ function showMenu() {
     menu.style.transform = "translateX(" + newPos +"px)";
     menu.style.transition = "transform .5s";
     black.style.opacity = 1;
-    black.style.background = "rgba(0,0,0,0.5)";
+    black.style.background = "rgba(0,0,0,0.3)";
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
 }
