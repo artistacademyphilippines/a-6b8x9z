@@ -10,10 +10,10 @@ function showMenu() {
     var newPos = window.innerWidth - menu.offsetWidth;
     menu.style.transform = "translateX(" + newPos +"px)";
     menu.style.transition = "transform .5s";
-    black.style.opacity = 1;
-    black.style.background = "rgba(0,0,0,0.3)";
-    black.style.visibility = "visible";
-    black.style.transition = "opacity .5s";
+    //black.style.opacity = 1;
+    //black.style.background = "rgba(0,0,0,0.3)";
+    //black.style.visibility = "visible";
+    //black.style.transition = "opacity .5s";
 }
 
 function hideMenu() {
@@ -21,12 +21,14 @@ function hideMenu() {
     menu.style.transform = "translateX(" + newPos +"px)";
     menu.style.transition = "transform .5s";  
 
+    /*
     if(black.childElementCount == 0) {
         black.style.opacity = 0;  
         black.style.visibility = "hidden"; 
         black.style.background = "rgba(0,0,0,0)";
         black.style.transition = "opacity .5s";
     }
+    */
 }
 
 function switchMenu() {
