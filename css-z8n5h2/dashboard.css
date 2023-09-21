@@ -67,7 +67,7 @@ img{
     height: 1px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: #4F5B81;
     opacity: .3;
 }
 
@@ -75,7 +75,7 @@ img{
     min-width: 300px;
     width: 100%;
     aspect-ratio: 4/3;
-    border: 1px solid white;
+    border: 1px solid #4F5B81;
     border-radius: 6px;
     margin-top: 1em;
     margin-left: auto;
@@ -106,8 +106,8 @@ img{
     height: 1px;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
     margin-bottom: 1em;
+    background-color: #4F5B81;
     opacity: .3;
 }
 
