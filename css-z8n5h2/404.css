@@ -1,2 +1,62 @@
-/* OBFUSCATED BY CSSOBFUSCATOR.COM at 2023/09/21 04:27:42 */
-#frm404{z-index:1;}#frmHeader h1,#frmBody h1{font-family:"Roboto";}#frm404{width:3.75in;}#frmHeader h1,#frmBody h1{font-style:normal;}#frm404{height:300px;}#frmHeader h1{font-weight:700;}#frm404{border-radius:4.5pt;}#frmHeader h1{font-size:.875pc;}#frmHeader h1,#frm404,#frmBody h1,#line{margin-left:auto;}#frmHeader h1,#frmBody h1{line-height:28.5pt;}#frmBody h1,#line,#frmHeader h1,#frm404{margin-bottom:auto;}#frmHeader h1,#frmBody h1,#line,#frm404{margin-right:auto;}img{-khtml-user-select:none;}#frm404,#frmBody h1,#frmHeader h1,#line{margin-top:auto;}#frm404{border-left-width:.0625pc;}#frmBody h1,#frmHeader h1{letter-spacing:.1em;}#frm404{border-bottom-width:.0625pc;}img{-o-user-select:none;}#frm404{border-right-width:.0625pc;}#frmBody h1,#frmHeader h1{color:#fff;}#frm404{border-top-width:.0625pc;}#frmBody h1{font-weight:900;}#frm404{border-left-style:solid;}#frm404{border-bottom-style:solid;}img{-moz-user-select:none;}#frmBody h1{font-size:75pt;}img{-webkit-user-select:none;}#frm404{border-right-style:solid;}#frm404{border-top-style:solid;}#frm404{border-left-color:#4f5b81;}#frm404{border-bottom-color:#4f5b81;}#frm404{border-right-color:#4f5b81;}#frm404{border-top-color:#4f5b81;}#frm404{border-image:none;}#frm404{background-color:rgba(23,33,52,.1);}#frm404{aspect-ratio:1/1;}#frm404{display:inline-flex;}#frm404{flex-direction:column;}img{user-select:none;}#frmBody,#frmHeader{width:100%;}#frmHeader{height:.416666667in;}#frmHeader,#frmBody{display:flex;}#frmBody{height:100%;}#line{width:96%;}#line{height:0pc;}#line{background-color:#4f5b81;}#line{opacity:.3;}
+img{
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#frm404 {
+    z-index: 1;
+    width: 360px;
+    height: 300px;
+    border-radius: 6px;
+    margin: auto;
+    border: 1px solid #4F5B81;
+    background-color: rgba(23, 33, 52, 0.1);
+    aspect-ratio: 1/1;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#frmHeader {
+    width: 100%;
+    height: 40px;
+    display: flex;
+}
+
+#frmHeader h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#frmBody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#frmBody h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin: auto;
+}
+
+#line {
+    width: 96%;
+    height: 1px;
+    background-color: #4F5B81;
+    margin: auto;
+    opacity: .3;
+}
