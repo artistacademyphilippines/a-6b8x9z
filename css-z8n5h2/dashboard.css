@@ -32,6 +32,9 @@ img{
     font-size: 18px;
     line-height: 38px;
     color: #FFFFFF;
+    background-color: green;
+    width: auto;
+    min-width: 160px;
 }
 
 #traineeID {
