@@ -33,8 +33,9 @@ img{
     line-height: 38px;
     color: #FFFFFF;
     background-color: green;
-    width: auto;
+    width: 33%;
     min-width: 160px;
+    overflow-x: hidden;
 }
 
 #traineeID {
