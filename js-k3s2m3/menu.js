@@ -1,1 +1,90 @@
-function _0x3943(_0x365a63,_0x2243a1){var _0x137d96=_0x137d();return _0x3943=function(_0x3943f6,_0x3c9912){_0x3943f6=_0x3943f6-0x70;var _0xf6fac1=_0x137d96[_0x3943f6];return _0xf6fac1;},_0x3943(_0x365a63,_0x2243a1);}var _0x277477=_0x3943;(function(_0x374b6d,_0x41c521){var _0x279af2=_0x3943,_0x58dfd6=_0x374b6d();while(!![]){try{var _0x15f217=parseInt(_0x279af2(0x7b))/0x1+-parseInt(_0x279af2(0x89))/0x2+parseInt(_0x279af2(0x93))/0x3+parseInt(_0x279af2(0x7e))/0x4+parseInt(_0x279af2(0x78))/0x5*(-parseInt(_0x279af2(0x81))/0x6)+-parseInt(_0x279af2(0x7c))/0x7*(parseInt(_0x279af2(0x72))/0x8)+parseInt(_0x279af2(0x97))/0x9;if(_0x15f217===_0x41c521)break;else _0x58dfd6['push'](_0x58dfd6['shift']());}catch(_0x2f2ecf){_0x58dfd6['push'](_0x58dfd6['shift']());}}}(_0x137d,0xcfc09));var boolSwitch=![];const black=document['getElementById']('black'),menu=document['getElementById'](_0x277477(0x80)),btnMenu=document[_0x277477(0x85)]('btnMenu');function showMenu(){var _0x3ae273=_0x277477,_0x4c4f2b=window['innerWidth']-menu[_0x3ae273(0x82)];menu[_0x3ae273(0x7f)][_0x3ae273(0x83)]='translateX('+_0x4c4f2b+_0x3ae273(0x8d),menu[_0x3ae273(0x7f)][_0x3ae273(0x92)]='transform\x20.5s',black[_0x3ae273(0x7f)][_0x3ae273(0x95)]=0x1,black[_0x3ae273(0x7f)][_0x3ae273(0x84)]=_0x3ae273(0x75),black['style'][_0x3ae273(0x7d)]=_0x3ae273(0x94),black[_0x3ae273(0x7f)]['transition']='opacity\x20.5s';}function hideMenu(){var _0x568713=_0x277477,_0x469aef=window[_0x568713(0x90)];menu[_0x568713(0x7f)]['transform']=_0x568713(0x8a)+_0x469aef+'px)',menu[_0x568713(0x7f)][_0x568713(0x92)]=_0x568713(0x91),black['childElementCount']==0x0&&(black['style'][_0x568713(0x95)]=0x0,black[_0x568713(0x7f)][_0x568713(0x7d)]=_0x568713(0x79),black[_0x568713(0x7f)][_0x568713(0x84)]=_0x568713(0x74),black[_0x568713(0x7f)][_0x568713(0x92)]=_0x568713(0x8b));}function switchMenu(){boolSwitch==![]?(showMenu(),boolSwitch=!![]):(hideMenu(),boolSwitch=![]);}btnMenu[_0x277477(0x77)](_0x277477(0x70),switchMenu);function adjustMenu(){var _0x2fe355=_0x277477;if(boolSwitch==!![]){var _0xbf9c93=window[_0x2fe355(0x90)]-menu['offsetWidth'];menu['style'][_0x2fe355(0x83)]='translateX('+_0xbf9c93+_0x2fe355(0x8d),menu[_0x2fe355(0x7f)][_0x2fe355(0x92)]=null;}else{var _0xbf9c93=window[_0x2fe355(0x90)];menu[_0x2fe355(0x7f)]['transform']='translateX('+_0xbf9c93+'px)',menu['style'][_0x2fe355(0x92)]=null;}}function _0x137d(){var _0x8ddd38=['visibility','5064736aIPpiR','style','menu','3739068ezDBjJ','offsetWidth','transform','background','getElementById','resize','childElementCount','toLowerCase','3254174yNapvq','translateX(','opacity\x20.5s','view-files','px)','btnLogout','out','innerWidth','transform\x20.5s','transition','261042pqRHmb','visible','opacity','btnViewFiles','15836346AZHLUZ','click','location','8gkYORT','oAuth','rgba(0,0,0,0)','rgba(0,0,0,0.3)','innerText','addEventListener','5yEYvGM','hidden','replace','911325KpELQa','6460293cLzpQc'];_0x137d=function(){return _0x8ddd38;};return _0x137d();}window['addEventListener'](_0x277477(0x86),adjustMenu);function checkVideoOrMenu(){var _0x10b8be=_0x277477;black[_0x10b8be(0x87)]>0x0?(black[_0x10b8be(0x7f)][_0x10b8be(0x95)]=0x0,black[_0x10b8be(0x7f)]['background']='rgba(0,0,0,0)',black[_0x10b8be(0x7f)][_0x10b8be(0x7d)]=_0x10b8be(0x79),black[_0x10b8be(0x7f)][_0x10b8be(0x92)]=_0x10b8be(0x8b),black['innerHTML']=''):switchMenu();}black[_0x277477(0x77)](_0x277477(0x70),checkVideoOrMenu);function navigateMenu(_0x53ba88){var _0x251940=_0x277477;if(_0x53ba88==_0x251940(0x8e))sessionStorage['setItem'](_0x251940(0x73),_0x251940(0x8f));else{if(_0x53ba88==_0x251940(0x96))window[_0x251940(0x71)][_0x251940(0x7a)](_0x251940(0x8c));else{var _0x5bcbb2=document[_0x251940(0x85)](_0x53ba88)[_0x251940(0x76)][_0x251940(0x88)]();window[_0x251940(0x71)][_0x251940(0x7a)](_0x5bcbb2);}}}
+
+//--------------------------Show Menu---------------------------------
+
+var boolSwitch = false;
+const black = document.getElementById('black');
+const menu = document.getElementById('menu');
+const btnMenu = document.getElementById('btnMenu');
+
+function showMenu() {
+    var newPos = window.innerWidth - menu.offsetWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .8s";
+}
+
+function hideMenu() {
+    var newPos = window.innerWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";  
+
+    if(black.childElementCount == 0) {
+        black.style.opacity = 0;  
+        black.style.visibility = "hidden"; 
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.transition = "opacity .5s";
+    }
+}
+
+function switchMenu() {
+    if(boolSwitch == false) {
+        showMenu();
+        boolSwitch = true;
+    }
+    else {
+        hideMenu();
+        boolSwitch = false;
+    }
+}
+btnMenu.addEventListener('click', switchMenu);
+
+function adjustMenu() {
+    
+    if(boolSwitch == true) {
+        var newPos = window.innerWidth - menu.offsetWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+    else {
+        var newPos = window.innerWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+}
+window.addEventListener('resize', adjustMenu);
+
+function checkVideoOrMenu() {
+    if(black.childElementCount > 0) {
+        black.style.opacity = 0;
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.visibility = "hidden";
+        black.style.transition = "opacity .5s";
+        black.innerHTML = "";
+    }
+    else {
+        switchMenu();
+    }
+}
+black.addEventListener('click', checkVideoOrMenu)
+
+
+//---------------------------Menu Navigation--------------------------
+
+function navigateMenu(id) {
+    if(id == 'btnLogout') {
+        sessionStorage.setItem("oAuth", "out");
+        
+    }
+
+    else if(id == 'btnViewFiles') {
+        window.location.replace('view-files');
+    }
+
+    else {
+        var nextPage = document.getElementById(id).innerText.toLowerCase();
+        window.location.replace(nextPage);
+    }
+}
