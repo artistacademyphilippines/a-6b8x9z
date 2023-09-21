@@ -23,7 +23,8 @@ img{
 }
 
 #boxAll {
-    margin-top: 4.4vh;
+    margin-top: 4.2vh;
+    background-color: green;
 }
 
 .boxMenu {
@@ -32,6 +33,7 @@ img{
     height: 80px;
     text-align: left;
     cursor: pointer;
+    background-color: pink;
 }
 
 .boxMenu h1 {
