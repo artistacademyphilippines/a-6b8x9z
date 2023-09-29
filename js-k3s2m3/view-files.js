@@ -1,1 +1,715 @@
-var _0x2328b2=_0x4761;function _0x23e3(){var _0x19da5a=['getItem','/batch/','appName','false','<iframe\x20src=\x22','Select\x20Course','1:651674935886:web:629aefbab24dd2a154991f','https://api.ipify.org/?format=text&callback=getIP/','divAppTable','accounts/trainees/','\x27);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>','translateX(','size','count','replace','5270400fpeAJY','transform','<option\x20value=\x22Select\x20Course\x22\x20class=\x22dropOption\x22>Select\x20Course</option>','addEventListener','code','<option\x20value=\x22','\x22\x20data-show\x20=\x20\x22false\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22entryHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22leftHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22appIconHeader\x22><img\x20src=\x22','black','link','<div\x20class=\x22tableFileEntry\x22>\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileID\x22></div>\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileTitle\x22><h1>','length','value','none','courses/','background','2sfwcJQ','1089723cYGHJa','1884840vYlhXO','settings/banner','3416380JzQFAy','setItem','location','change','getElementsByClassName','status','children','opacity\x20.5s','tableFileEntry','getElementById','<div\x20class=\x22frm\x22\x20data-count\x20=\x20\x22','projartcademyph-29663','btnPlayTrainingVids','key','/files/','devices','true','\x22\x20class=\x22dropOption\x22>','getMonth','offsetWidth','then','5674779udUAMB','btnPlayFile','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileControls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDownload.png\x22\x20class\x20=\x20\x22btnDownloadFile\x22\x20onclick=\x22window.open(\x27','videoViews','/courses/','inline-flex','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','parentElement','divTrainingTable','forEach','<div\x20class=\x22frm\x22\x20data-show\x20=\x20\x22false\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22entryHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22leftHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22appIconHeader\x22><img\x20src=\x22img-h6rv2c/imgCertificate.svg\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Certificate</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnExpand.svg\x22\x20class=\x22btnExpand\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22divCertiTable\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22frm\x22\x20data-show\x20=\x20\x22false\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22entryHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22leftHeader\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22appIconHeader\x22><img\x20src=\x22img-h6rv2c/imgLive.svg\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>Training\x20Video</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnExpand.svg\x22\x20class=\x22btnExpand\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22divTrainingTable\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>','click','bodyBlue','rgba(0,0,0,0.3)','out','innerText','px)','transition','dropCourse','\x27);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayFile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>','\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>','173025HdjWAT','email','visible','getDate','show','videoTitle','val','<div\x20class=\x22tableFileEntry\x22>\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileID\x22><img\x20src=\x22img-h6rv2c/imgNotif.svg\x22></div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileTitle\x22><h1>','oAuth','https://artcademy.ph/login','6000848LUgVPu','divBanner','divCertiTable','btnExpand','sessEmail','/trainingVideos/','clear','fileLink','opacity','projartcademyph-29663.firebaseapp.com','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileControls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayFile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>','suspended','text','rotate(0deg)','resources','/resources/public/','</h1></div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileControls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayTrainingVids\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>','.info/connected','</h1></div>\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileControls\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDownload.png\x22\x20onclick=\x22window.open(\x27','appIcon','651674935886','7SKpkTV','hidden','visibility','getFullYear','innerHTML','display','<div\x20class=\x22tableFileEntry\x22>\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileID\x22></div>\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22tableFileTitle\x22><h1>','innerWidth','style','dataset','videoLink'];_0x23e3=function(){return _0x19da5a;};return _0x23e3();}(function(_0x4e6e0e,_0x5bdfc9){var _0x4cddf4=_0x4761,_0x41ca6e=_0x4e6e0e();while(!![]){try{var _0x37fed9=-parseInt(_0x4cddf4(0x126))/0x1+-parseInt(_0x4cddf4(0x16e))/0x2*(parseInt(_0x4cddf4(0x16f))/0x3)+parseInt(_0x4cddf4(0x172))/0x4+-parseInt(_0x4cddf4(0x170))/0x5+-parseInt(_0x4cddf4(0x15f))/0x6+-parseInt(_0x4cddf4(0x145))/0x7*(-parseInt(_0x4cddf4(0x130))/0x8)+parseInt(_0x4cddf4(0x187))/0x9;if(_0x37fed9===_0x5bdfc9)break;else _0x41ca6e['push'](_0x41ca6e['shift']());}catch(_0x2ec028){_0x41ca6e['push'](_0x41ca6e['shift']());}}}(_0x23e3,0x6c2da));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,onDisconnect,remove}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x2328b2(0x18d),'authDomain':_0x2328b2(0x139),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x2328b2(0x17d),'storageBucket':'projartcademyph-29663.appspot.com','messagingSenderId':_0x2328b2(0x144),'appId':_0x2328b2(0x156)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var sessEmail=sessionStorage[_0x2328b2(0x150)](_0x2328b2(0x134)),bodyBlue=document[_0x2328b2(0x17b)](_0x2328b2(0x193));onAuthStateChanged(auth,_0x238fb1=>{var _0x3c8946=_0x2328b2;if(_0x238fb1){if(sessEmail==_0x238fb1[_0x3c8946(0x127)]&&sessEmail!==null){fetch(_0x3c8946(0x157))[_0x3c8946(0x186)](_0xe1662f=>_0xe1662f[_0x3c8946(0x13c)]())[_0x3c8946(0x186)](_0x554245=>_0x43f7a7(_0x554245));function _0x43f7a7(_0x34e44b){var _0x353e36=_0x3c8946;const _0x53d765=ref(db,_0x353e36(0x159));onValue(_0x53d765,_0x2963e9=>{_0x2963e9['forEach'](_0x430117=>{var _0xe8e94=_0x4761,_0x4ab7bc=_0x430117[_0xe8e94(0x12c)]()[_0xe8e94(0x181)];_0x238fb1[_0xe8e94(0x127)]==_0x430117[_0xe8e94(0x12c)]()[_0xe8e94(0x127)]&&(_0x34e44b==_0x4ab7bc&&(bodyBlue['style'][_0xe8e94(0x147)]=_0xe8e94(0x128)));});});}}else signOut(auth);}else window[_0x3c8946(0x174)][_0x3c8946(0x15e)](_0x3c8946(0x12f));});var t=0.002*window[_0x2328b2(0x14c)],c=window['innerWidth'],scrollingBannerText=document[_0x2328b2(0x17b)]('pBanner');const scrollingBanner=document[_0x2328b2(0x17b)](_0x2328b2(0x131));var bannerContainer=document[_0x2328b2(0x17b)]('bannerContainer');bannerContainer[_0x2328b2(0x14d)][_0x2328b2(0x160)]=_0x2328b2(0x15b)+window[_0x2328b2(0x14c)]+_0x2328b2(0x197);function checkBanner(){var _0x57ce28=_0x2328b2;const _0x1754a6=ref(db,_0x57ce28(0x171));onValue(_0x1754a6,_0x31d570=>{var _0x3b588c=_0x57ce28;_0x31d570['exists']()&&(scrollingBannerText[_0x3b588c(0x196)]=_0x31d570[_0x3b588c(0x12c)]()['message'],_0x31d570[_0x3b588c(0x12c)]()[_0x3b588c(0x177)]===!![]?scrollingBanner[_0x3b588c(0x14d)]['visibility']=_0x3b588c(0x128):scrollingBanner[_0x3b588c(0x14d)][_0x3b588c(0x147)]=_0x3b588c(0x146));});}checkBanner();function bannerAnimation(){var _0x33b666=_0x2328b2;c-=0.5,bannerContainer['style'][_0x33b666(0x160)]='translateX('+c+_0x33b666(0x197),c<bannerContainer[_0x33b666(0x185)]*-0x1&&(c=window['innerWidth'],bannerContainer[_0x33b666(0x14d)][_0x33b666(0x160)]='translateX('+window[_0x33b666(0x14c)]+_0x33b666(0x197));}setInterval(bannerAnimation,t);var dropCourse=document[_0x2328b2(0x17b)](_0x2328b2(0x123)),resources=document[_0x2328b2(0x17b)](_0x2328b2(0x13e));function _0x4761(_0xcfd591,_0x3122ce){var _0x23e3b5=_0x23e3();return _0x4761=function(_0x476118,_0x1a79f2){_0x476118=_0x476118-0x123;var _0x40978c=_0x23e3b5[_0x476118];return _0x40978c;},_0x4761(_0xcfd591,_0x3122ce);}const black=document['getElementById'](_0x2328b2(0x166));var btnPlayTrainingVids=document['getElementsByClassName'](_0x2328b2(0x17e));const divAppTable=document[_0x2328b2(0x176)](_0x2328b2(0x158)),tableFileEntry=document[_0x2328b2(0x176)](_0x2328b2(0x17a)),btnExpand=document[_0x2328b2(0x176)](_0x2328b2(0x133)),btnPlayFile=document['getElementsByClassName'](_0x2328b2(0x188)),btnDownloadFile=document[_0x2328b2(0x176)]('btnDownloadFile');function loadCourse(){var _0x4d3b9c=_0x2328b2,_0x2813f5=_0x4d3b9c(0x161);const _0xa810c7=ref(db,_0x4d3b9c(0x159));get(_0xa810c7)[_0x4d3b9c(0x186)](_0x323269=>{var _0x2a2960=_0x4d3b9c;_0x323269[_0x2a2960(0x190)](_0x27dc41=>{var _0xf0050f=_0x2a2960;if(_0x27dc41['val']()[_0xf0050f(0x127)]==sessEmail){var _0x2f52bb=_0x27dc41[_0xf0050f(0x17f)];const _0x4404e5=ref(db,_0xf0050f(0x159)+_0x2f52bb+_0xf0050f(0x18b));get(_0x4404e5)[_0xf0050f(0x186)](_0x5d0825=>{var _0x56042f=_0xf0050f;_0x5d0825['forEach'](_0x1d6658=>{var _0x3175fe=_0x4761;_0x2813f5+=_0x3175fe(0x164)+_0x1d6658['key']+_0x3175fe(0x183)+_0x1d6658['key']+'</option>';}),dropCourse[_0x56042f(0x149)]=_0x2813f5;});}});});}loadCourse();function showTables(){var _0x3f2cdc=_0x2328b2;dropCourse[_0x3f2cdc(0x16a)]!='Select\x20Course'?(resources[_0x3f2cdc(0x149)]=_0x3f2cdc(0x191),loadAppTable()):resources[_0x3f2cdc(0x149)]='';}dropCourse[_0x2328b2(0x162)](_0x2328b2(0x175),showTables);function loadAppTable(){var _0x2c07a0=_0x2328b2;const _0x458580=ref(db,_0x2c07a0(0x16c)+dropCourse['value']+_0x2c07a0(0x13f));get(_0x458580)[_0x2c07a0(0x186)](_0x1aedc9=>{var _0x1fb057=_0x2c07a0,_0x39f167='';_0x1aedc9[_0x1fb057(0x190)](_0x4c13f6=>{var _0x1d531b=_0x1fb057;_0x39f167+=_0x1d531b(0x17c)+_0x4c13f6['key']+_0x1d531b(0x165)+_0x4c13f6[_0x1d531b(0x12c)]()[_0x1d531b(0x143)]+_0x1d531b(0x125)+_0x4c13f6[_0x1d531b(0x12c)]()[_0x1d531b(0x152)]+'</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnExpand.svg\x22\x20class=\x22btnExpand\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22bannerLine\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22divAppTable\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>';}),resources[_0x1fb057(0x149)]+=_0x39f167,loadBtnExpand(),loadCerti(),loadTrainingVideos(),loadAppData();});}function loadCerti(){var _0xcfd191=_0x2328b2;const _0x4e200e=document[_0xcfd191(0x17b)](_0xcfd191(0x132));if(dropCourse[_0xcfd191(0x16a)]!=_0xcfd191(0x155)){const _0x3475b7=ref(db,'accounts/trainees/');get(_0x3475b7)[_0xcfd191(0x186)](_0x6f0200=>{_0x6f0200['forEach'](_0x164477=>{var _0x3a008a=_0x4761;if(_0x164477[_0x3a008a(0x12c)]()['email']==sessEmail){var _0x51dc12=_0x164477[_0x3a008a(0x17f)];const _0x157e5f=ref(db,_0x3a008a(0x159)+_0x51dc12+'/courses/'+dropCourse[_0x3a008a(0x16a)]+_0x3a008a(0x151));get(_0x157e5f)['then'](_0x1780c7=>{var _0x31698d=_0x3a008a,_0x342a42='';_0x1780c7[_0x31698d(0x190)](_0x1a7fcd=>{var _0x1a8f32=_0x31698d,_0x1c4a44=_0x1a7fcd['key'];const _0x5b3b81=ref(db,_0x1a8f32(0x16c)+dropCourse[_0x1a8f32(0x16a)]+_0x1a8f32(0x151)+_0x1c4a44+'/');get(_0x5b3b81)[_0x1a8f32(0x186)](_0x4fe53b=>{var _0x2c3671=_0x1a8f32;_0x342a42+=_0x2c3671(0x168)+dropCourse[_0x2c3671(0x16a)]+'-'+_0x1c4a44+_0x2c3671(0x142)+_0x4fe53b[_0x2c3671(0x12c)]()['certificates']+_0x2c3671(0x15a),_0x4e200e[_0x2c3671(0x149)]=_0x342a42;});});});}});});}}function playTrainingVids(){var _0x42b6f9=_0x2328b2,_0x104667=this[_0x42b6f9(0x18e)]['parentElement']['children'][0x1][_0x42b6f9(0x196)];black[_0x42b6f9(0x14d)][_0x42b6f9(0x138)]=0x1,black[_0x42b6f9(0x14d)][_0x42b6f9(0x16d)]=_0x42b6f9(0x194),black[_0x42b6f9(0x14d)][_0x42b6f9(0x147)]=_0x42b6f9(0x128),black[_0x42b6f9(0x14d)][_0x42b6f9(0x198)]=_0x42b6f9(0x179);const _0x2682f4=ref(db,'courses/'+dropCourse['value']+_0x42b6f9(0x151));get(_0x2682f4)[_0x42b6f9(0x186)](_0x2d390d=>{var _0x582318=_0x42b6f9;_0x2d390d[_0x582318(0x190)](_0x5935e5=>{var _0x28b716=_0x582318,_0x38ea8a=_0x5935e5[_0x28b716(0x17f)];const _0x2d87fd=ref(db,_0x28b716(0x16c)+dropCourse['value']+'/batch/'+_0x38ea8a+_0x28b716(0x135));get(_0x2d87fd)[_0x28b716(0x186)](_0x3431e8=>{var _0x4635d4=_0x28b716;_0x3431e8[_0x4635d4(0x190)](_0x1bb555=>{var _0x320bd1=_0x4635d4;if(_0x1bb555[_0x320bd1(0x17f)]==_0x104667){black[_0x320bd1(0x149)]='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<iframe\x20src=\x22'+_0x1bb555['val']()[_0x320bd1(0x167)]+'\x22\x20scrolling=\x22no\x22\x20frameborder=\x220\x22\x20allowfullscreen=\x22true\x22></iframe>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';var _0x110d66=_0x1bb555[_0x320bd1(0x12c)]()['views'];update(ref(db,_0x320bd1(0x16c)+dropCourse[_0x320bd1(0x16a)]+_0x320bd1(0x151)+_0x38ea8a+_0x320bd1(0x135)+_0x104667+'/'),{'views':_0x110d66+0x1});}});});});});}function loadTrainingVideos(){var _0x4278ea=_0x2328b2;const _0x34623b=document[_0x4278ea(0x17b)](_0x4278ea(0x18f));if(dropCourse[_0x4278ea(0x16a)]!=_0x4278ea(0x155)){const _0x4ce45a=ref(db,_0x4278ea(0x159));get(_0x4ce45a)[_0x4278ea(0x186)](_0x23bc26=>{var _0x43a4de=_0x4278ea;_0x23bc26[_0x43a4de(0x190)](_0x44a2c2=>{var _0x3a6f69=_0x43a4de;if(_0x44a2c2['val']()[_0x3a6f69(0x127)]==sessEmail){var _0x5d74ed=_0x44a2c2[_0x3a6f69(0x17f)];const _0x52e3e5=ref(db,_0x3a6f69(0x159)+_0x5d74ed+_0x3a6f69(0x18b)+dropCourse[_0x3a6f69(0x16a)]+_0x3a6f69(0x151));get(_0x52e3e5)[_0x3a6f69(0x186)](_0x127de9=>{var _0x3918aa=_0x3a6f69,_0x299c92='';_0x127de9[_0x3918aa(0x190)](_0x379e49=>{var _0x962482=_0x3918aa,_0x2dbf07=_0x379e49[_0x962482(0x17f)];const _0x3ebcba=ref(db,_0x962482(0x16c)+dropCourse[_0x962482(0x16a)]+_0x962482(0x151)+_0x2dbf07+_0x962482(0x135));get(_0x3ebcba)[_0x962482(0x186)](_0x453ccb=>{var _0x17fe68=_0x962482;_0x453ccb['forEach'](_0x3276e8=>{var _0x28f293=_0x4761;_0x299c92+=_0x28f293(0x14b)+_0x3276e8[_0x28f293(0x17f)]+_0x28f293(0x140);}),_0x34623b[_0x17fe68(0x149)]=_0x299c92;for(var _0x46ff48=0x0;_0x46ff48<btnPlayTrainingVids[_0x17fe68(0x169)];_0x46ff48++){btnPlayTrainingVids[_0x46ff48][_0x17fe68(0x162)]('click',playTrainingVids);}});});});}});});}}function playAppVids(){var _0x1fc125=_0x2328b2,_0x311eba=this[_0x1fc125(0x18e)][_0x1fc125(0x18e)][_0x1fc125(0x178)][0x1]['innerText'],_0x193444=Number(this[_0x1fc125(0x18e)][_0x1fc125(0x18e)][_0x1fc125(0x18e)][_0x1fc125(0x18e)][_0x1fc125(0x14e)][_0x1fc125(0x15d)]);black[_0x1fc125(0x14d)][_0x1fc125(0x138)]=0x1,black[_0x1fc125(0x14d)][_0x1fc125(0x16d)]='rgba(0,0,0,0.3)',black[_0x1fc125(0x14d)][_0x1fc125(0x147)]='visible',black[_0x1fc125(0x14d)][_0x1fc125(0x198)]='opacity\x20.5s';const _0x13321c=ref(db,_0x1fc125(0x16c)+dropCourse[_0x1fc125(0x16a)]+'/resources/public/'+_0x193444+_0x1fc125(0x180));get(_0x13321c)['then'](_0x547181=>{var _0x25b3af=_0x1fc125;_0x547181[_0x25b3af(0x190)](_0x64478=>{var _0x193f95=_0x25b3af;if(_0x64478[_0x193f95(0x12c)]()['videoTitle']==_0x311eba){var _0x48cd6a=_0x64478[_0x193f95(0x17f)];black[_0x193f95(0x149)]=_0x193f95(0x154)+_0x64478[_0x193f95(0x12c)]()[_0x193f95(0x14f)]+'\x22\x20scrolling=\x22no\x22\x20frameborder=\x220\x22\x20allowfullscreen=\x22true\x22></iframe>';var _0x544dfa=_0x64478[_0x193f95(0x12c)]()[_0x193f95(0x18a)];update(ref(db,_0x193f95(0x16c)+dropCourse['value']+'/resources/public/'+_0x193444+_0x193f95(0x180)+_0x48cd6a+'/'),{'videoViews':_0x544dfa+0x1}),hideNotifs(_0x311eba);}});});}function downloadAppFiles(){var _0x2fd4a2=_0x2328b2,_0x26cd28=this[_0x2fd4a2(0x18e)][_0x2fd4a2(0x18e)]['children'][0x1][_0x2fd4a2(0x196)],_0x263c04=Number(this[_0x2fd4a2(0x18e)][_0x2fd4a2(0x18e)][_0x2fd4a2(0x18e)][_0x2fd4a2(0x18e)]['dataset'][_0x2fd4a2(0x15d)]);const _0x4593f6=ref(db,_0x2fd4a2(0x16c)+dropCourse[_0x2fd4a2(0x16a)]+_0x2fd4a2(0x13f)+_0x263c04+_0x2fd4a2(0x180));get(_0x4593f6)[_0x2fd4a2(0x186)](_0x38fce0=>{_0x38fce0['forEach'](_0x50848e=>{var _0x5e083e=_0x4761;if(_0x50848e['val']()[_0x5e083e(0x12b)]==_0x26cd28){var _0x571c08=_0x50848e[_0x5e083e(0x17f)],_0x4ee8d9=_0x50848e[_0x5e083e(0x12c)]()['downloads'];update(ref(db,_0x5e083e(0x16c)+dropCourse[_0x5e083e(0x16a)]+_0x5e083e(0x13f)+_0x263c04+_0x5e083e(0x180)+_0x571c08+'/'),{'downloads':_0x4ee8d9+0x1});}});});}function loadAppData(){var _0x4380bc=_0x2328b2;const _0x5f1032=ref(db,_0x4380bc(0x16c)+dropCourse[_0x4380bc(0x16a)]+'/resources/public/');onValue(_0x5f1032,_0x2e1931=>{var _0x223012=_0x4380bc;for(var _0x2a8dae=0x1;_0x2a8dae<=_0x2e1931[_0x223012(0x15c)];_0x2a8dae++){var _0x36d3c2='',_0x15fbde=[];const _0x546e1d=ref(db,'courses/'+dropCourse[_0x223012(0x16a)]+_0x223012(0x13f)+_0x2a8dae+'/files/');onValue(_0x546e1d,_0x1bfc0e=>{var _0x4020ae=_0x223012;_0x1bfc0e['forEach'](_0x636025=>{var _0x49e2ba=_0x4761;_0x636025[_0x49e2ba(0x12c)]()[_0x49e2ba(0x137)]!=''?_0x36d3c2+=_0x49e2ba(0x12d)+_0x636025[_0x49e2ba(0x12c)]()[_0x49e2ba(0x12b)]+_0x49e2ba(0x189)+_0x636025[_0x49e2ba(0x12c)]()['fileLink']+_0x49e2ba(0x124):_0x36d3c2+=_0x49e2ba(0x12d)+_0x636025['val']()[_0x49e2ba(0x12b)]+_0x49e2ba(0x13a);}),_0x15fbde[_0x2a8dae]=_0x36d3c2,divAppTable[_0x2a8dae-0x1][_0x4020ae(0x149)]=_0x15fbde[_0x2a8dae];for(var _0xf6ace9=0x0;_0xf6ace9<btnPlayFile[_0x4020ae(0x169)];_0xf6ace9++){btnPlayFile[_0xf6ace9][_0x4020ae(0x162)](_0x4020ae(0x192),playAppVids);}for(var _0xf6ace9=0x0;_0xf6ace9<btnDownloadFile[_0x4020ae(0x169)];_0xf6ace9++){btnDownloadFile[_0xf6ace9][_0x4020ae(0x162)]('click',downloadAppFiles);}checkNotifs();});}});}function checkNotifs(){var _0x102888=_0x2328b2;const _0x3df5cf=ref(db,_0x102888(0x16c)+dropCourse[_0x102888(0x16a)]+_0x102888(0x13f));get(_0x3df5cf)[_0x102888(0x186)](_0x96182e=>{var _0x4e0110=_0x102888;_0x96182e[_0x4e0110(0x190)](_0x10245e=>{var _0x2f7d92=_0x4e0110;const _0x3862f2=ref(db,_0x2f7d92(0x16c)+dropCourse[_0x2f7d92(0x16a)]+_0x2f7d92(0x13f)+_0x10245e['key']+_0x2f7d92(0x180));get(_0x3862f2)[_0x2f7d92(0x186)](_0x180284=>{var _0x2d6abc=_0x2f7d92;_0x180284[_0x2d6abc(0x190)](_0x41a28b=>{var _0x22f6eb=_0x2d6abc,_0x77108e=_0x41a28b['val']()['videoTitle'],_0x21b819=_0x41a28b['val']()['notify'];localStorage[_0x22f6eb(0x150)](_0x77108e)==null?localStorage[_0x22f6eb(0x173)](_0x77108e,_0x21b819):_0x21b819=localStorage[_0x22f6eb(0x150)](_0x77108e);for(var _0x3a0e8b=0x0;_0x3a0e8b<tableFileEntry['length'];_0x3a0e8b++){var _0x3cb63f=tableFileEntry[_0x3a0e8b]['children'][0x1][_0x22f6eb(0x196)];_0x77108e==_0x3cb63f&&(_0x21b819==_0x22f6eb(0x182)?tableFileEntry[_0x3a0e8b]['children'][0x0][_0x22f6eb(0x178)][0x0][_0x22f6eb(0x14d)][_0x22f6eb(0x147)]='visible':tableFileEntry[_0x3a0e8b]['children'][0x0][_0x22f6eb(0x178)][0x0]['style'][_0x22f6eb(0x147)]=_0x22f6eb(0x146));}});});});});}function hideNotifs(_0xbbde65){var _0x532cfd=_0x2328b2;localStorage[_0x532cfd(0x173)](_0xbbde65,_0x532cfd(0x153)),checkNotifs();}function showHideRes(){var _0x46def2=_0x2328b2,_0x4815aa=this[_0x46def2(0x18e)]['parentElement'][_0x46def2(0x14e)][_0x46def2(0x12a)];if(_0x4815aa==_0x46def2(0x153)){var _0x2589fb=this[_0x46def2(0x18e)][_0x46def2(0x18e)][_0x46def2(0x178)][0x2];this[_0x46def2(0x14d)][_0x46def2(0x160)]='rotate(-180deg)',_0x2589fb['style']['display']=_0x46def2(0x18c),_0x2589fb['style']['flexDirection']='column',this[_0x46def2(0x18e)][_0x46def2(0x18e)][_0x46def2(0x14e)][_0x46def2(0x12a)]='true';}else{var _0x2589fb=this[_0x46def2(0x18e)][_0x46def2(0x18e)][_0x46def2(0x178)][0x2];this[_0x46def2(0x14d)]['transform']=_0x46def2(0x13d),_0x2589fb[_0x46def2(0x14d)][_0x46def2(0x14a)]=_0x46def2(0x16b),this[_0x46def2(0x18e)]['parentElement'][_0x46def2(0x14e)][_0x46def2(0x12a)]=_0x46def2(0x153);}}function loadBtnExpand(){var _0x5c5c7c=_0x2328b2;for(var _0x420660=0x0;_0x420660<btnExpand[_0x5c5c7c(0x169)];_0x420660++){btnExpand[_0x420660]['addEventListener'](_0x5c5c7c(0x192),showHideRes);}}function checkIfOnline(){var _0x2ca1a4=_0x2328b2,_0x1fb2cb=sessionStorage[_0x2ca1a4(0x150)](_0x2ca1a4(0x12e)),_0x5f2963=sessionStorage[_0x2ca1a4(0x150)](_0x2ca1a4(0x134));if(_0x1fb2cb==_0x2ca1a4(0x195)){const _0x3b5647=ref(db,_0x2ca1a4(0x159));onValue(_0x3b5647,_0x1b28e9=>{var _0x5d6e23=_0x2ca1a4;_0x1b28e9[_0x5d6e23(0x190)](_0x910012=>{var _0x337ffe=_0x5d6e23;if(_0x910012['val']()[_0x337ffe(0x127)]==_0x5f2963){var _0x470881=_0x910012[_0x337ffe(0x17f)];update(ref(db,_0x337ffe(0x159)+_0x470881+'/'),{'status':'offline','devices':0x0})[_0x337ffe(0x186)](()=>{var _0x5ecddf=_0x337ffe;signOut(auth)[_0x5ecddf(0x186)](()=>{var _0x30e5f6=_0x5ecddf;sessionStorage[_0x30e5f6(0x136)]();})['catch'](_0x2d7da2=>{var _0x35dd25=_0x5ecddf;alert(_0x2d7da2[_0x35dd25(0x163)]);});});}});});}else{var _0x48a862=ref(db,_0x2ca1a4(0x141));onValue(_0x48a862,_0x54e1c6=>{var _0x510384=_0x2ca1a4;if(_0x54e1c6[_0x510384(0x12c)]()===!![]){var _0x5a8961=ref(db,_0x510384(0x159));onValue(_0x5a8961,_0x2526f0=>{var _0x2e3208=_0x510384;_0x2526f0[_0x2e3208(0x190)](_0x2d1a7c=>{var _0x232174=_0x2e3208,_0x3de5c4=sessionStorage[_0x232174(0x150)](_0x232174(0x134));if(_0x2d1a7c[_0x232174(0x12c)]()[_0x232174(0x127)]==_0x3de5c4){var _0x15f124=_0x2d1a7c[_0x232174(0x17f)];if(_0x2d1a7c[_0x232174(0x12c)]()[_0x232174(0x177)]==_0x232174(0x13b))signOut(auth)[_0x232174(0x186)](()=>{var _0x5c46c4=_0x232174;sessionStorage[_0x5c46c4(0x136)]();})['catch'](_0x2ba98d=>{var _0x34d8dc=_0x232174;alert(_0x2ba98d[_0x34d8dc(0x163)]);});else{if(_0x2d1a7c['val']()[_0x232174(0x177)]=='deletion')sessionStorage[_0x232174(0x136)](),window[_0x232174(0x174)][_0x232174(0x15e)](_0x232174(0x12f));else{var _0x97c39f=new Date(),_0x332508=_0x97c39f[_0x232174(0x184)]()+0x1,_0x1f4dad=_0x97c39f[_0x232174(0x129)](),_0x540f8b=_0x97c39f[_0x232174(0x148)]();fetch('https://api.ipify.org/?format=text&callback=getIP/')[_0x232174(0x186)](_0x34b2b2=>_0x34b2b2[_0x232174(0x13c)]())[_0x232174(0x186)](_0x55efc9=>_0x482e87(_0x55efc9));function _0x482e87(_0x17a838){var _0xc92e05=_0x232174;update(ref(db,_0xc92e05(0x159)+_0x15f124),{'devices':_0x17a838,'status':'online','lastOnline':_0x332508+'.'+_0x1f4dad+'.'+_0x540f8b})['catch'](_0x19bb9a=>{var _0x2a6809=_0xc92e05;alert(_0x19bb9a[_0x2a6809(0x163)]);});}}}}});});}});}}setInterval(checkIfOnline,0x1f4);function checkIfOffline(){const _0x15b60d=ref(db,'accounts/trainees/');onValue(_0x15b60d,_0x1e7a26=>{var _0x29ad4b=_0x4761,_0x1ae348=sessionStorage['getItem'](_0x29ad4b(0x134));_0x1e7a26[_0x29ad4b(0x190)](_0x1475d3=>{var _0x466813=_0x29ad4b;if(_0x1ae348==_0x1475d3[_0x466813(0x12c)]()[_0x466813(0x127)]){var _0x179018=_0x1475d3['key'],_0x835795=ref(db,'accounts/trainees/'+_0x179018+'/');onDisconnect(_0x835795)['update']({'status':'offline','devices':0x0});}});});}checkIfOffline();
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, onDisconnect, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+//--check first if user is currently logged in
+
+var sessEmail = sessionStorage.getItem("sessEmail");
+var bodyBlue = document.getElementById('bodyBlue');
+
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+        
+        if((sessEmail == user.email) && (sessEmail !== null)) {
+
+            fetch("https://api.ipify.org/?format=text&callback=getIP/")
+            .then(res => res.text())
+            .then(IP => getIP(IP));
+
+            function getIP(IP) {
+                
+                const path = ref(db, 'accounts/trainees/');
+                onValue(path, (snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+
+                        var sessIP = childSnapshot.val().devices;
+
+                        if (user.email == childSnapshot.val().email) {
+
+                            if (IP == sessIP) {
+                                
+                                bodyBlue.style.visibility = "visible";
+                            }
+                        }
+                    })
+                })
+            }
+        }
+        
+        else {
+          signOut(auth);
+        }
+
+    }
+
+    else {
+      
+        window.location.replace('https://artcademy.ph/login');
+      
+    } 
+
+});
+
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+                
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+//--------------------------Load Course---------------------------
+var dropCourse = document.getElementById('dropCourse');
+var resources = document.getElementById('resources');
+
+//-------------------------Play Videos---------------------------
+const black = document.getElementById('black');
+var btnPlayTrainingVids = document.getElementsByClassName('btnPlayTrainingVids');
+
+//-------------------------Tables--------------------------------
+
+const divAppTable = document.getElementsByClassName('divAppTable');
+const tableFileEntry = document.getElementsByClassName('tableFileEntry');
+const btnExpand = document.getElementsByClassName('btnExpand');
+const btnPlayFile = document.getElementsByClassName('btnPlayFile');
+const btnDownloadFile = document.getElementsByClassName('btnDownloadFile');
+
+function loadCourse() {
+    var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
+
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().email == sessEmail) {
+                
+                var sessID = childSnapshot.key;
+
+                const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/');
+                get(path2).then((snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+                    })
+                    dropCourse.innerHTML = append;
+                })
+
+            }
+        })
+        
+    })
+
+
+}
+loadCourse();
+
+//-------------------------Load All Tables First------------------
+
+function showTables() {
+    if(dropCourse.value != "Select Course") {
+        
+        //add the first 2 default tables
+        resources.innerHTML = 
+        `<div class="frm" data-show = "false">
+            <div class="entryHeader">
+                <div class="leftHeader">
+                <div class="appIconHeader"><img src="img-h6rv2c/imgCertificate.svg"></div>
+                    <h1>Certificate</h1>
+                </div>
+                <img src="img-h6rv2c/btnExpand.svg" class="btnExpand">
+            </div>
+            <div class="bannerLine"></div>
+            <div id="divCertiTable">
+                            
+            </div>        
+        </div>
+        <div class="frm" data-show = "false">
+            <div class="entryHeader">
+                <div class="leftHeader">
+                <div class="appIconHeader"><img src="img-h6rv2c/imgLive.svg"></div>
+                    <h1>Training Video</h1>
+                </div>
+                <img src="img-h6rv2c/btnExpand.svg" class="btnExpand">
+            </div>
+            <div class="bannerLine"></div>
+            <div id="divTrainingTable">
+                    
+            </div>        
+        </div>`; 
+
+        // 1) add the apps related to course
+        loadAppTable();
+        
+    }
+    else {
+        resources.innerHTML = "";
+    }
+}
+dropCourse.addEventListener('change', showTables);
+
+//----------------------------Add App Tables--------------------
+
+function loadAppTable() {
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
+    get(path).then((snapshot)=> {
+        var append = "";
+        snapshot.forEach((childSnapshot)=> {
+            
+            append += 
+                `<div class="frm" data-count = "${childSnapshot.key}" data-show = "false">
+                    <div class="entryHeader">
+                        <div class="leftHeader">
+                            <div class="appIconHeader"><img src="${childSnapshot.val().appIcon}"></div>
+                            <h1>${childSnapshot.val().appName}</h1>
+                        </div>
+                        <img src="img-h6rv2c/btnExpand.svg" class="btnExpand">
+                    </div>
+                    <div class="bannerLine"></div>
+                    <div class="divAppTable">
+                            
+                    </div>        
+                </div>`;        
+                       
+            }) 
+            resources.innerHTML += append;
+
+            // 2) next, add event listeners to btnExpand to all tables
+            loadBtnExpand();
+            // 3) next, load the content for the first 2 tables
+            loadCerti();
+            loadTrainingVideos();
+            // 4) load all the data from apps
+            loadAppData();  
+        })   
+}
+
+//--------------------------Load Certificate-----------------------
+
+function loadCerti() {
+
+    const divCertiTable = document.getElementById('divCertiTable');
+
+    if(dropCourse.value != "Select Course") {
+
+        const path = ref(db, 'accounts/trainees/');
+
+        get(path).then((snapshot)=> {
+
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+
+                    get(path2).then((snapshot)=> {
+                        var append = "";
+                        snapshot.forEach((childSnapshot)=> {
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/');
+                            
+                            get(path3).then((snapshot)=> {
+                                
+                                append+= 
+
+                                `<div class="tableFileEntry">   
+                                    <div class="tableFileID"></div>   
+                                    <div class="tableFileTitle"><h1>${dropCourse.value}-${sessBatch}</h1></div>                        
+                                    <div class="tableFileControls">
+                                        <img src="img-h6rv2c/btnDownload.png" onclick="window.open('${snapshot.val().certificates}');">
+                                    </div>
+                                </div>
+                                <div class="bannerLine"></div>`;
+                               
+                                divCertiTable.innerHTML = append;
+                            })
+                           
+                        })
+                       
+                    })
+               
+                }
+                
+            })
+         
+        })
+    }
+
+}
+
+//---------------------------Training Videos-----------------------
+
+function playTrainingVids() {
+
+    var vidTitle = this.parentElement.parentElement.children[1].innerText;
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/batch/');
+    get(path).then((snapshot)=> {
+
+        snapshot.forEach((childSnapshot)=> {
+
+            var newKey = childSnapshot.key;
+
+            const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/');
+            get(path2).then((snapshot)=> {
+                
+                snapshot.forEach((childSnapshot)=> {
+                    
+                if(childSnapshot.key == vidTitle) {
+                        
+                    //mixdrop.co
+                    black.innerHTML = `
+                        <iframe src="${childSnapshot.val().link}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                        `;
+
+                    var oldViews = childSnapshot.val().views;
+
+                    update(ref(db, 'courses/' + dropCourse.value + '/batch/' + newKey + '/trainingVideos/' + vidTitle + '/'), {
+                        views: oldViews + 1
+                    })
+                }
+            })
+        })
+    })
+})
+}
+
+function loadTrainingVideos() {
+
+    const divTrainingTable = document.getElementById('divTrainingTable');
+
+    if(dropCourse.value != "Select Course") {
+
+        const path = ref(db, 'accounts/trainees/');
+        get(path).then((snapshot)=> {
+
+            snapshot.forEach((childSnapshot)=> {
+
+                if(childSnapshot.val().email == sessEmail) {
+
+                    var sessID = childSnapshot.key;
+
+                    const path2 = ref(db, 'accounts/trainees/' + sessID + '/courses/' + dropCourse.value + '/batch/');
+
+                    get(path2).then((snapshot)=> {
+                        var append = "";
+                        snapshot.forEach((childSnapshot)=> {
+                            var sessBatch = childSnapshot.key;
+                            const path3 = ref(db, 'courses/' + dropCourse.value + '/batch/' + sessBatch + '/trainingVideos/');
+                            
+                            get(path3).then((snapshot)=> {
+                                snapshot.forEach((childSnapshot)=> {
+                                    append += 
+
+                                    `<div class="tableFileEntry">     
+                                        <div class="tableFileID"></div> 
+                                        <div class="tableFileTitle"><h1>${childSnapshot.key}</h1></div>                        
+                                        <div class="tableFileControls">
+                                            <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVids">
+                                        </div>
+                                    </div>
+                                    <div class="bannerLine"></div>`;
+                                })
+
+                                divTrainingTable.innerHTML = append;
+
+                                for(var a = 0; a < btnPlayTrainingVids.length; a++) {
+                                    btnPlayTrainingVids[a].addEventListener('click', playTrainingVids);
+                                }
+                                
+                            })
+                            
+                        })
+                        
+                    })
+                    
+                }
+                
+            })
+            
+        })
+    }
+}
+
+//----------------------------Load All App Data--------------------
+
+function playAppVids() {
+    
+    var fileTitle = this.parentElement.parentElement.children[1].innerText;
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
+    get(path).then((snapshot)=> {
+        
+        snapshot.forEach((childSnapshot)=> {
+
+            if(childSnapshot.val().videoTitle == fileTitle) {
+
+                var newKey = childSnapshot.key;
+
+                black.innerHTML = 
+                    `<iframe src="${childSnapshot.val().videoLink}" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>`;
+
+                var oldViews = childSnapshot.val().videoViews;
+
+                update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
+                    videoViews: oldViews + 1
+                })
+
+                hideNotifs(fileTitle);
+            }
+        })
+    })
+}
+
+function downloadAppFiles() {
+    var fileTitle = this.parentElement.parentElement.children[1].innerText;
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
+    get(path).then((snapshot)=> {
+        
+        snapshot.forEach((childSnapshot)=> {
+
+        if(childSnapshot.val().videoTitle == fileTitle) {
+
+            var newKey = childSnapshot.key;
+
+            var oldDownloads = childSnapshot.val().downloads;
+
+            update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + newKey + '/'), {
+                downloads: oldDownloads + 1
+            })
+        }
+    })
+})
+}
+
+function loadAppData() {
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
+
+    onValue(path,(snapshot)=> {
+
+        for(var a = 1; a <= snapshot.size; a++) {
+            
+            var append = "";
+            var append2 = [];
+            const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a + '/files/');
+            
+            onValue(path2, (snapshot)=>{  
+
+                snapshot.forEach((childSnapshot)=> {   
+                    
+                    if(childSnapshot.val().fileLink != "") {
+                        append+= 
+                        `<div class="tableFileEntry">     
+                            <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
+                            <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
+                            <div class="tableFileControls">
+                                <img src="img-h6rv2c/btnDownload.png" class = "btnDownloadFile" onclick="window.open('${childSnapshot.val().fileLink}');">
+                                <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
+                            </div>
+                        </div>
+                        <div class="bannerLine"></div>`;
+                    }
+
+                    else {
+                        append+= 
+                        `<div class="tableFileEntry">     
+                            <div class="tableFileID"><img src="img-h6rv2c/imgNotif.svg"></div>                        
+                            <div class="tableFileTitle"><h1>${childSnapshot.val().videoTitle}</h1></div>
+                            <div class="tableFileControls">
+                                <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
+                            </div>
+                        </div>
+                        <div class="bannerLine"></div>`;
+                    }
+                    
+                })
+                append2[a] = append;
+
+                divAppTable[a-1].innerHTML = append2[a];
+
+                //add playAppVids 
+                for(var z = 0; z < btnPlayFile.length; z++) {
+                    btnPlayFile[z].addEventListener('click', playAppVids);
+                }
+
+                //add downloadFiles
+                for(var z = 0; z < btnDownloadFile.length; z++) {
+                    btnDownloadFile[z].addEventListener('click', downloadAppFiles);
+                } 
+                checkNotifs();
+            })            
+        }
+        
+    })
+
+}
+
+//----------------------------Notifications------------------------
+
+function checkNotifs() {
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + childSnapshot.key + '/files/');
+            get(path2).then((snapshot)=> {
+                snapshot.forEach((childSnapshot)=> {
+                    var getTitle = childSnapshot.val().videoTitle;
+                    var getNotif = childSnapshot.val().notify;
+
+                    //checking if the title already exists in local storage
+                    //if not, add it with true value means the red dot should be on
+                    if(localStorage.getItem(getTitle) == null) {
+                        localStorage.setItem(getTitle, getNotif)
+                    }
+                    else {
+                        getNotif = localStorage.getItem(getTitle);
+                    }
+
+                    //search all tableFileEntry class to get their titles
+                    for(var a = 0; a < tableFileEntry.length; a++) {
+                        var fileTitle = tableFileEntry[a].children[1].innerText;
+
+                        //match the title
+                        if(getTitle == fileTitle) {
+                            if(getNotif == "true") {
+                                tableFileEntry[a].children[0].children[0].style.visibility = "visible";
+                            } 
+                            else {
+                                tableFileEntry[a].children[0].children[0].style.visibility = "hidden";
+                            }
+                        }
+                    }   
+                })
+            })
+        })
+    })
+}
+
+function hideNotifs(fileTitle) {
+
+    localStorage.setItem(fileTitle, "false");
+
+    checkNotifs();
+    
+}
+
+//---------------------------Expand & Collapse---------------------
+
+function showHideRes() {
+    var frmShow = this.parentElement.parentElement.dataset.show;
+
+    if(frmShow == "false") {
+        var newAppTable = this.parentElement.parentElement.children[2];
+        this.style.transform = "rotate(-180deg)";
+        newAppTable.style.display = "inline-flex";
+        newAppTable.style.flexDirection = "column";
+        this.parentElement.parentElement.dataset.show = "true"
+    }
+    else {
+        
+        var newAppTable = this.parentElement.parentElement.children[2];
+        this.style.transform = "rotate(0deg)";
+        newAppTable.style.display = "none";
+        this.parentElement.parentElement.dataset.show = "false"
+        
+    }
+
+}
+
+function loadBtnExpand() {
+    for(var a = 0; a < btnExpand.length; a++) {     
+        btnExpand[a].addEventListener('click', showHideRes);
+    }    
+}
+
+
+//------------------------Check IF Online (Multiple Tabs)--------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        const path = ref(db, 'accounts/trainees/');
+        onValue(path, (snapshot)=> {
+            snapshot.forEach((childSnapshot)=> {
+                if(childSnapshot.val().email == sessEmail) {
+                    var sessID = childSnapshot.key;
+
+                    update(ref(db, 'accounts/trainees/' + sessID + '/'), {
+                        status: "offline",
+                        devices: 0
+                    })
+                    .then(()=> {
+                        signOut(auth)
+                        .then(()=> {
+                            sessionStorage.clear();
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    })
+                }
+            })
+        })
+
+    }
+
+    else {
+
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) {
+                
+                var path2 = ref(db, 'accounts/trainees/');
+                
+                onValue(path2, (snapshot)=> {
+                    snapshot.forEach((childSnapshot)=> {
+                        
+                        var sessEmail = sessionStorage.getItem('sessEmail');
+
+                        if(childSnapshot.val().email == sessEmail) {
+
+                            var sessID = childSnapshot.key;
+
+                            if(childSnapshot.val().status == "suspended") {
+                                signOut(auth)
+                                .then(()=> {
+                                    sessionStorage.clear();
+                                })
+                                .catch((error)=> {
+                                    alert(error.code);
+                                }) 
+                            }
+
+                            else if (childSnapshot.val().status == "deletion") {
+    
+                                sessionStorage.clear();
+                                window.location.replace("https://artcademy.ph/login");
+
+                            }
+
+                            else {
+                                var newDate = new Date();
+                                var currMonth = newDate.getMonth() + 1;
+                                var currDate = newDate.getDate();
+                                var currYear = newDate.getFullYear();
+            
+                                fetch("https://api.ipify.org/?format=text&callback=getIP/")
+                                .then(res => res.text())
+                                .then(IP => getIP(IP));
+
+                                function getIP(IP) {
+                                    update(ref(db, 'accounts/trainees/' + sessID), {
+                                        devices: IP,
+                                        status: "online",
+                                        lastOnline: currMonth + "." + currDate + "." + currYear
+                                    })
+                                    .catch((error)=> {
+                                        alert(error.code);
+                                    })
+                                }
+                            }
+                        }
+                    })
+                })
+            }
+
+        });
+    }
+}
+setInterval(checkIfOnline, 500);
+
+
+//------------------------Check IF Offline--------------------------
+
+function checkIfOffline() {
+    
+    const path = ref(db, 'accounts/trainees/');
+
+    onValue(path, (snapshot)=> {
+        var sessEmail = sessionStorage.getItem('sessEmail');
+        snapshot.forEach((childSnapshot)=> {
+            
+            if(sessEmail == childSnapshot.val().email) {
+                var sessID = childSnapshot.key;
+
+                var checkCon = ref(db, 'accounts/trainees/' + sessID + '/');
+                onDisconnect(checkCon).update({
+                    status: "offline",
+                    devices: 0
+                })
+            }
+        })
+    })
+}
+
+checkIfOffline();

@@ -1,1 +1,92 @@
-const _0x19ec5b=_0x2cb9;(function(_0x17b01c,_0x59277e){const _0x4381fb=_0x2cb9,_0x225502=_0x17b01c();while(!![]){try{const _0x19bce2=parseInt(_0x4381fb(0x149))/0x1+parseInt(_0x4381fb(0x131))/0x2+parseInt(_0x4381fb(0x137))/0x3*(parseInt(_0x4381fb(0x129))/0x4)+parseInt(_0x4381fb(0x14a))/0x5+parseInt(_0x4381fb(0x13c))/0x6*(-parseInt(_0x4381fb(0x128))/0x7)+parseInt(_0x4381fb(0x139))/0x8*(-parseInt(_0x4381fb(0x12e))/0x9)+parseInt(_0x4381fb(0x12d))/0xa*(-parseInt(_0x4381fb(0x141))/0xb);if(_0x19bce2===_0x59277e)break;else _0x225502['push'](_0x225502['shift']());}catch(_0x45ac2b){_0x225502['push'](_0x225502['shift']());}}}(_0x3006,0x477d4));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js';import{getDatabase,ref,onValue}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js';const firebaseConfig={'apiKey':_0x19ec5b(0x121),'authDomain':_0x19ec5b(0x145),'databaseURL':_0x19ec5b(0x130),'projectId':_0x19ec5b(0x13e),'storageBucket':_0x19ec5b(0x12c),'messagingSenderId':_0x19ec5b(0x13d),'appId':'1:651674935886:web:629aefbab24dd2a154991f'},app=initializeApp(firebaseConfig),db=getDatabase();var t=0.002*window[_0x19ec5b(0x124)],c=window[_0x19ec5b(0x124)],scrollingBannerText=document[_0x19ec5b(0x132)]('pBanner');const scrollingBanner=document[_0x19ec5b(0x132)](_0x19ec5b(0x13b));var bannerContainer=document[_0x19ec5b(0x132)](_0x19ec5b(0x123));bannerContainer[_0x19ec5b(0x12a)][_0x19ec5b(0x143)]='translateX('+window[_0x19ec5b(0x124)]+_0x19ec5b(0x127);function checkBanner(){const _0x1cc93b=ref(db,'settings/banner');onValue(_0x1cc93b,_0x4a9878=>{const _0x2342fe=_0x2cb9;_0x4a9878['exists']()&&(scrollingBannerText['innerText']=_0x4a9878[_0x2342fe(0x140)]()[_0x2342fe(0x125)],_0x4a9878[_0x2342fe(0x140)]()['status']===!![]?scrollingBanner[_0x2342fe(0x12a)][_0x2342fe(0x144)]=_0x2342fe(0x147):scrollingBanner[_0x2342fe(0x12a)][_0x2342fe(0x144)]=_0x2342fe(0x142));});}checkBanner();function bannerAnimation(){const _0x254c54=_0x19ec5b;c-=0.5,bannerContainer['style']['transform']=_0x254c54(0x122)+c+_0x254c54(0x127),c<bannerContainer[_0x254c54(0x146)]*-0x1&&(c=window[_0x254c54(0x124)],bannerContainer[_0x254c54(0x12a)]['transform']='translateX('+window[_0x254c54(0x124)]+_0x254c54(0x127));}setInterval(bannerAnimation,t),window[_0x19ec5b(0x134)](_0x19ec5b(0x13f),()=>{const _0x53ee37=_0x19ec5b;t=0.002*window['innerWidth'],c=window[_0x53ee37(0x124)],bannerContainer[_0x53ee37(0x12a)][_0x53ee37(0x143)]=_0x53ee37(0x122)+window[_0x53ee37(0x124)]+_0x53ee37(0x127);});var bodyBlue=document[_0x19ec5b(0x132)](_0x19ec5b(0x133));function _0x2cb9(_0x5af90a,_0x1bfba6){const _0x300695=_0x3006();return _0x2cb9=function(_0x2cb9fe,_0x113ad3){_0x2cb9fe=_0x2cb9fe-0x121;let _0x5acbb6=_0x300695[_0x2cb9fe];return _0x5acbb6;},_0x2cb9(_0x5af90a,_0x1bfba6);}const rightCard=document['getElementById'](_0x19ec5b(0x12f)),imgCloud=document['getElementById'](_0x19ec5b(0x126)),divAdventurer=document[_0x19ec5b(0x132)]('divAdventurer'),divArtist=document[_0x19ec5b(0x132)](_0x19ec5b(0x13a)),divDev=document[_0x19ec5b(0x132)](_0x19ec5b(0x136));imgCloud[_0x19ec5b(0x12a)][_0x19ec5b(0x143)]=_0x19ec5b(0x12b)+rightCard[_0x19ec5b(0x138)]*-0x1+_0x19ec5b(0x135),divAdventurer['style'][_0x19ec5b(0x14b)]=rightCard[_0x19ec5b(0x138)]*0.4+'px',divArtist[_0x19ec5b(0x12a)][_0x19ec5b(0x14b)]=rightCard[_0x19ec5b(0x138)]*0.3+'px',divDev[_0x19ec5b(0x12a)][_0x19ec5b(0x14b)]=rightCard[_0x19ec5b(0x138)]*0.2+'px',window[_0x19ec5b(0x134)](_0x19ec5b(0x13f),()=>{const _0x36abb1=_0x19ec5b;imgCloud[_0x36abb1(0x12a)][_0x36abb1(0x143)]=_0x36abb1(0x12b)+rightCard[_0x36abb1(0x138)]*-0x1+_0x36abb1(0x135),divAdventurer[_0x36abb1(0x12a)][_0x36abb1(0x14b)]=rightCard[_0x36abb1(0x138)]*0.4+'px',divArtist[_0x36abb1(0x12a)][_0x36abb1(0x14b)]=rightCard['clientWidth']*0.3+'px',divDev['style'][_0x36abb1(0x14b)]=rightCard['clientWidth']*0.2+'px';}),window[_0x19ec5b(0x134)](_0x19ec5b(0x148),function(){const _0x33cf89=_0x19ec5b;bodyBlue['style']['visibility']=_0x33cf89(0x147);});function _0x3006(){const _0x30350e=['projartcademyph-29663.appspot.com','340ANIAzK','7983FmnVdC','rightCard','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','1009612euAVvk','getElementById','bodyBlue','addEventListener','px,\x200px)','divDev','27piQKJp','clientWidth','512QBkowC','divArtist','divBanner','1195410FLvPsG','651674935886','projartcademyph-29663','resize','val','63206hcHRkb','hidden','transform','visibility','projartcademyph-29663.firebaseapp.com','offsetWidth','visible','load','111390laZjgo','52120XFPJDi','width','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','translateX(','bannerContainer','innerWidth','message','imgCloud','px)','7GKCbKx','52252FRcvlT','style','translate('];_0x3006=function(){return _0x30350e;};return _0x3006();}
+//------------------------Firebase--------------------
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getDatabase, ref, onValue} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase();
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth* -1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+
+window.addEventListener('resize', ()=> {
+    t = .002*window.innerWidth;
+    c = window.innerWidth;  
+    bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+})
+
+//-------------------------------Show Body-------------------------------------
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+//---------------------------------Right Card-------------------------------
+
+const rightCard = document.getElementById('rightCard');
+const imgCloud = document.getElementById('imgCloud');
+const divAdventurer = document.getElementById('divAdventurer');
+const divArtist = document.getElementById('divArtist');
+const divDev = document.getElementById('divDev');
+
+imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px)";
+
+//console.log(divAdventurer.offsetTop + ', ' + divAdventurer.offsetLeft);
+divAdventurer.style.width = rightCard.clientWidth * .40 + 'px';
+divArtist.style.width = rightCard.clientWidth * .30 + 'px';
+divDev.style.width = rightCard.clientWidth * .20 + 'px';
+
+window.addEventListener('resize', ()=> {
+    imgCloud.style.transform = "translate("+ (rightCard.clientWidth * -1) + "px, 0px)";
+    divAdventurer.style.width = rightCard.clientWidth * .40 + 'px';
+    divArtist.style.width = rightCard.clientWidth * .30 + 'px';
+    divDev.style.width = rightCard.clientWidth * .20 + 'px';
+})
+
+
+window.addEventListener('load', function() {
+    bodyBlue.style.visibility = "visible";
+})

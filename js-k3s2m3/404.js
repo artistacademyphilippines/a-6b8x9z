@@ -1,1 +1,14 @@
-var _0x816b87=_0x58bd;function _0x58bd(_0x43cfd0,_0x191f1e){var _0x4b4287=_0x4b42();return _0x58bd=function(_0x58bd54,_0x12a1d2){_0x58bd54=_0x58bd54-0xd6;var _0x1a1d48=_0x4b4287[_0x58bd54];return _0x1a1d48;},_0x58bd(_0x43cfd0,_0x191f1e);}(function(_0x391755,_0x3be402){var _0x524323=_0x58bd,_0x195c1e=_0x391755();while(!![]){try{var _0x4116af=-parseInt(_0x524323(0xe2))/0x1*(-parseInt(_0x524323(0xe7))/0x2)+parseInt(_0x524323(0xdc))/0x3*(parseInt(_0x524323(0xe4))/0x4)+parseInt(_0x524323(0xd9))/0x5+-parseInt(_0x524323(0xdb))/0x6*(parseInt(_0x524323(0xda))/0x7)+parseInt(_0x524323(0xe1))/0x8*(-parseInt(_0x524323(0xe5))/0x9)+-parseInt(_0x524323(0xd6))/0xa*(parseInt(_0x524323(0xdf))/0xb)+parseInt(_0x524323(0xe8))/0xc;if(_0x4116af===_0x3be402)break;else _0x195c1e['push'](_0x195c1e['shift']());}catch(_0x150229){_0x195c1e['push'](_0x195c1e['shift']());}}}(_0x4b42,0xea037));var bodyBlue=document[_0x816b87(0xde)](_0x816b87(0xe6));bodyBlue[_0x816b87(0xe0)]['visibility']=_0x816b87(0xd8);var i=0x5;function redirect(){var _0x50e06e=_0x816b87;document[_0x50e06e(0xde)]('frmHeader')[_0x50e06e(0xe3)]['innerText']='Oops!\x20Page\x20Not\x20Found\x20('+i+'s)',i==0x0?window['location'][_0x50e06e(0xdd)](_0x50e06e(0xd7)):i-=0x1;}setInterval(redirect,0x3e8);function _0x4b42(){var _0x48b32f=['6828325RQXQNC','7DGIbXP','341058pKRRhH','3bxUyrQ','replace','getElementById','659791rLUvAi','style','6955616EZREmD','7oyeztn','firstElementChild','4595928jRcjJC','18SUdQem','bodyBlue','2434ZOcjdD','6372060ygNNQF','50fcGvEB','https://artcademy.ph/','visible'];_0x4b42=function(){return _0x48b32f;};return _0x4b42();}
+var bodyBlue = document.getElementById('bodyBlue');
+bodyBlue.style.visibility = "visible";
+var i = 5;
+function redirect() {
+    document.getElementById('frmHeader').firstElementChild.innerText = "Oops! Page Not Found (" + i + "s)"
+    if(i == 0) {
+        window.location.replace('https://artcademy.ph/');
+    }
+    else {
+        i-=1;
+    }
+    
+}
+setInterval(redirect, 1000);

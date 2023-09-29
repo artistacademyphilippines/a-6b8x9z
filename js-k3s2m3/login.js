@@ -236,6 +236,8 @@ function validateLogin() {
         if((error.code == "auth/wrong-password") || (error.code == "auth/user-not-found")) {
           alertMsg.innerText = "Email or password is incorrect";
           alertMsg.style.opacity = "1";
+          document.getElementById('txtEmail').value = "";
+          document.getElementById('txtPw').value = "";
         }
       })
       
@@ -244,6 +246,8 @@ function validateLogin() {
     else {
       alertMsg.innerText = "Email or password is incorrect";
       alertMsg.style.opacity = "1";
+      document.getElementById('txtEmail').value = "";
+      document.getElementById('txtPw').value = "";
     }
   }
 

@@ -1,1 +1,49 @@
-var _0x2855fd=_0x1145;(function(_0x2a74c3,_0x26bca7){var _0x143358=_0x1145,_0x2e20fd=_0x2a74c3();while(!![]){try{var _0x4cff3e=parseInt(_0x143358(0x145))/0x1*(parseInt(_0x143358(0x158))/0x2)+-parseInt(_0x143358(0x14d))/0x3+-parseInt(_0x143358(0x13c))/0x4*(parseInt(_0x143358(0x159))/0x5)+-parseInt(_0x143358(0x140))/0x6*(parseInt(_0x143358(0x14e))/0x7)+parseInt(_0x143358(0x142))/0x8+parseInt(_0x143358(0x15b))/0x9+parseInt(_0x143358(0x146))/0xa*(parseInt(_0x143358(0x139))/0xb);if(_0x4cff3e===_0x26bca7)break;else _0x2e20fd['push'](_0x2e20fd['shift']());}catch(_0x53a117){_0x2e20fd['push'](_0x2e20fd['shift']());}}}(_0x893c,0xc22b6));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,sendPasswordResetEmail}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';function _0x1145(_0x4ec28b,_0x3c6ee9){var _0x893c71=_0x893c();return _0x1145=function(_0x1145a3,_0x49ff2e){_0x1145a3=_0x1145a3-0x139;var _0x4fe8a3=_0x893c71[_0x1145a3];return _0x4fe8a3;},_0x1145(_0x4ec28b,_0x3c6ee9);}const firebaseConfig={'apiKey':'AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','authDomain':_0x2855fd(0x144),'databaseURL':_0x2855fd(0x13d),'projectId':_0x2855fd(0x153),'storageBucket':_0x2855fd(0x14b),'messagingSenderId':_0x2855fd(0x147),'appId':'1:651674935886:web:629aefbab24dd2a154991f'},app=initializeApp(firebaseConfig),auth=getAuth(app);function _0x893c(){var _0x59ab30=['170sfsAjS','Aquamarine','3207609pDbGFW','231evnAcC','visibility','querySelector','179060DeTPuc','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','getElementById','catch','351606SPiUuW','click','12170176yKPanG','addEventListener','projartcademyph-29663.firebaseapp.com','12AFbRvz','890650ywsvJs','651674935886','value','opacity','#txtEmail','projartcademyph-29663.appspot.com','bodyBlue','3287208ehYEXj','42KYXqer','Account\x20does\x20not\x20exist\x20or\x20has\x20been\x20removed','replace','style','#btnConfirm','projartcademyph-29663','#alertMessage','visible','Password\x20reset\x20was\x20sent\x20to\x20your\x20email','innerText','2772iGEDnf'];_0x893c=function(){return _0x59ab30;};return _0x893c();}var bodyBlue=document[_0x2855fd(0x13e)](_0x2855fd(0x14c));bodyBlue['style'][_0x2855fd(0x13a)]=_0x2855fd(0x155);var loginEmail=null,alertMsg=document[_0x2855fd(0x13b)](_0x2855fd(0x154)),btnConfirm=document[_0x2855fd(0x13b)](_0x2855fd(0x152));const resetPw=async()=>{var _0x254afa=_0x2855fd;loginEmail=document[_0x254afa(0x13b)]('#txtEmail')['value'],sendPasswordResetEmail(auth,loginEmail)['then'](()=>{var _0x64d816=_0x254afa;alertMsg[_0x64d816(0x157)]=_0x64d816(0x156),alertMsg[_0x64d816(0x151)]['color']=_0x64d816(0x15a),alertMsg[_0x64d816(0x151)][_0x64d816(0x149)]='1',document[_0x64d816(0x13b)](_0x64d816(0x14a))[_0x64d816(0x148)]='',setInterval(reLogin,0x1388);})[_0x254afa(0x13f)](()=>{var _0x5311bb=_0x254afa;alertMsg[_0x5311bb(0x157)]=_0x5311bb(0x14f),alertMsg['style'][_0x5311bb(0x149)]='1';});};btnConfirm[_0x2855fd(0x143)](_0x2855fd(0x141),resetPw);function reLogin(){var _0x522b6d=_0x2855fd;window['location'][_0x522b6d(0x150)]('https://artcademy.ph/login');}
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, sendPasswordResetEmail }  from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app)
+
+
+var bodyBlue = document.getElementById('bodyBlue');
+bodyBlue.style.visibility = "visible";
+
+//----------------------Functions----------------------
+
+var loginEmail = null;
+var alertMsg = document.querySelector('#alertMessage');
+var btnConfirm = document.querySelector('#btnConfirm');
+
+const resetPw = async() => {
+   loginEmail = document.querySelector('#txtEmail').value;
+
+   sendPasswordResetEmail(auth, loginEmail)
+   .then(() => {
+       alertMsg.innerText = "Password reset was sent to your email";
+       alertMsg.style.color = "Aquamarine";
+       alertMsg.style.opacity = "1";
+       document.querySelector('#txtEmail').value = "";
+       setInterval(reLogin, 5000);
+   })
+   .catch(() => {
+       alertMsg.innerText = "Account does not exist or has been removed";
+       alertMsg.style.opacity = "1";
+       
+   })
+}
+btnConfirm.addEventListener("click", resetPw);
+
+function reLogin() {
+   window.location.replace('https://artcademy.ph/login');
+}
