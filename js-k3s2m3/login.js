@@ -65,7 +65,7 @@ var alertMsg = document.querySelector('#alertMessage');
 //--check first if user is currently logged in
 var bodyBlue = document.getElementById('bodyBlue');
 
-
+/*
 onAuthStateChanged(auth, (user) => {
 
   if (user) {
@@ -219,7 +219,7 @@ onAuthStateChanged(auth, (user) => {
   } 
 
   });
-
+*/
   bodyBlue.style.visibility = "visible";
 
   //---------------------validate login--------------------
