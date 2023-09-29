@@ -220,6 +220,7 @@ onAuthStateChanged(auth, (user) => {
 
   });
 
+  bodyBlue.style.visibility = "visible";
 
   //---------------------validate login--------------------
 
