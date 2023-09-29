@@ -22,7 +22,7 @@ const db = getDatabase();
 var sessEmail = sessionStorage.getItem("sessEmail");
 var bodyBlue = document.getElementById('bodyBlue');
 
-
+/*
 onAuthStateChanged(auth, (user) => {
 
     if (user) {
@@ -60,7 +60,7 @@ onAuthStateChanged(auth, (user) => {
     } 
 
 });
-
+*/
 
 //--------------------------------Banner--------------------------------------
 
@@ -214,7 +214,6 @@ function tapCards() {
 dot1.addEventListener('click', tapCards);
 dot2.addEventListener('click', tapCards);
 dot3.addEventListener('click', tapCards);
-
 
 //----------------------------------Autoplay Cards--------------------------------
 
