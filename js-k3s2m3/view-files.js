@@ -524,14 +524,15 @@ function clearNotifs() {
         console.log(`count: ${getCount}`)
         //get key of local storage
         const getKey = localStorage.key(i);
-        //assume that key does not exist
-        var getKeyExist = false;
 
         const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
         get(path).then((snapshot)=> {
             snapshot.forEach((childSnapshot)=> {
                 const path2 = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + childSnapshot.key + '/files/');
                 get(path2).then((snapshot)=> {
+                    //assume that key does not exist
+                    var getKeyExist = false;
+                    
                     snapshot.forEach((childSnapshot)=> {
                         var getTitle = childSnapshot.val().videoTitle;
                         
