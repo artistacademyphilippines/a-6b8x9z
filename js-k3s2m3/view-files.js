@@ -491,7 +491,7 @@ function loadAppData() {
                     }
                     
                 })
-                
+
                 append2[a] = append;
 
                 divAppTable[a-1].innerHTML = append2[a];
@@ -505,7 +505,8 @@ function loadAppData() {
                 for(var z = 0; z < btnDownloadFile.length; z++) {
                     btnDownloadFile[z].addEventListener('click', downloadAppFiles);
                 } 
-                checkNotifs();
+                clearNotifs();
+                
             })            
         }
         
@@ -516,9 +517,11 @@ function loadAppData() {
 //----------------------------Notifications------------------------
 
 function clearNotifs() {
+
     const getCount = localStorage.length;
 
     for (var i = 0; i < getCount; i++) {
+        console.log(`count: ${getCount}`)
         //get key of local storage
         const getKey = localStorage.key(i);
         //assume that key does not exist
@@ -532,21 +535,23 @@ function clearNotifs() {
                     snapshot.forEach((childSnapshot)=> {
                         var getTitle = childSnapshot.val().videoTitle;
                         
+                        console.log(`getkey: ${getKey} gettitle: ${getTitle}`)
                         if(getKey == getTitle) {
                             getKeyExist = true;
                         }
-                        
-
                     })
 
                     //if getKeyExist remained false, delete it
                     if(getKeyExist == false) {
                         localStorage.removeItem(getKey);
                     }
+                    console.log(`getkeyexist: ${getKeyExist}`);
                 })
             })
         })
     }
+
+    checkNotifs();
 }
 
 function checkNotifs() {
