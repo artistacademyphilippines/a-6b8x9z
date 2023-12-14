@@ -35,7 +35,7 @@ img{
 .panel {
     width: 420px;
     min-width: 340px; 
-    height: 400px; 
+    height: auto;
     display: inline-flex; 
     flex-direction: column;  
     margin: auto; 
