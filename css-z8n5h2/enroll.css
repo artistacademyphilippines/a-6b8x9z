@@ -371,9 +371,7 @@ img{
     cursor: pointer;
     transition: .1s linear;
     justify-content: center;
-}
 
-#btnCheckout p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 900;
@@ -381,9 +379,7 @@ img{
     line-height: 38px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
-    margin: auto;
 }
-
 
 #frm3 {
     display: none;
