@@ -4,7 +4,7 @@ var stylish = [];
 stylish[0] = {
     name: "Bang Tamvan",
     class: "stylish",
-    source: "/fonts/stylish/Bang-Tamvan.woff2",
+    source: "/res/fonts/stylish/Bang-Tamvan.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -14,7 +14,7 @@ stylish[0] = {
 stylish[1] = {
     name: "Bloopoly",
     class: "stylish",
-    source: "/fonts/stylish/Bloopoly.woff2",
+    source: "/res/fonts/stylish/Bloopoly.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -24,7 +24,7 @@ stylish[1] = {
 stylish[2] = {
     name: "Bottle Coffee",
     class: "stylish",
-    source: "/fonts/stylish/Bottle-Coffee.woff2",
+    source: "/res/fonts/stylish/Bottle-Coffee.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -34,7 +34,7 @@ stylish[2] = {
 stylish[3] = {
     name: "Cheesy Cats",
     class: "stylish",
-    source: "/fonts/stylish/Cheesy-Cats.woff2",
+    source: "/res/fonts/stylish/Cheesy-Cats.woff2",
     normal: "Regular",
     italics: "",
     designers: "Tkzgraphic",
@@ -44,7 +44,7 @@ stylish[3] = {
 stylish[4] = {
     name: "Corner Cafe",
     class: "stylish",
-    source: "/fonts/stylish/Corner-Cafe.woff2",
+    source: "/res/fonts/stylish/Corner-Cafe.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -54,7 +54,7 @@ stylish[4] = {
 stylish[5] = {
     name: "Devina Garden",
     class: "stylish",
-    source: "/fonts/stylish/Devina-Garden.woff2",
+    source: "/res/fonts/stylish/Devina-Garden.woff2",
     normal: "Regular",
     italics: "",
     designers: "Limitype",
@@ -64,7 +64,7 @@ stylish[5] = {
 stylish[6] = {
     name: "Funkwest",
     class: "stylish",
-    source: "/fonts/stylish/Funkwest.woff2",
+    source: "/res/fonts/stylish/Funkwest.woff2",
     normal: "Regular",
     italics: "",
     designers: "Theophine Savio Theodore",
@@ -74,7 +74,7 @@ stylish[6] = {
 stylish[7] = {
     name: "Hey Louie",
     class: "stylish",
-    source: "/fonts/stylish/Hey-Louie.woff2",
+    source: "/res/fonts/stylish/Hey-Louie.woff2",
     normal: "Regular",
     italics: "",
     designers: "Eko Bimantara",
@@ -84,7 +84,7 @@ stylish[7] = {
 stylish[8] = {
     name: "Honchokomono",
     class: "stylish",
-    source: "/fonts/stylish/Honchokomono.woff2",
+    source: "/res/fonts/stylish/Honchokomono.woff2",
     normal: "Regular",
     italics: "",
     designers: "Honchokomodo",
@@ -94,7 +94,7 @@ stylish[8] = {
 stylish[9] = {
     name: "Keep Cheese",
     class: "stylish",
-    source: "/fonts/stylish/Keep-Cheese.woff2",
+    source: "/res/fonts/stylish/Keep-Cheese.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -104,7 +104,7 @@ stylish[9] = {
 stylish[10] = {
     name: "Lonely Coffee",
     class: "stylish",
-    source: "/fonts/stylish/Lonely-Coffee.woff2",
+    source: "/res/fonts/stylish/Lonely-Coffee.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -114,7 +114,7 @@ stylish[10] = {
 stylish[11] = {
     name: "Mang Gondrong",
     class: "stylish",
-    source: "/fonts/stylish/Mang-Gondrong.woff2",
+    source: "/res/fonts/stylish/Mang-Gondrong.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -124,7 +124,7 @@ stylish[11] = {
 stylish[12] = {
     name: "Mang Kenapa",
     class: "stylish",
-    source: "/fonts/stylish/Mang-Kenapa.woff2",
+    source: "/res/fonts/stylish/Mang-Kenapa.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -134,7 +134,7 @@ stylish[12] = {
 stylish[13] = {
     name: "Note Saia",
     class: "stylish",
-    source: "/fonts/stylish/Note-Saia.woff2",
+    source: "/res/fonts/stylish/Note-Saia.woff2",
     normal: "Regular",
     italics: "",
     designers: "Tkzgraphic",
@@ -144,7 +144,7 @@ stylish[13] = {
 stylish[14] = {
     name: "Nowcloud Stencil",
     class: "stylish",
-    source: "/fonts/stylish/Nowcloud-Stencil.woff2",
+    source: "/res/fonts/stylish/Nowcloud-Stencil.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -154,7 +154,7 @@ stylish[14] = {
 stylish[15] = {
     name: "Ora Urus",
     class: "stylish",
-    source: "/fonts/stylish/Ora-Urus.woff2",
+    source: "/res/fonts/stylish/Ora-Urus.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -164,7 +164,7 @@ stylish[15] = {
 stylish[16] = {
     name: "Reselu",
     class: "stylish",
-    source: "/fonts/stylish/Reselu.woff2",
+    source: "/res/fonts/stylish/Reselu.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -174,7 +174,7 @@ stylish[16] = {
 stylish[17] = {
     name: "Save Lemon",
     class: "stylish",
-    source: "/fonts/stylish/Save-Lemon.woff2",
+    source: "/res/fonts/stylish/Save-Lemon.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -184,7 +184,7 @@ stylish[17] = {
 stylish[18] = {
     name: "Shortcake",
     class: "stylish",
-    source: "/fonts/stylish/Shortcake.woff2",
+    source: "/res/fonts/stylish/Shortcake.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -194,7 +194,7 @@ stylish[18] = {
 stylish[19] = {
     name: "Super Brother",
     class: "stylish",
-    source: "/fonts/stylish/Super-Brother.woff2",
+    source: "/res/fonts/stylish/Super-Brother.woff2",
     normal: "Regular",
     italics: "",
     designers: "All Super Font",
@@ -204,7 +204,7 @@ stylish[19] = {
 stylish[20] = {
     name: "Super Crafty",
     class: "stylish",
-    source: "/fonts/stylish/Super-Crafty.woff2",
+    source: "/res/fonts/stylish/Super-Crafty.woff2",
     normal: "Regular",
     italics: "",
     designers: "All Super Font",
@@ -214,7 +214,7 @@ stylish[20] = {
 stylish[21] = {
     name: "Super Frog",
     class: "stylish",
-    source: "/fonts/stylish/Super-Frog.woff2",
+    source: "/res/fonts/stylish/Super-Frog.woff2",
     normal: "Regular",
     italics: "",
     designers: "All Super Font",
@@ -224,7 +224,7 @@ stylish[21] = {
 stylish[22] = {
     name: "Super Honey",
     class: "stylish",
-    source: "/fonts/stylish/Super-Honey.woff2",
+    source: "/res/fonts/stylish/Super-Honey.woff2",
     normal: "Regular",
     italics: "",
     designers: "All Super Font",
@@ -234,7 +234,7 @@ stylish[22] = {
 stylish[23] = {
     name: "Super Playful",
     class: "stylish",
-    source: "/fonts/stylish/Super-Playful.woff2",
+    source: "/res/fonts/stylish/Super-Playful.woff2",
     normal: "Regular",
     italics: "",
     designers: "All Super Font",
@@ -244,7 +244,7 @@ stylish[23] = {
 stylish[24] = {
     name: "Susah Kali",
     class: "stylish",
-    source: "/fonts/stylish/Susah-Kali.woff2",
+    source: "/res/fonts/stylish/Susah-Kali.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -254,7 +254,7 @@ stylish[24] = {
 stylish[25] = {
     name: "Tak Cubit",
     class: "stylish",
-    source: "/fonts/stylish/Tak-Cubit.woff2",
+    source: "/res/fonts/stylish/Tak-Cubit.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
@@ -264,7 +264,7 @@ stylish[25] = {
 stylish[26] = {
     name: "Tenaciou",
     class: "stylish",
-    source: "/fonts/stylish/Tenaciou.woff2",
+    source: "/res/fonts/stylish/Tenaciou.woff2",
     normal: "Regular",
     italics: "",
     designers: "Migomojo Type House",
@@ -274,7 +274,7 @@ stylish[26] = {
 stylish[27] = {
     name: "Valentie",
     class: "stylish",
-    source: "/fonts/stylish/Valentie.woff2",
+    source: "/res/fonts/stylish/Valentie.woff2",
     normal: "Regular",
     italics: "",
     designers: "Bodig Std",
@@ -285,7 +285,7 @@ stylish[27] = {
 stylish[28] = {
     name: "Vestardia",
     class: "stylish",
-    source: "/fonts/stylish/Vestardia.woff2",
+    source: "/res/fonts/stylish/Vestardia.woff2",
     normal: "Regular",
     italics: "",
     designers: "Letterhanna",
@@ -295,7 +295,7 @@ stylish[28] = {
 stylish[29] = {
     name: "Yaelah",
     class: "stylish",
-    source: "/fonts/stylish/Yaelah.woff2",
+    source: "/res/fonts/stylish/Yaelah.woff2",
     normal: "Regular",
     italics: "",
     designers: "Syafrizal a.k.a Khurasan",
