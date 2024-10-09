@@ -17,7 +17,7 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getDatabase();
 
-
+console.log('hey')
 //--check first if user is currently logged in
 var sessEmail = sessionStorage.getItem("sessEmail");
 var bodyBlue = document.getElementById('bodyBlue');
