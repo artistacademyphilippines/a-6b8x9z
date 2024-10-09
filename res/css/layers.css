@@ -1,0 +1,2202 @@
+/*borders*/
+
+#cnvPin {
+    overflow: hidden;
+    position: absolute;
+    left: 0px !important;
+    top: 0px !important;
+    cursor: default;
+}
+
+.pinBody {
+    display: grid;
+    position: absolute;
+}
+
+.pinL {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    left: calc(0% - 4px);
+}
+
+.pinL2 {
+    width: 1px;
+    height: 100%;
+    margin: auto;
+    background-color: #6885CC;
+}
+
+.pinTL {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    border-radius: 0px;
+    top: calc(0% - 15px);
+    left: calc(0% - 14px);
+    transition: .2s;
+}
+
+.pinTL2 {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border: 1px solid #6885CC;
+    margin-left: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+.pinT {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    top: calc(0% - 4px);
+}
+
+.pinT2 {
+    height: 1px;
+    width: 100%;
+    margin: auto;
+    background-color: #6885CC;
+}
+
+.pinTR {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    border-radius: 0px;
+    top: calc(0% - 15px);
+    left: calc(100% - 5px);
+    transition: .2s;
+}
+
+.pinTR2 {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border: 1px solid #6885CC;
+    margin-right: auto;
+    margin-top: auto;
+    position: relative;
+}
+
+.pinR {
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    left: calc(100% - 4px);
+}
+
+.pinR2 {
+    width: 1px;
+    height: 100%;
+    margin: auto;
+    background-color: #6885CC;
+}
+
+.pinBR {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    border-radius: 0px;
+    top: calc(100% - 5px);
+    left: calc(100% - 5px);
+    transition: .2s;
+}
+
+.pinBR2 {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border: 1px solid #6885CC;
+    margin-right: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.pinB {
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    background-color: transparent;
+    display: flex;
+    top: calc(100% - 4px);
+}
+
+.pinB2 {
+    height: 1px;
+    width: 100%;
+    margin: auto;
+    background-color: #6885CC;
+}
+
+.pinBL {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    position: absolute;
+    border-radius: 0px;
+    top: calc(100% - 5px);
+    left: calc(0% - 14px);
+    transition: .2s;
+}
+
+.pinBL2 {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #6885CC;
+    margin-left: auto;
+    margin-bottom: auto;
+    position: relative;
+}
+
+.cnvLayers {
+    position: absolute;
+    visibility: visible;
+    display: flex;
+}
+
+.cnvLayersBorder {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.cnvLayers img {
+    width: 100%;
+    height: 100%;
+    cursor: default;
+    object-fit: cover;
+    image-rendering: high-quality;
+    position: absolute;
+    min-width: 5px !important;
+    min-height: 5px !important;
+}
+
+.divLineStart {
+    display: flex;
+    height: 100%;
+    display: none;
+}
+
+.divLineStart svg {
+    width: 100%;
+    height: auto;
+}
+
+.divLineStart div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.divLineMid {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.divLineMid svg {
+    width: 100%;
+    height: auto;
+}
+
+.divLineEnd {
+    display: flex;
+    height: 100%;
+    display: none;
+}
+
+.divLineEnd div {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    transform: scale(-1,1);
+}
+
+.divLineEnd svg {
+    width: 100%;
+    height: auto;
+    transform: scale(-1,1);
+}
+
+.cnvOutline {
+    position: absolute;
+}
+
+.pnlBoxLayer {
+    width: 240px;
+    min-width: 240px;
+    height: auto;
+    margin-right: auto;
+    border-radius: 9px;
+    background-color: #343C4F;
+    border: 1px solid #3F4961;
+    overflow: hidden;
+    transition: .1s;
+    margin-bottom: .5em;
+}
+
+
+.pnlTitleLayer {
+    display: flex;
+    width: 240px;
+    height: 40px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #6885CC;
+    background-color: transparent;
+}
+
+.pnlTitleLayer h2 {
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+.btnExpandCollapseLayer {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+    cursor: pointer;
+    rotate: 0deg;
+    transition: .2s;
+}
+
+.btnExpandCollapseLayer svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.txtHeaderLayer {
+    margin: auto;
+    width: 80px;
+    height: 24px;
+    outline: none;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    margin: auto;
+    text-align: center;
+    cursor: default;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: .2s;
+    background-color: transparent;
+}
+
+.btnShowHideLayer {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.btnShowHideLayer svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
+
+.optLayerBlend {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerBlend:hover {
+    background-color: #6885CC;
+}
+
+.optTextWeight {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optTextWeight:hover {
+    background-color: #6885CC;
+}
+
+.optLayerStyle {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLayerStyle:hover {
+    background-color: #6885CC;
+}
+
+.contentImages {
+    width: 214px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.contentVector {
+    width: 214px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1em;
+    overflow: hidden;
+}
+
+.pnlEntryFold {
+    display: flex;
+    width: 210px;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.pnlEntryFold h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.pnlEntrySide {
+    height: 40px;
+    width: 42%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pnlEntrySide svg {
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: .2s;
+    filter: saturate(0) brightness(2);
+}
+
+.tabSliderLayer {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: .2s;
+}
+
+.tabBasicLayer {
+    height: auto;
+    width: 214px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tabColorLayer {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 214px;
+  
+}
+
+.tabTextLayer {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 214px;
+  
+}
+
+.tabStyleLayer {
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 214px;
+}
+
+.pnlDropLayer {
+    width: 210px;
+    height: 40px;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pnlBottomLayerTrack {
+    background-color: #3F4961;
+    width: 90%;
+    height: 1px;
+    margin: auto;
+    top: 400px;
+}
+
+.pnlBottomLayerThumb {
+    background-color: #6885CC;
+    width: 33%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomLayerThumb2 {
+    background-color: #6885CC;
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.pnlBottomLayer {
+    display: flex;
+    width: 90%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #343C4F; 
+    top: 400px;
+}
+
+.pnlBottomLayer h2:hover {
+    color: #99B7FF;
+}
+
+.frBottom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.frBottom div {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+}
+
+.frBottom div:hover svg {
+    filter: saturate(1) brightness(1.5);
+}
+
+.frBottom div svg{
+    margin: auto;
+}
+
+.rngLayer {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 52px;
+    height: 1px; 
+    border-radius: 99px;
+    background: #647499; 
+    outline: none; 
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 8px;
+}
+ 
+.rngLayer::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 14px; 
+    height: 14px; 
+    background-color: white; 
+    border-radius: 99px;
+    cursor: pointer; 
+    transition: .2s background-color;
+}
+
+.rngLayer::-webkit-slider-thumb:hover {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 14px; 
+    height: 14px; 
+    background-color: white; 
+    border-radius: 99px;
+    cursor: pointer; 
+}
+  
+.rngLayer::-moz-range-thumb {
+    width: 14px; 
+    height: 14px; 
+    background-color: white; 
+    border-radius: 99px;
+    cursor: pointer; 
+    transition: .2s background-color;
+}
+
+.rngLayer::-moz-range-thumb:hover {
+    width: 14px; 
+    height: 14px; 
+    background: white; 
+    border-radius: 99px;
+    cursor: pointer; 
+}
+
+.txtMiniLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtMiniLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtMiniLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtRotationLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtRotationLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtRotationLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtOpacityLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOpacityLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtOpacityLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtBlurLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtBlurLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtBlurLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.checkboxLayer {
+    outline: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid #515E7B;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 6px;
+}
+
+.txtWidthLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtWidthLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtWidthLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtHeightLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtHeightLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtHeightLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtXLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtXLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtXLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtYLayer {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtYLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtYLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.chkFlipX {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid #3F4961;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkFlipY {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid #3F4961;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkSwitch {
+    width: 12px;
+    height: 12px;
+    border-radius: 99px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #647499;
+    transition: .2s;
+}
+
+.txtBrightnessLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtBrightnessLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtBrightnessLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtContrastLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtContrastLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtContrastLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtSaturationLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSaturationLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtSaturationLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtTemperatureLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtTemperatureLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtTemperatureLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+
+.tabOutlineLayer {
+    display: none;
+}
+
+.txtOutlineColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtOutlineColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtOutlineColor:focus {
+    border: 1px solid #515E7B;
+}
+
+.thumbPickerOutline {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.txtOutlineOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineOpacity:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtOutlineOpacity:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtOutlineSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtOutlineSize:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtOutlineSize:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.tabGlowLayer {
+    display: none;
+}
+
+.txtGlowColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtGlowColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtGlowColor:focus {
+    border: 1px solid #515E7B;
+}
+
+.thumbPickerGlow {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: #949EFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.txtGlowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowOpacity:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtGlowOpacity:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtGlowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSize:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtGlowSize:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtGlowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtGlowSpread:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtGlowSpread:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.tabShadowLayer {
+    display: none;
+}
+
+.txtShadowColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtShadowColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtShadowColor:focus {
+    border: 1px solid #515E7B;
+}
+
+.thumbPickerShadow {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.txtShadowOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowOpacity:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowOpacity:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowSize {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSize:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowSize:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowSpread {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowSpread:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowSpread:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowRotation {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtShadowRotation:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtShadowRotation:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.pnlButtonSide {
+    height: 40px;
+    width: 42%;
+    display: flex;
+}
+
+.txtTextColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtTextColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtTextColor:focus {
+    border: 1px solid #647499;
+}
+
+.thumbPickerTextColor {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.txtResizeText {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtResizeText:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtResizeText:focus {
+    border-bottom: 1px solid #647499;
+}
+
+
+.txtLetterSpacing {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLetterSpacing:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtLetterSpacing:focus {
+    border-bottom: 1px solid #647499;
+}
+
+
+.txtLineHeight {
+    width: 32px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtLineHeight:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtLineHeight:focus {
+    border-bottom: 1px solid #647499;
+}
+
+
+.btnTitleCase {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+    border: 1px solid transparent;
+}
+
+.btnTitleCase h2 {
+    margin: auto;
+    color: #647499;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnUpperCase {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+
+.btnUpperCase h2 {
+    margin: auto;
+    color: #647499;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnLowerCase {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+
+.btnLowerCase h2 {
+    margin: auto;
+    color: #647499;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.btnAlignLeft {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+.btnAlignLeft svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignCenter {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.btnAlignCenter svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignRight {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+.btnAlignRight svg {
+    margin: auto;
+    transition: .2s;
+}
+
+
+.btnAlignTop {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+.btnAlignTop svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignMiddle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.btnAlignMiddle svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnAlignBottom {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 3px;
+}
+
+.btnAlignBottom svg {
+    margin: auto;
+    transition: .2s;
+}
+
+.btnLineSpacing svg {
+    margin: auto;
+    transition: .2s;
+    filter: saturate(0) brightness(2);
+}
+
+.btnAutoWidth {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    border-radius: 3px;
+}
+
+.btnAutoWidth svg {
+    margin: auto;
+}
+
+.btnAutoHeight {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.btnAutoHeight svg {
+    margin: auto;
+}
+
+.btnFixedSize {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-radius: 3px;
+}
+
+.btnFixedSize svg {
+    margin: auto;
+}
+
+.btnNoDecor {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    border-radius: 3px;
+}
+
+.btnNoDecor div {
+    width: 8px;
+    height: 2px;
+    margin: auto;
+    background-color: #647499;
+}
+
+.btnUnderline {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.btnUnderline h2 {
+    margin: auto;
+    color: #647499;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-decoration: underline;
+}
+
+.btnStrike {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    border-radius: 3px;
+}
+
+.btnStrike h2 {
+    margin: auto;
+    color: #647499;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    text-decoration: line-through;
+}
+
+.txtSubLayer {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtSubLayer:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtSubLayer:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.tabVectorPreview {
+    width: 214px;
+    height: 82%;
+    border-radius: 9px;
+    margin-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.tabVectorPreview svg { 
+    width: 100%;
+    height: auto;
+    margin: auto;
+    filter: none;
+}
+
+.tabVectorStroke {
+    display: block;
+}
+
+.txtVectorStrokeColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtVectorStrokeColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtVectorStrokeColor:focus {
+    border: 1px solid #515E7B;
+}
+
+
+.txtVectorStrokeOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeOpacity:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeOpacity:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeWidth {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeWidth:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeWidth:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorCornerRadius {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorCornerRadius:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorCornerRadius:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.tabVectorFill {
+    display: none;
+}
+
+.txtVectorFillColor {
+    width: 56px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border-radius: 3px;
+    border: 1px solid #343C4F;
+    background-color: transparent;
+    transition: border .2s;
+}
+
+.txtVectorFillColor:hover {
+    border: 1px solid #515E7B;
+}
+
+.txtVectorFillColor:focus {
+    border: 1px solid #515E7B;
+}
+
+.thumbPickerVector {
+    outline: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    background-color: black;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.txtVectorFillOpacity {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorFillOpacity:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorFillOpacity:focus {
+    border-bottom: 1px solid #647499;
+}
+
+
+.tabVectorStrokeFill {
+    display: none;
+}
+
+.txtVectorStrokeDash {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeDash:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeDash:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeGap {
+    width: 28px;
+    height: 24px;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: default;
+    border: none;
+    border-bottom: 1px solid transparent;
+    background-color: transparent;
+    transition: .2s;
+}
+
+.txtVectorStrokeGap:hover {
+    border-bottom: 1px solid #647499;
+}
+
+.txtVectorStrokeGap:focus {
+    border-bottom: 1px solid #647499;
+}
+
+.chkVectorStrokeCap {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid #3F4961;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkVectorStrokeShow {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid #3F4961;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+.chkVectorFillShow {
+    outline: none;
+    width: 24px;
+    max-width: 24px;
+    height: 16px;
+    border-radius: 99px;
+    border: 1px solid #3F4961;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+    cursor: pointer;
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    transition: .2s;
+}
+
+
+.pnlBottomLayerThumbVector {
+    background-color: #6885CC;
+    width: 50%;
+    height: 1px;
+    translate: 0%;
+    transition: .2s;
+}
+
+.optVectorColor {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optVectorColor:hover {
+    background-color: #6885CC;
+}
+
+.pnlDropSide {
+    height: 40px;
+    width: 42%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.dropdownLineStart {
+    width: 100%;
+    height: 32px;
+    margin-top: 3px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 4px;
+    border: 1px solid #515E7B;
+}
+
+.dropdownLineStart:hover {
+    border: 1px solid #647499;
+}
+
+.dropdownLineEnd {
+    width: 100%;
+    height: 32px;
+    margin-top: 3px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    transition: .2s;
+    border-radius: 4px;
+    border: 1px solid #515E7B;
+}
+
+.dropdownLineEnd:hover {
+    border: 1px solid #647499;
+}
+
+.chosenLineStart {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+.chosenLineEnd {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    transform: scale(-1,1);
+}
+
+.dropdownLineStart svg{
+    width: 8px;
+    height: 6px;
+    margin: auto;
+}
+
+.dropdownLineEnd svg{
+    width: 8px;
+    height: 6px;
+    margin: auto;
+}
+
+.dropOptionLineStart {
+    z-index: 5;
+    width: 90px;
+    height: auto;
+    max-height: 156px;
+    border-radius: 6px;
+    background-color: #1E222B;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dropOptionLineStart::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-thumb {
+    background-color: #6885CC;
+    border-radius: 99px;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-thumb:hover {
+    background-color: #6885CC;
+}
+
+.dropOptionLineStart::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.dropOptionLineEnd {
+    z-index: 5;
+    width: 90px;
+    height: auto;
+    max-height: 156px;
+    border-radius: 6px;
+    background-color: #1E222B;
+    display: none;
+    cursor: default;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    scroll-behavior: smooth;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar {
+    width: 1px;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-thumb {
+    background-color: #6885CC;
+    border-radius: 99px;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-thumb:hover {
+    background-color: #6885CC;
+}
+
+.dropOptionLineEnd::-webkit-scrollbar-corner { 
+    background: transparent; 
+}
+
+.optLineHead {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+    background-color: transparent;
+}
+
+.optLineHead:hover {
+    background-color: #6885CC;
+}
+
+.optLineHead svg {
+    width: 40%;
+    height: auto;
+    
+}
+

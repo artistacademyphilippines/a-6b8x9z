@@ -1,0 +1,93 @@
+
+
+.wrapMini {
+    width: 228px;
+    min-width: 228px;
+    max-width: 228px !important;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: .5em;
+    /*background-color: #343C4F;*/
+    border-radius: 9px;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.wrapLong {
+    width: 228px;
+    min-width: 228px;
+    max-width: 228px !important;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    gap: .5em;
+    /*background-color: #343C4F;*/
+    border-radius: 9px;
+    padding: .5em;
+    margin-bottom: .5em;
+}
+
+.elemTitle {
+    width: 240px;
+    height: 40px;
+    display: flex;
+    cursor: default;
+    margin-bottom: .5em;
+}
+
+.elemTitle h2 {
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 12px;
+    font-weight: 600px;
+    cursor: default;
+}
+
+.optElementMini {
+    width: 69px;
+    height: 69px;
+    display: flex;
+    border-radius: 9px;
+    transition: .1s;
+    border: 1px solid transparent;
+}
+
+.hoverElementMini {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border-radius: 999px;
+}
+
+.hoverElementMini svg {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+.optElementLong {
+    width: 108px;
+    height: 54px;
+    display: flex;
+    border-radius: 9px;
+    transition: .1s;
+    border: 1px solid transparent;
+}
+
+.hoverElementLong {
+    display: flex;
+    width: 90px;
+    height: 40px;
+    margin: auto;
+}
+
+.hoverElementLong svg {
+    margin: auto;
+    width: auto;
+    height: auto;
+}
